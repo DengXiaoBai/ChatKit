@@ -1,0 +1,911 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
+		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
+		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
+		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
+		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
+		6003F59E195388D20070C39A /* SKSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* SKSAppDelegate.m */; };
+		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
+		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
+		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
+		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
+		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
+		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		7B4E2B05F9C2F58BFFD70CD2 /* Pods_ChatKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF62EEA34FF602BBFB51C773 /* Pods_ChatKit_Example.framework */; };
+		B7124017B1D1137E787C980F /* chat_admin.html in Resources */ = {isa = PBXBuildFile; fileRef = B7124774F0BE2C661253DF35 /* chat_admin.html */; };
+		B712401CD55EA913A82328DA /* common-coin-icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B7124EE8215808B496ED1E58 /* common-coin-icon.jpg */; };
+		B712407152C7ED0D20A7AE7A /* UIFont+SKS.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124359F2A3282F62F33762 /* UIFont+SKS.m */; };
+		B71241214DAEBEE008600E99 /* ChatSessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124EC68447122FC61EF357 /* ChatSessionViewController.m */; };
+		B7124148F327CAC96EC90C06 /* ChatPrivacyGiftOfferBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = B71246ECC1163928D265AA7D /* ChatPrivacyGiftOfferBtnView.m */; };
+		B712414C90FCA14ACC543B30 /* ChatPrivacyGiftOfferContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124DFD47B20647AC68FF42 /* ChatPrivacyGiftOfferContentView.m */; };
+		B712418B14CDC91291A7D605 /* ChatSessionConfigFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124D150956D787D806177C /* ChatSessionConfigFactory.m */; };
+		B712418BEAC23750A96E5BAF /* ChatPrivacyGiftOfferView.m in Sources */ = {isa = PBXBuildFile; fileRef = B71245722FA699195D1E1C20 /* ChatPrivacyGiftOfferView.m */; };
+		B712419E15CF2884490FCA03 /* ChatPrivacyDateOfferMessageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124E3F68092F816CF5A2BC /* ChatPrivacyDateOfferMessageObject.m */; };
+		B71245B60D3F4A62AE5F042A /* in2.txt in Resources */ = {isa = PBXBuildFile; fileRef = B71241FAE55A4836F555A886 /* in2.txt */; };
+		B7124736E1B6CB001D020B91 /* ChatPrivacyDateOfferContentConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124739D4C38807F6F702F6 /* ChatPrivacyDateOfferContentConfig.m */; };
+		B71247F9F98D665F562ACE3C /* ChatPrivacyActivityOfferCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = B71248AAC3B9A2679F17B955 /* ChatPrivacyActivityOfferCoverView.m */; };
+		B71247FC19117FE3EBD10193 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7124F128C874CCB98D25BBB /* Default-568h@2x.png */; };
+		B7124853E7C5EAF32205C656 /* ChatTestViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B71240C920A1A7100096BB1C /* ChatTestViewModel.m */; };
+		B71248B0BDA5856ECDA9ACA9 /* ChatPrivacyGiftOfferDescView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124C00A3CAC7E181D8EE1C /* ChatPrivacyGiftOfferDescView.m */; };
+		B712495BB39274E11209C13B /* EmojisList.plist in Resources */ = {isa = PBXBuildFile; fileRef = B71241845849F6AFCB9AEEC9 /* EmojisList.plist */; };
+		B71249D67FBCD0426316FF1F /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71242EBBCBFED9F9244BBEF /* UIFont.swift */; };
+		B7124B3164EA9BBAD164A0A0 /* ChatSessionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B712476B948D493CFFF4943C /* ChatSessionConfig.m */; };
+		B7124C59AD2C991E4726D243 /* ChatPrivacyGiftOfferMessageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B712415A6A207490A1319F72 /* ChatPrivacyGiftOfferMessageObject.m */; };
+		B7124DBD9CE7F2FEFE0A28CD /* common-roses-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B71243B8A6718CAA2918B1E6 /* common-roses-icon.png */; };
+		B7124DC6AB60FF9C4936524C /* ChatSessionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124B59D0165110B91F6F4F /* ChatSessionHelper.m */; };
+		B7124E2D0B77E44B6D467F91 /* ChatPrivacyDateOfferBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124F49AFF229A72EFFB299 /* ChatPrivacyDateOfferBtnView.m */; };
+		B7124E36DD14803F31D6067C /* ChatPrivacyGiftOfferContentConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124B2554DE865C94667E05 /* ChatPrivacyGiftOfferContentConfig.m */; };
+		B7124EA52DC27EBCE71CFAB8 /* ChatDefaultValueMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124ABF27B9F8C7DC0B63F9 /* ChatDefaultValueMaker.m */; };
+		B7124F76CCEED8FDF60798AC /* ChatPrivacyActivityContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = B712459EB603E8115806A34D /* ChatPrivacyActivityContentView.m */; };
+		D19AC708A69802FC98B5732C /* Pods_ChatKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 235195F2020DB035610B0014 /* Pods_ChatKit_Tests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6003F5B3195388D20070C39A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6003F582195388D10070C39A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6003F589195388D20070C39A;
+			remoteInfo = ChatKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		16F0CF79849D7D0645AD49FE /* Pods-ChatKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatKit_Example/Pods-ChatKit_Example.release.xcconfig"; sourceTree = "<group>"; };
+		235195F2020DB035610B0014 /* Pods_ChatKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52831D7CDF35426F1E82A5BE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		54C4C060A00A55253CDB416C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		6003F58A195388D20070C39A /* ChatKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6003F595195388D20070C39A /* ChatKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ChatKit-Info.plist"; sourceTree = "<group>"; };
+		6003F597195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6003F599195388D20070C39A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6003F59B195388D20070C39A /* ChatKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChatKit-Prefix.pch"; sourceTree = "<group>"; };
+		6003F59C195388D20070C39A /* SKSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKSAppDelegate.h; sourceTree = "<group>"; };
+		6003F59D195388D20070C39A /* SKSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSAppDelegate.m; sourceTree = "<group>"; };
+		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6003F5AE195388D20070C39A /* ChatKit_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatKit_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
+		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
+		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		7B13179241DDD12685EFDA9B /* Pods-ChatKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatKit_Tests/Pods-ChatKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		7F829344B002556D9AC5E0A9 /* ChatKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ChatKit.podspec; path = ../ChatKit.podspec; sourceTree = "<group>"; };
+		AA66345F2BCFEC7601A6D31F /* Pods-ChatKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatKit_Example/Pods-ChatKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		B712408DEA59A94E306147C9 /* ChatPrivacyGiftOfferMessageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyGiftOfferMessageObject.h; sourceTree = "<group>"; };
+		B71240C920A1A7100096BB1C /* ChatTestViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTestViewModel.m; sourceTree = "<group>"; };
+		B712415A6A207490A1319F72 /* ChatPrivacyGiftOfferMessageObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyGiftOfferMessageObject.m; sourceTree = "<group>"; };
+		B71241845849F6AFCB9AEEC9 /* EmojisList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = EmojisList.plist; sourceTree = "<group>"; };
+		B71241FAE55A4836F555A886 /* in2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = in2.txt; sourceTree = "<group>"; };
+		B712429CC6B2AC42981A0C4E /* ChatPrivacyGiftOfferDescView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyGiftOfferDescView.h; sourceTree = "<group>"; };
+		B71242EBBCBFED9F9244BBEF /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		B7124359F2A3282F62F33762 /* UIFont+SKS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+SKS.m"; sourceTree = "<group>"; };
+		B71243B0E37A73051113E6FD /* ChatPrivacyDateOfferBtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyDateOfferBtnView.h; sourceTree = "<group>"; };
+		B71243B8A6718CAA2918B1E6 /* common-roses-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common-roses-icon.png"; sourceTree = "<group>"; };
+		B712452534AF695B9946D96D /* MarcosDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarcosDefinition.h; sourceTree = "<group>"; };
+		B71245722FA699195D1E1C20 /* ChatPrivacyGiftOfferView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyGiftOfferView.m; sourceTree = "<group>"; };
+		B712459431A1E6F1D2E37DE2 /* ChatSessionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatSessionHelper.h; sourceTree = "<group>"; };
+		B712459EB603E8115806A34D /* ChatPrivacyActivityContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyActivityContentView.m; sourceTree = "<group>"; };
+		B71245A79E6CDD8BA19C38B2 /* ChatSessionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatSessionViewController.h; sourceTree = "<group>"; };
+		B71245ACD76F5DCA3250C498 /* ChatPrivacyGiftOfferBtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyGiftOfferBtnView.h; sourceTree = "<group>"; };
+		B712465DFFEC0AA79AE04485 /* ChatPrivacyDateOfferContentConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyDateOfferContentConfig.h; sourceTree = "<group>"; };
+		B71246EA19A807A3E14ECC8B /* ChatSessionConfigFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatSessionConfigFactory.h; sourceTree = "<group>"; };
+		B71246ECC1163928D265AA7D /* ChatPrivacyGiftOfferBtnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyGiftOfferBtnView.m; sourceTree = "<group>"; };
+		B7124739D4C38807F6F702F6 /* ChatPrivacyDateOfferContentConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyDateOfferContentConfig.m; sourceTree = "<group>"; };
+		B712476B948D493CFFF4943C /* ChatSessionConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatSessionConfig.m; sourceTree = "<group>"; };
+		B7124774F0BE2C661253DF35 /* chat_admin.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = chat_admin.html; sourceTree = "<group>"; };
+		B71247A189AA985A83543CE2 /* ChatPrivacyActivityOfferCoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyActivityOfferCoverView.h; sourceTree = "<group>"; };
+		B71248AAC3B9A2679F17B955 /* ChatPrivacyActivityOfferCoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyActivityOfferCoverView.m; sourceTree = "<group>"; };
+		B712499A527494A78FE631F0 /* UIFont+SKS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+SKS.h"; sourceTree = "<group>"; };
+		B7124A102606B451F69AE1F8 /* ChatPrivacyGiftOfferContentConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyGiftOfferContentConfig.h; sourceTree = "<group>"; };
+		B7124A8A38BBB0B9EF808C77 /* ChatPrivacyGiftOfferView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyGiftOfferView.h; sourceTree = "<group>"; };
+		B7124A8BECEE4C0E0F28C08B /* ChatPrivacyGiftOfferContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyGiftOfferContentView.h; sourceTree = "<group>"; };
+		B7124AAEC6CD7E31F336D4CC /* ChatDefaultValueMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDefaultValueMaker.h; sourceTree = "<group>"; };
+		B7124ABF27B9F8C7DC0B63F9 /* ChatDefaultValueMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatDefaultValueMaker.m; sourceTree = "<group>"; };
+		B7124B2554DE865C94667E05 /* ChatPrivacyGiftOfferContentConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyGiftOfferContentConfig.m; sourceTree = "<group>"; };
+		B7124B59D0165110B91F6F4F /* ChatSessionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatSessionHelper.m; sourceTree = "<group>"; };
+		B7124C00A3CAC7E181D8EE1C /* ChatPrivacyGiftOfferDescView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyGiftOfferDescView.m; sourceTree = "<group>"; };
+		B7124D150956D787D806177C /* ChatSessionConfigFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatSessionConfigFactory.m; sourceTree = "<group>"; };
+		B7124D4915DBF9CBC7CF928D /* ChatSessionConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatSessionConfig.h; sourceTree = "<group>"; };
+		B7124DFD47B20647AC68FF42 /* ChatPrivacyGiftOfferContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyGiftOfferContentView.m; sourceTree = "<group>"; };
+		B7124E3F68092F816CF5A2BC /* ChatPrivacyDateOfferMessageObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyDateOfferMessageObject.m; sourceTree = "<group>"; };
+		B7124E701D1691B6C59E4339 /* ChatTestViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTestViewModel.h; sourceTree = "<group>"; };
+		B7124EC68447122FC61EF357 /* ChatSessionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatSessionViewController.m; sourceTree = "<group>"; };
+		B7124ED30C79BCC1C660A624 /* ChatPrivacyActivityContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyActivityContentView.h; sourceTree = "<group>"; };
+		B7124EE8215808B496ED1E58 /* common-coin-icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "common-coin-icon.jpg"; sourceTree = "<group>"; };
+		B7124F128C874CCB98D25BBB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
+		B7124F49AFF229A72EFFB299 /* ChatPrivacyDateOfferBtnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyDateOfferBtnView.m; sourceTree = "<group>"; };
+		B7124FC2841A8B4CF2ED0337 /* ChatPrivacyDateOfferMessageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyDateOfferMessageObject.h; sourceTree = "<group>"; };
+		BF62EEA34FF602BBFB51C773 /* Pods_ChatKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7D7CB73EC78F0E19717646C /* Pods-ChatKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatKit_Tests/Pods-ChatKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		EC4DEAE71EF914A600C88F6B /* ChatKit-Example-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ChatKit-Example-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6003F587195388D20070C39A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
+				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
+				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
+				7B4E2B05F9C2F58BFFD70CD2 /* Pods_ChatKit_Example.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6003F5AB195388D20070C39A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
+				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
+				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
+				D19AC708A69802FC98B5732C /* Pods_ChatKit_Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6003F581195388D10070C39A = {
+			isa = PBXGroup;
+			children = (
+				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
+				6003F593195388D20070C39A /* Example for ChatKit */,
+				6003F5B5195388D20070C39A /* Tests */,
+				6003F58C195388D20070C39A /* Frameworks */,
+				6003F58B195388D20070C39A /* Products */,
+				D0471BF9983E94776CBC260D /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		6003F58B195388D20070C39A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6003F58A195388D20070C39A /* ChatKit_Example.app */,
+				6003F5AE195388D20070C39A /* ChatKit_Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6003F58C195388D20070C39A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6003F58D195388D20070C39A /* Foundation.framework */,
+				6003F58F195388D20070C39A /* CoreGraphics.framework */,
+				6003F591195388D20070C39A /* UIKit.framework */,
+				6003F5AF195388D20070C39A /* XCTest.framework */,
+				BF62EEA34FF602BBFB51C773 /* Pods_ChatKit_Example.framework */,
+				235195F2020DB035610B0014 /* Pods_ChatKit_Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6003F593195388D20070C39A /* Example for ChatKit */ = {
+			isa = PBXGroup;
+			children = (
+				6003F59C195388D20070C39A /* SKSAppDelegate.h */,
+				6003F59D195388D20070C39A /* SKSAppDelegate.m */,
+				6003F5A8195388D20070C39A /* Images.xcassets */,
+				6003F594195388D20070C39A /* Supporting Files */,
+				B7124D092AB0575A1098C194 /* VO */,
+				B7124FE4A13045152AD53BB4 /* VC */,
+				B71245242B783615FC83E089 /* ViewModel */,
+				B71246346C53EB61C63FC33E /* Resource */,
+				B7124F2970BC2D73392717C6 /* Helper */,
+				B7124F128C874CCB98D25BBB /* Default-568h@2x.png */,
+				B7124E92BA1511B856DB072B /* ChatKitConfig */,
+				B7124D82517E250653329E6B /* General */,
+			);
+			name = "Example for ChatKit";
+			path = ChatKit;
+			sourceTree = "<group>";
+		};
+		6003F594195388D20070C39A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6003F595195388D20070C39A /* ChatKit-Info.plist */,
+				6003F596195388D20070C39A /* InfoPlist.strings */,
+				6003F599195388D20070C39A /* main.m */,
+				6003F59B195388D20070C39A /* ChatKit-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6003F5B5195388D20070C39A /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6003F5BB195388D20070C39A /* Tests.m */,
+				6003F5B6195388D20070C39A /* Supporting Files */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		6003F5B6195388D20070C39A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6003F5B7195388D20070C39A /* Tests-Info.plist */,
+				6003F5B8195388D20070C39A /* InfoPlist.strings */,
+				606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				7F829344B002556D9AC5E0A9 /* ChatKit.podspec */,
+				52831D7CDF35426F1E82A5BE /* README.md */,
+				54C4C060A00A55253CDB416C /* LICENSE */,
+			);
+			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		B712419E595DA244A2DF074C /* ChatPrivacyGiftOfferView */ = {
+			isa = PBXGroup;
+			children = (
+				B7124A8A38BBB0B9EF808C77 /* ChatPrivacyGiftOfferView.h */,
+				B71245722FA699195D1E1C20 /* ChatPrivacyGiftOfferView.m */,
+				B71245ACD76F5DCA3250C498 /* ChatPrivacyGiftOfferBtnView.h */,
+				B71246ECC1163928D265AA7D /* ChatPrivacyGiftOfferBtnView.m */,
+				B712429CC6B2AC42981A0C4E /* ChatPrivacyGiftOfferDescView.h */,
+				B7124C00A3CAC7E181D8EE1C /* ChatPrivacyGiftOfferDescView.m */,
+			);
+			path = ChatPrivacyGiftOfferView;
+			sourceTree = "<group>";
+		};
+		B71243FBFB0D95D36AE8F636 /* BridgeHeader */ = {
+			isa = PBXGroup;
+			children = (
+				EC4DEAE71EF914A600C88F6B /* ChatKit-Example-Bridging-Header.h */,
+			);
+			path = BridgeHeader;
+			sourceTree = "<group>";
+		};
+		B71244D4EBED441B32BE3F94 /* ChatPrivacyAcitivityView */ = {
+			isa = PBXGroup;
+			children = (
+				B71243B0E37A73051113E6FD /* ChatPrivacyDateOfferBtnView.h */,
+				B7124F49AFF229A72EFFB299 /* ChatPrivacyDateOfferBtnView.m */,
+				B71247A189AA985A83543CE2 /* ChatPrivacyActivityOfferCoverView.h */,
+				B71248AAC3B9A2679F17B955 /* ChatPrivacyActivityOfferCoverView.m */,
+			);
+			path = ChatPrivacyAcitivityView;
+			sourceTree = "<group>";
+		};
+		B71245242B783615FC83E089 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B7124E701D1691B6C59E4339 /* ChatTestViewModel.h */,
+				B71240C920A1A7100096BB1C /* ChatTestViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B71246346C53EB61C63FC33E /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B71241845849F6AFCB9AEEC9 /* EmojisList.plist */,
+				B7124774F0BE2C661253DF35 /* chat_admin.html */,
+				B7124EE8215808B496ED1E58 /* common-coin-icon.jpg */,
+				B71243B8A6718CAA2918B1E6 /* common-roses-icon.png */,
+				B71241FAE55A4836F555A886 /* in2.txt */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		B7124800559BC5AD5FD00BFB /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B71242EBBCBFED9F9244BBEF /* UIFont.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B7124841D26DD48A6AEB2CC9 /* ChatSessionConfig */ = {
+			isa = PBXGroup;
+			children = (
+				B7124D4915DBF9CBC7CF928D /* ChatSessionConfig.h */,
+				B712476B948D493CFFF4943C /* ChatSessionConfig.m */,
+			);
+			path = ChatSessionConfig;
+			sourceTree = "<group>";
+		};
+		B712484B98073D5BAAAA14DC /* ValueMaker */ = {
+			isa = PBXGroup;
+			children = (
+				B7124AAEC6CD7E31F336D4CC /* ChatDefaultValueMaker.h */,
+				B7124ABF27B9F8C7DC0B63F9 /* ChatDefaultValueMaker.m */,
+				B71246EA19A807A3E14ECC8B /* ChatSessionConfigFactory.h */,
+				B7124D150956D787D806177C /* ChatSessionConfigFactory.m */,
+			);
+			path = ValueMaker;
+			sourceTree = "<group>";
+		};
+		B7124901ECB42718EC953D08 /* ChatMessageAdditionObject */ = {
+			isa = PBXGroup;
+			children = (
+				B7124FC2841A8B4CF2ED0337 /* ChatPrivacyDateOfferMessageObject.h */,
+				B7124E3F68092F816CF5A2BC /* ChatPrivacyDateOfferMessageObject.m */,
+				B712408DEA59A94E306147C9 /* ChatPrivacyGiftOfferMessageObject.h */,
+				B712415A6A207490A1319F72 /* ChatPrivacyGiftOfferMessageObject.m */,
+			);
+			path = ChatMessageAdditionObject;
+			sourceTree = "<group>";
+		};
+		B7124BE48A225110DE388B56 /* ChatContentView */ = {
+			isa = PBXGroup;
+			children = (
+				B7124A8BECEE4C0E0F28C08B /* ChatPrivacyGiftOfferContentView.h */,
+				B7124DFD47B20647AC68FF42 /* ChatPrivacyGiftOfferContentView.m */,
+				B7124ED30C79BCC1C660A624 /* ChatPrivacyActivityContentView.h */,
+				B712459EB603E8115806A34D /* ChatPrivacyActivityContentView.m */,
+				B71244D4EBED441B32BE3F94 /* ChatPrivacyAcitivityView */,
+				B712419E595DA244A2DF074C /* ChatPrivacyGiftOfferView */,
+			);
+			path = ChatContentView;
+			sourceTree = "<group>";
+		};
+		B7124D092AB0575A1098C194 /* VO */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VO;
+			sourceTree = "<group>";
+		};
+		B7124D301BCFB2FF6F708E34 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				B7124359F2A3282F62F33762 /* UIFont+SKS.m */,
+				B712499A527494A78FE631F0 /* UIFont+SKS.h */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		B7124D82517E250653329E6B /* General */ = {
+			isa = PBXGroup;
+			children = (
+				B7124EB2248FBABEC237541D /* Marco */,
+				B7124800559BC5AD5FD00BFB /* Extension */,
+				B71243FBFB0D95D36AE8F636 /* BridgeHeader */,
+				B7124D301BCFB2FF6F708E34 /* Category */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		B7124E92BA1511B856DB072B /* ChatKitConfig */ = {
+			isa = PBXGroup;
+			children = (
+				B712484B98073D5BAAAA14DC /* ValueMaker */,
+				B7124EC6137C108780134666 /* ChatContentConfig */,
+				B7124BE48A225110DE388B56 /* ChatContentView */,
+				B7124901ECB42718EC953D08 /* ChatMessageAdditionObject */,
+				B7124841D26DD48A6AEB2CC9 /* ChatSessionConfig */,
+			);
+			path = ChatKitConfig;
+			sourceTree = "<group>";
+		};
+		B7124EB2248FBABEC237541D /* Marco */ = {
+			isa = PBXGroup;
+			children = (
+				B712452534AF695B9946D96D /* MarcosDefinition.h */,
+			);
+			path = Marco;
+			sourceTree = "<group>";
+		};
+		B7124EC6137C108780134666 /* ChatContentConfig */ = {
+			isa = PBXGroup;
+			children = (
+				B712465DFFEC0AA79AE04485 /* ChatPrivacyDateOfferContentConfig.h */,
+				B7124739D4C38807F6F702F6 /* ChatPrivacyDateOfferContentConfig.m */,
+				B7124A102606B451F69AE1F8 /* ChatPrivacyGiftOfferContentConfig.h */,
+				B7124B2554DE865C94667E05 /* ChatPrivacyGiftOfferContentConfig.m */,
+			);
+			path = ChatContentConfig;
+			sourceTree = "<group>";
+		};
+		B7124F2970BC2D73392717C6 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B712459431A1E6F1D2E37DE2 /* ChatSessionHelper.h */,
+				B7124B59D0165110B91F6F4F /* ChatSessionHelper.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		B7124FE4A13045152AD53BB4 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				B71245A79E6CDD8BA19C38B2 /* ChatSessionViewController.h */,
+				B7124EC68447122FC61EF357 /* ChatSessionViewController.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		D0471BF9983E94776CBC260D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA66345F2BCFEC7601A6D31F /* Pods-ChatKit_Example.debug.xcconfig */,
+				16F0CF79849D7D0645AD49FE /* Pods-ChatKit_Example.release.xcconfig */,
+				7B13179241DDD12685EFDA9B /* Pods-ChatKit_Tests.debug.xcconfig */,
+				C7D7CB73EC78F0E19717646C /* Pods-ChatKit_Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6003F589195388D20070C39A /* ChatKit_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "ChatKit_Example" */;
+			buildPhases = (
+				7E23513E09BD0B58290E69DC /* [CP] Check Pods Manifest.lock */,
+				6003F586195388D20070C39A /* Sources */,
+				6003F587195388D20070C39A /* Frameworks */,
+				6003F588195388D20070C39A /* Resources */,
+				EC04C2E2B6EF0154010ACC86 /* [CP] Embed Pods Frameworks */,
+				261D9152B1153BCAA4A7FCE7 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChatKit_Example;
+			productName = ChatKit;
+			productReference = 6003F58A195388D20070C39A /* ChatKit_Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6003F5AD195388D20070C39A /* ChatKit_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "ChatKit_Tests" */;
+			buildPhases = (
+				507976D8EE9C0BB39F5CC33A /* [CP] Check Pods Manifest.lock */,
+				6003F5AA195388D20070C39A /* Sources */,
+				6003F5AB195388D20070C39A /* Frameworks */,
+				6003F5AC195388D20070C39A /* Resources */,
+				950C8F55CE9AA9DA4697FF6C /* [CP] Embed Pods Frameworks */,
+				C86121683ED03743329E8A17 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6003F5B4195388D20070C39A /* PBXTargetDependency */,
+			);
+			name = ChatKit_Tests;
+			productName = ChatKitTests;
+			productReference = 6003F5AE195388D20070C39A /* ChatKit_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6003F582195388D10070C39A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SKS;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = iCrany;
+				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = BR6M459V2X;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Manual;
+					};
+					6003F5AD195388D20070C39A = {
+						TestTargetID = 6003F589195388D20070C39A;
+					};
+				};
+			};
+			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "ChatKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6003F581195388D10070C39A;
+			productRefGroup = 6003F58B195388D20070C39A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6003F589195388D20070C39A /* ChatKit_Example */,
+				6003F5AD195388D20070C39A /* ChatKit_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6003F588195388D20070C39A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				B712495BB39274E11209C13B /* EmojisList.plist in Resources */,
+				B7124017B1D1137E787C980F /* chat_admin.html in Resources */,
+				B712401CD55EA913A82328DA /* common-coin-icon.jpg in Resources */,
+				B7124DBD9CE7F2FEFE0A28CD /* common-roses-icon.png in Resources */,
+				B71245B60D3F4A62AE5F042A /* in2.txt in Resources */,
+				B71247FC19117FE3EBD10193 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6003F5AC195388D20070C39A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		261D9152B1153BCAA4A7FCE7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChatKit_Example/Pods-ChatKit_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		507976D8EE9C0BB39F5CC33A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7E23513E09BD0B58290E69DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		950C8F55CE9AA9DA4697FF6C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChatKit_Tests/Pods-ChatKit_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C86121683ED03743329E8A17 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChatKit_Tests/Pods-ChatKit_Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC04C2E2B6EF0154010ACC86 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChatKit_Example/Pods-ChatKit_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6003F586195388D20070C39A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F59E195388D20070C39A /* SKSAppDelegate.m in Sources */,
+				6003F59A195388D20070C39A /* main.m in Sources */,
+				B71241214DAEBEE008600E99 /* ChatSessionViewController.m in Sources */,
+				B7124853E7C5EAF32205C656 /* ChatTestViewModel.m in Sources */,
+				B7124DC6AB60FF9C4936524C /* ChatSessionHelper.m in Sources */,
+				B7124EA52DC27EBCE71CFAB8 /* ChatDefaultValueMaker.m in Sources */,
+				B712418B14CDC91291A7D605 /* ChatSessionConfigFactory.m in Sources */,
+				B7124736E1B6CB001D020B91 /* ChatPrivacyDateOfferContentConfig.m in Sources */,
+				B7124E36DD14803F31D6067C /* ChatPrivacyGiftOfferContentConfig.m in Sources */,
+				B712414C90FCA14ACC543B30 /* ChatPrivacyGiftOfferContentView.m in Sources */,
+				B7124F76CCEED8FDF60798AC /* ChatPrivacyActivityContentView.m in Sources */,
+				B712419E15CF2884490FCA03 /* ChatPrivacyDateOfferMessageObject.m in Sources */,
+				B7124C59AD2C991E4726D243 /* ChatPrivacyGiftOfferMessageObject.m in Sources */,
+				B7124E2D0B77E44B6D467F91 /* ChatPrivacyDateOfferBtnView.m in Sources */,
+				B712418BEAC23750A96E5BAF /* ChatPrivacyGiftOfferView.m in Sources */,
+				B7124148F327CAC96EC90C06 /* ChatPrivacyGiftOfferBtnView.m in Sources */,
+				B71248B0BDA5856ECDA9ACA9 /* ChatPrivacyGiftOfferDescView.m in Sources */,
+				B7124B3164EA9BBAD164A0A0 /* ChatSessionConfig.m in Sources */,
+				B71249D67FBCD0426316FF1F /* UIFont.swift in Sources */,
+				B712407152C7ED0D20A7AE7A /* UIFont+SKS.m in Sources */,
+				B71247F9F98D665F562ACE3C /* ChatPrivacyActivityOfferCoverView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6003F5AA195388D20070C39A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6003F5B4195388D20070C39A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6003F589195388D20070C39A /* ChatKit_Example */;
+			targetProxy = 6003F5B3195388D20070C39A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6003F596195388D20070C39A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6003F597195388D20070C39A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6003F5B8195388D20070C39A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6003F5B9195388D20070C39A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6003F5BD195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6003F5BE195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6003F5C0195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA66345F2BCFEC7601A6D31F /* Pods-ChatKit_Example.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = BR6M459V2X;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ChatKit/ChatKit-Prefix.pch";
+				INFOPLIST_FILE = "ChatKit/ChatKit-Info.plist";
+				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f7de6ecb-76b7-4eec-9bd1-c57df32a2184";
+				PROVISIONING_PROFILE_SPECIFIER = "iOS Development Wildcard";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_NAME)/General/BridgeHeader/ChatKit-Example-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6003F5C1195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16F0CF79849D7D0645AD49FE /* Pods-ChatKit_Example.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = BR6M459V2X;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ChatKit/ChatKit-Prefix.pch";
+				INFOPLIST_FILE = "ChatKit/ChatKit-Info.plist";
+				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f7de6ecb-76b7-4eec-9bd1-c57df32a2184";
+				PROVISIONING_PROFILE_SPECIFIER = "iOS Development Wildcard";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_NAME)/General/BridgeHeader/ChatKit-Example-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6003F5C3195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B13179241DDD12685EFDA9B /* Pods-ChatKit_Tests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChatKit_Example.app/ChatKit_Example";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		6003F5C4195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7D7CB73EC78F0E19717646C /* Pods-ChatKit_Tests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChatKit_Example.app/ChatKit_Example";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6003F585195388D10070C39A /* Build configuration list for PBXProject "ChatKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5BD195388D20070C39A /* Debug */,
+				6003F5BE195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "ChatKit_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5C0195388D20070C39A /* Debug */,
+				6003F5C1195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "ChatKit_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5C3195388D20070C39A /* Debug */,
+				6003F5C4195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6003F582195388D10070C39A /* Project object */;
+}

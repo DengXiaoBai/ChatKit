@@ -1,0 +1,33 @@
+//
+//  SKSDefaultValueMaker.h
+//  AtFirstSight
+//
+//  Created by iCrany on 2016/11/11.
+//  Copyright © 2016年 Sachsen. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+@protocol SKSChatCellConfig;
+@protocol SKSChatCellLayoutConfig;
+@protocol SKSChatSessionConfig;
+@protocol SKSChatContentConfig;
+@protocol SKSChatKeyboardConfig;
+
+
+@interface SKSDefaultValueMaker : NSObject
+
+
++ (instancetype)shareInstance;
+
+
+- (id<SKSChatCellConfig>)getDefaultChatCellConfig;
+
+
+- (id<SKSChatCellLayoutConfig>)getDefaultChatCellLayoutConfig;
+
+
+- (id<SKSChatSessionConfig>)getDefaultSessionConfig;
+
+- (id<SKSChatKeyboardConfig>)getDefaultKeyboardConfig;
+
+@end

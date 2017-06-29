@@ -1,0 +1,86 @@
+PODS:
+  - ChatKit (0.1.59):
+    - DTCoreText (~> 1.6)
+    - GRMustache (~> 7.3)
+    - Masonry (~> 0.6)
+    - pop (~> 1.0)
+    - TTTAttributedLabel
+    - UITextView+Placeholder
+    - YYImage
+  - DTCoreText (1.6.19):
+    - DTCoreText/Core (= 1.6.19)
+    - DTFoundation/Core (~> 1.7.5)
+    - DTFoundation/DTAnimatedGIF (~> 1.7.5)
+    - DTFoundation/DTHTMLParser (~> 1.7.5)
+    - DTFoundation/UIKit (~> 1.7.5)
+  - DTCoreText/Core (1.6.19):
+    - DTFoundation/Core (~> 1.7.5)
+    - DTFoundation/DTAnimatedGIF (~> 1.7.5)
+    - DTFoundation/DTHTMLParser (~> 1.7.5)
+    - DTFoundation/UIKit (~> 1.7.5)
+  - DTFoundation/Core (1.7.11)
+  - DTFoundation/DTAnimatedGIF (1.7.11)
+  - DTFoundation/DTHTMLParser (1.7.11):
+    - DTFoundation/Core
+  - DTFoundation/UIKit (1.7.11):
+    - DTFoundation/Core
+  - Expecta (1.0.5)
+  - Expecta+Snapshots (3.0.0):
+    - Expecta (~> 1.0)
+    - FBSnapshotTestCase/Core (~> 2.0)
+    - Specta (~> 1.0)
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - GRMustache (7.3.2):
+    - JRSwizzle (~> 1.0)
+  - JRSwizzle (1.0)
+  - Masonry (0.6.4)
+  - pop (1.0.9)
+  - Reveal-iOS-SDK (1.6.2)
+  - Specta (1.0.5)
+  - TTTAttributedLabel (2.0.0)
+  - UITextView+Placeholder (1.2.0)
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
+
+DEPENDENCIES:
+  - ChatKit (from `../`)
+  - DTCoreText (~> 1.6)
+  - Expecta
+  - Expecta+Snapshots
+  - FBSnapshotTestCase
+  - GRMustache (~> 7.3)
+  - Masonry (~> 0.6)
+  - pop (~> 1.0)
+  - Reveal-iOS-SDK
+  - Specta
+  - TTTAttributedLabel
+
+EXTERNAL SOURCES:
+  ChatKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ChatKit: e0f3d311d71f3a7d2fe38bb5ae6f5a62118ee10c
+  DTCoreText: 184cc2f460c2177108e8700dfb0eb1b1cb72c99d
+  DTFoundation: 0ef29c70a9814e15518694862bd739347abe2a50
+  Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
+  Expecta+Snapshots: c343f410c7a6392f3e22e78f94c44b6c0749a516
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  GRMustache: ebe6104fd30a6d22c1f36af131e19e2dbf7cd292
+  JRSwizzle: dd5ead5d913a0f29e7f558200165849f006bb1e3
+  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  Reveal-iOS-SDK: e2250b3c155bcfac53ae223ddc1f76d08f206c33
+  Specta: ac94d110b865115fe60ff2c6d7281053c6f8e8a2
+  TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
+  UITextView+Placeholder: 77680995fcdd07c3f52ec92fe1150874a2ac89ff
+  YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
+
+PODFILE CHECKSUM: e8b944a1882dd491047a45d78fb2e1f741bb75a8
+
+COCOAPODS: 1.2.1
