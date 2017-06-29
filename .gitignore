@@ -1,7 +1,12 @@
 # Xcode
 #
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## Build generated
 build/
-ipa-build/
+DerivedData/
+
+## Various settings
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -13,10 +18,19 @@ ipa-build/
 xcuserdata
 *.xccheckout
 *.moved-aside
-DerivedData
+*.xcuserstate
+xcuserdata/
+
+## Other
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+
+## Obj-C/Swift specific
 *.hmap
 *.ipa
-*.xcuserstate
+*.dSYM.zip
+*.dSYM
 
 # CocoaPods
 #
@@ -46,4 +60,3 @@ Example/Pods/
 /out/
 .DS_Store
 */.DS_Store
-
