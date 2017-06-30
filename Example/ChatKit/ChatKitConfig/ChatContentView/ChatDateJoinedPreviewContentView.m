@@ -1,27 +1,27 @@
 //
-//  SKSChatDateJoinedPreviewContentView.m
+//  ChatDateJoinedPreviewContentView.m
 //  ChatKit
 //
 //  Created by iCrany on 2016/12/29.
 //
 //
 
-#import "SKSChatDateJoinedPreviewContentView.h"
+#import "ChatDateJoinedPreviewContentView.h"
 #import "SKSChatMessageModel.h"
 #import "SKSChatSessionConfig.h"
-#import "SKSDateJoinedPreviewContentConfig.h"
-#import "SKSDateJoinedPreviewView.h"
+#import "ChatDateJoinedPreviewContentConfig.h"
+#import "ChatDateJoinedPreviewView.h"
 #import "SKSChatMessage.h"
 #import "SKSImageView.h"
 
-@interface SKSChatDateJoinedPreviewContentView()
+@interface ChatDateJoinedPreviewContentView()
 
-@property (nonatomic, strong) SKSDateJoinedPreviewContentConfig *contentConfig;
-@property (nonatomic, strong) SKSDateJoinedPreviewView *dateJoinedPreviewView;
+@property (nonatomic, strong) ChatDateJoinedPreviewContentConfig *contentConfig;
+@property (nonatomic, strong) ChatDateJoinedPreviewView *dateJoinedPreviewView;
 
 @end
 
-@implementation SKSChatDateJoinedPreviewContentView
+@implementation ChatDateJoinedPreviewContentView
 
 - (instancetype)initWithSKSMessageModel:(SKSChatMessageModel *)messageModel {
     self = [super initWithSKSMessageModel:messageModel];
@@ -35,7 +35,7 @@
 
 - (void)setupUI {
     if (!_dateJoinedPreviewView) {
-        _dateJoinedPreviewView = [[SKSDateJoinedPreviewView alloc] initWithMessageModel:self.messageModel];
+        _dateJoinedPreviewView = [[ChatDateJoinedPreviewView alloc] initWithMessageModel:self.messageModel];
         [self addSubview:_dateJoinedPreviewView];
     }
 }

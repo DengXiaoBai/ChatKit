@@ -1,24 +1,25 @@
 //
-//  SKSDateJoinedPreviewView.m
+//  ChatDateJoinedPreviewView.m
 //  ChatKit
 //
 //  Created by iCrany on 2016/12/29.
 //
 //
 
-#import "SKSDateJoinedPreviewView.h"
-#import "SKSChatMessageModel.h"
-#import "SKSDateJoinedPreviewContentConfig.h"
-#import "SKSChatMessage.h"
-#import "SKSChatSessionConfig.h"
-#import "SKSDateJoinedPreviewMessageObject.h"
-#import "SKSWeakProxy.h"
+#import <ChatKit/SKSChatMessageModel.h>
+#import <ChatKit/SKSChatSessionConfig.h>
+#import <ChatKit/SKSChatMessage.h>
+#import <ChatKit/SKSChatMessageObject.h>
+#import <ChatKit/SKSWeakProxy.h>
+#import "ChatDateJoinedPreviewView.h"
+#import "ChatDateJoinedPreviewContentConfig.h"
+#import "ChatDateJoinedPreviewMessageObject.h"
 
-@interface SKSDateJoinedPreviewView()
+@interface ChatDateJoinedPreviewView()
 
 @property (nonatomic, strong) SKSChatMessageModel *messageModel;
-@property (nonatomic, strong) SKSDateJoinedPreviewContentConfig *contentConfig;
-@property (nonatomic, strong) SKSDateJoinedPreviewMessageObject *messageObject;
+@property (nonatomic, strong) ChatDateJoinedPreviewContentConfig *contentConfig;
+@property (nonatomic, strong) ChatDateJoinedPreviewMessageObject *messageObject;
 
 @property (nonatomic, strong) UIImageView *coverImageView;
 @property (nonatomic, strong) UIView *maskView;
@@ -33,7 +34,7 @@
 
 @end
 
-@implementation SKSDateJoinedPreviewView
+@implementation ChatDateJoinedPreviewView
 
 - (instancetype)initWithMessageModel:(SKSChatMessageModel *)messageModel {
     self = [super init];
@@ -121,7 +122,7 @@
     }
 
     BOOL isCoverUrlSame = NO;
-    SKSDateJoinedPreviewMessageObject *newMessageObject = messageModel.message.messageAdditionalObject;
+    ChatDateJoinedPreviewMessageObject *newMessageObject = messageModel.message.messageAdditionalObject;
     if ([newMessageObject.coverUrl isEqualToString:self.messageObject.coverUrl]) {
         isCoverUrlSame = YES;
     }
@@ -202,8 +203,8 @@
 }
 
 + (CGSize)getSizeWithMessageModel:(SKSChatMessageModel *)messageModel {
-    SKSDateJoinedPreviewContentConfig *contentConfig = [messageModel.sessionConfig chatContentConfigWithMessageModel:messageModel];
-    SKSDateJoinedPreviewMessageObject *messageObject = messageModel.message.messageAdditionalObject;
+    ChatDateJoinedPreviewContentConfig *contentConfig = [messageModel.sessionConfig chatContentConfigWithMessageModel:messageModel];
+    ChatDateJoinedPreviewMessageObject *messageObject = messageModel.message.messageAdditionalObject;
 
     static UILabel *descLabel;
     if (!descLabel) {

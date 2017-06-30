@@ -1,5 +1,5 @@
 //
-//  SKSDateJoinedPreviewView.h
+//  ChatDateJoinedPreviewView.h
 //  ChatKit
 //
 //  Created by iCrany on 2016/12/29.
@@ -8,16 +8,16 @@
 
 @class SKSChatMessageModel;
 
-@protocol SKSDateJoinedPreviewViewDelegate <NSObject>
+@protocol ChatDateJoinedPreviewViewDelegate <NSObject>
 
 - (void)dateJoinedPreviewViewDownloadCoverImageWithCompletion:(void(^)(UIImage *coverImage))completion;
 - (void)dateJoinedPreviewViewGetTimeRemainDescWithCompletion:(void(^)(NSString *content))completion;//获取倒计时的文案
 
 @end
 
-@interface SKSDateJoinedPreviewView : UIView
+@interface ChatDateJoinedPreviewView : UIView
 
-@property (nonatomic, weak) id<SKSDateJoinedPreviewViewDelegate> delegate;
+@property (nonatomic, weak) id<ChatDateJoinedPreviewViewDelegate> delegate;
 
 - (instancetype)initWithMessageModel:(SKSChatMessageModel *)messageModel;
 

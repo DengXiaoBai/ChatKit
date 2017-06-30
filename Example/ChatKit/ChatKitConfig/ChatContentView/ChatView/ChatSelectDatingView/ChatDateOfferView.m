@@ -1,31 +1,31 @@
 //
-//  SKSDateOfferView.m
+//  ChatDateOfferView.m
 //  ChatKit
 //
 //  Created by iCrany on 2016/12/28.
 //
 //
 
-#import "SKSDateOfferView.h"
-#import "SKSChatDateOfferTopView.h"
-#import "SKSChatDateOfferBtnBottomView.h"
-#import "SKSChatMessageModel.h"
-#import "SKSChatDateOfferDescBottomView.h"
-#import "SKSChatMessage.h"
-#import "SKSDateOfferMessageObject.h"
+#import <ChatKit/SKSChatMessageModel.h>
+#import <ChatKit/SKSChatMessage.h>
+#import "ChatDateOfferView.h"
+#import "ChatDateOfferTopView.h"
+#import "ChatDateOfferBtnBottomView.h"
+#import "ChatDateOfferDescBottomView.h"
+#import "ChatDateOfferMessageObject.h"
 
-@interface SKSDateOfferView() <SKSChatSelectDatingDescBottomViewDelegate>
+@interface ChatDateOfferView() <ChatSelectDatingDescBottomViewDelegate>
 
 @property (nonatomic, strong) SKSChatMessageModel *messageModel;
-@property (nonatomic, strong) SKSDateOfferMessageObject *messageObject;
+@property (nonatomic, strong) ChatDateOfferMessageObject *messageObject;
 
-@property (nonatomic, strong) SKSChatDateOfferTopView *topView;
-@property (nonatomic, strong) SKSChatDateOfferBtnBottomView *btnBottomView;
-@property (nonatomic, strong) SKSChatDateOfferDescBottomView *descBottomView;
+@property (nonatomic, strong) ChatDateOfferTopView *topView;
+@property (nonatomic, strong) ChatDateOfferBtnBottomView *btnBottomView;
+@property (nonatomic, strong) ChatDateOfferDescBottomView *descBottomView;
 
 @end
 
-@implementation SKSDateOfferView
+@implementation ChatDateOfferView
 
 - (instancetype)initWithMessageModel:(SKSChatMessageModel *)messageModel {
     self = [super init];
@@ -40,7 +40,7 @@
 
 - (void)setupUI {
     if (!_topView) {
-        _topView = [[SKSChatDateOfferTopView alloc] initWithMessageModel:self.messageModel];
+        _topView = [[ChatDateOfferTopView alloc] initWithMessageModel:self.messageModel];
         [self addSubview:_topView];
     }
 
@@ -48,19 +48,19 @@
         case SKSMessageSourceTypeReceive: {
             if (self.messageObject.dateOfferState == SKSDateOfferStateNotProcessed) {
                 if (!_btnBottomView) {
-                    _btnBottomView = [[SKSChatDateOfferBtnBottomView alloc] initWithMessageModel:self.messageModel];
+                    _btnBottomView = [[ChatDateOfferBtnBottomView alloc] initWithMessageModel:self.messageModel];
                     _btnBottomView.delegate = self;
                     [self addSubview:_btnBottomView];
                 }
 
                 if (!_descBottomView) {
-                    _descBottomView = [[SKSChatDateOfferDescBottomView alloc] initWithMessageModel:self.messageModel];
+                    _descBottomView = [[ChatDateOfferDescBottomView alloc] initWithMessageModel:self.messageModel];
                     _descBottomView.hidden = YES;//需要从未处理状态转换成失效状态
                     [self addSubview:_descBottomView];
                 }
             } else {
                 if (!_descBottomView) {
-                    _descBottomView = [[SKSChatDateOfferDescBottomView alloc] initWithMessageModel:self.messageModel];
+                    _descBottomView = [[ChatDateOfferDescBottomView alloc] initWithMessageModel:self.messageModel];
                     [self addSubview:_descBottomView];
                 }
             }
@@ -68,7 +68,7 @@
         }
         case SKSMessageSourceTypeSend: {
             if (!_descBottomView) {
-                _descBottomView = [[SKSChatDateOfferDescBottomView alloc] initWithMessageModel:self.messageModel];
+                _descBottomView = [[ChatDateOfferDescBottomView alloc] initWithMessageModel:self.messageModel];
                 [self addSubview:_descBottomView];
             }
             break;
@@ -95,13 +95,13 @@
     [_topView updateWithMessageModel:self.messageModel force:force];
 
     //根据不同的类型来判断
-    CGSize topViewSize = [SKSChatDateOfferTopView getViewSizeWithMessageModel:self.messageModel];
+    CGSize topViewSize = [ChatDateOfferTopView getViewSizeWithMessageModel:self.messageModel];
     _topView.frame = CGRectMake(0, 0, topViewSize.width, topViewSize.height);
 
     switch (self.messageModel.message.messageSourceType) {
         case SKSMessageSourceTypeSend: {
             [_descBottomView updateUIWithMessageModel:self.messageModel force:force];
-            CGSize descBottomViewSize = [SKSChatDateOfferDescBottomView getViewSizeWithMessageModel:self.messageModel];
+            CGSize descBottomViewSize = [ChatDateOfferDescBottomView getViewSizeWithMessageModel:self.messageModel];
             _descBottomView.frame = CGRectMake(0, topViewSize.height, descBottomViewSize.width, descBottomViewSize.height);
             break;
         }
@@ -111,7 +111,7 @@
                 _btnBottomView.hidden = NO;
 
                 [_btnBottomView updateUIWithMessageModel:self.messageModel force:force];
-                CGSize btnBottomViewSize = [SKSChatDateOfferBtnBottomView getViewSizeWithMessageModel:self.messageModel];
+                CGSize btnBottomViewSize = [ChatDateOfferBtnBottomView getViewSizeWithMessageModel:self.messageModel];
                 _btnBottomView.frame = CGRectMake(0, topViewSize.height, btnBottomViewSize.width, btnBottomViewSize.height);
 
             } else {
@@ -119,7 +119,7 @@
                 _descBottomView.hidden = NO;
 
                 [_descBottomView updateUIWithMessageModel:self.messageModel force:force];
-                CGSize descBottomViewSize = [SKSChatDateOfferDescBottomView getViewSizeWithMessageModel:self.messageModel];
+                CGSize descBottomViewSize = [ChatDateOfferDescBottomView getViewSizeWithMessageModel:self.messageModel];
                 _descBottomView.frame = CGRectMake(0, topViewSize.height, topViewSize.width, descBottomViewSize.height);
             }
             break;

@@ -20,8 +20,6 @@
 #import "SKSRealTimeVideoOrVoiceContentConfig.h"
 #import "SKSCoreTextContentConfig.h"
 #import "SKSDateCallContentConfig.h"
-#import "SKSDateOfferContentConfig.h"
-#import "SKSDateJoinedPreviewContentConfig.h"
 #import "SKSImpressContentConfig.h"
 #import "SKSUnReadContentConfig.h"
 #import "SKSUnReadYellowContentConfig.h"
@@ -60,9 +58,6 @@
                 @(SKSMessageMediaTypeTipLabel) : [SKSTipContentConfig new],
                 @(SKSMessageMediaTypeCoreText) : [SKSCoreTextContentConfig new],
                 @(SKSMessageMediaTypeDataCall) : [SKSDateCallContentConfig new],
-                @(SKSMessageMediaTypeDateOffer) : [SKSDateOfferContentConfig new],
-                @(SKSMessageMediaTypeDateJoinedPreview) : [SKSDateJoinedPreviewContentConfig new],
-                @(SKSMessageMediaTypeConfirmMeet) : [SKSDateOfferContentConfig new],
                 @(SKSMessageMediaTypeImpress) : [SKSImpressContentConfig new],
                 @(SKSMessageMediaTypeUnReadTip) : [SKSUnReadYellowContentConfig new],
         };

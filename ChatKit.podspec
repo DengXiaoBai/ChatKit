@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ChatKit'
-  s.version          = '0.1.59'
-  s.summary          = 'A short description of ChatKit.'
+  s.version          = '0.2.0'
+  s.summary          = 'Chatting framework for iOS.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-  Sachsen ChatKit
+  Stringstech ChatKit for iOS
                        DESC
 
   s.homepage         = 'https://github.com/Stringstech/'
@@ -31,9 +31,9 @@ Pod::Spec.new do |s|
 
   s.source_files = 'ChatKit/Classes/**/*'
   
-  s.resource_bundles = {
-    'ChatKit' => ['ChatKit/Assets/**/*.png']
-  }
+#  s.resource_bundles = {
+#    'ChatKit' => ['ChatKit/Assets/**/*.png']
+#  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

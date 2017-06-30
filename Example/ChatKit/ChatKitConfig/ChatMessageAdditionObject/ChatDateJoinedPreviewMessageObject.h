@@ -1,16 +1,16 @@
 //
-//  SKSDateJoinedPreviewMessageObject.h
+//  ChatDateJoinedPreviewMessageObject.h
 //  ChatKit
 //
 //  Created by iCrany on 2016/12/29.
 //
 //
 
-#import "SKSDateActivityMessageObject.h"
+#import "ChatDateActivityMessageObject.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SKSDateJoinedPreviewMessageObject : SKSDateActivityMessageObject
+@interface ChatDateJoinedPreviewMessageObject : ChatDateActivityMessageObject
 
 @property (nonatomic, strong) NSString *bottomDesc;
 

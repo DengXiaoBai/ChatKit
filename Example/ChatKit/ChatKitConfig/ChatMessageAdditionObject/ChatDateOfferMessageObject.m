@@ -1,15 +1,15 @@
 //
-//  SKSDateOfferMessageObject.m
+//  ChatDateOfferMessageObject.m
 //  ChatKit
 //
 //  Created by iCrany on 2016/12/28.
 //
 //
 
-#import "SKSDateOfferMessageObject.h"
+#import "ChatDateOfferMessageObject.h"
 #import "SKSChatMessage.h"
 
-@implementation SKSDateOfferMessageObject
+@implementation ChatDateOfferMessageObject
 
 #pragma mark - getter/setter
 

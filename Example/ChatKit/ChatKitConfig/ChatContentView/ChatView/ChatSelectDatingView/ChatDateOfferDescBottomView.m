@@ -1,32 +1,32 @@
 //
-//  SKSChatDateOfferDescBottomView.m
+//  ChatDateOfferDescBottomView.m
 //  ChatKit
 //
 //  Created by iCrany on 2016/12/28.
 //
 //
 
-#import "SKSChatDateOfferDescBottomView.h"
-#import "SKSChatMessageModel.h"
-#import "SKSDateOfferContentConfig.h"
-#import "SKSDateOfferMessageObject.h"
-#import "SKSChatSessionConfig.h"
-#import "SKSChatMessage.h"
-#import "SKSChatDateOfferTopView.h"
+#import <ChatKit/SKSChatMessageModel.h>
+#import <ChatKit/SKSChatSessionConfig.h>
+#import <ChatKit/SKSChatMessage.h>
+#import "ChatDateOfferDescBottomView.h"
+#import "ChatDateOfferContentConfig.h"
+#import "ChatDateOfferMessageObject.h"
+#import "ChatDateOfferTopView.h"
 
-static const CGFloat kDefaultHeight = 46;//在 Receive 方，跟 SKSChatDateOfferBtnBottomView 的高度统一, 避免因 DateOffer 状态的改变而重新刷新 Cell 的高度
+static const CGFloat kDefaultHeight = 46;//在 Receive 方，跟 ChatDateOfferBtnBottomView 的高度统一, 避免因 DateOffer 状态的改变而重新刷新 Cell 的高度
 
-@interface SKSChatDateOfferDescBottomView()
+@interface ChatDateOfferDescBottomView()
 
 @property (nonatomic, strong) SKSChatMessageModel *messageModel;
-@property (nonatomic, strong) SKSDateOfferContentConfig *contentConfig;
-@property (nonatomic, strong) SKSDateOfferMessageObject *messageObject;
+@property (nonatomic, strong) ChatDateOfferContentConfig *contentConfig;
+@property (nonatomic, strong) ChatDateOfferMessageObject *messageObject;
 
 @property (nonatomic, strong) UILabel *descLabel;
 
 @end
 
-@implementation SKSChatDateOfferDescBottomView
+@implementation ChatDateOfferDescBottomView
 
 - (instancetype)initWithMessageModel:(SKSChatMessageModel *)messageModel {
     self = [super init];
@@ -77,8 +77,8 @@ static const CGFloat kDefaultHeight = 46;//在 Receive 方，跟 SKSChatDateOffe
     _descLabel.frame = CGRectMake(x, y, descSize.width, descSize.height);
 
     if (self.messageModel.message.messageSourceType == SKSMessageSourceTypeReceive) {
-        CGSize topContentSize = [SKSChatDateOfferTopView getViewSizeWithMessageModel:self.messageModel];
-        CGSize bottomContentSize = [SKSChatDateOfferDescBottomView getViewSizeWithMessageModel:self.messageModel];
+        CGSize topContentSize = [ChatDateOfferTopView getViewSizeWithMessageModel:self.messageModel];
+        CGSize bottomContentSize = [ChatDateOfferDescBottomView getViewSizeWithMessageModel:self.messageModel];
         CGFloat max_width = MAX(topContentSize.width, bottomContentSize.width);
         _descLabel.frame = CGRectMake(max_width - descSize.width - descInsets.right, 0, descSize.width, descSize.height);
         if ( descInsets.top + descSize.height + descInsets.bottom - kDefaultHeight < FLT_MIN ) {
@@ -90,8 +90,8 @@ static const CGFloat kDefaultHeight = 46;//在 Receive 方，跟 SKSChatDateOffe
 #pragma mark - Public method
 + (CGSize)getViewSizeWithMessageModel:(SKSChatMessageModel *)messageModel {
 
-    SKSDateOfferContentConfig *contentConfig = [messageModel.sessionConfig chatContentConfigWithMessageModel:messageModel];
-    SKSDateOfferMessageObject *messageObject = messageModel.message.messageAdditionalObject;
+    ChatDateOfferContentConfig *contentConfig = [messageModel.sessionConfig chatContentConfigWithMessageModel:messageModel];
+    ChatDateOfferMessageObject *messageObject = messageModel.message.messageAdditionalObject;
 
     static UILabel *descLabel;
     if (!descLabel) {

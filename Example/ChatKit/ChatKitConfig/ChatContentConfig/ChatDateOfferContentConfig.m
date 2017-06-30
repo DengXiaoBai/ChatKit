@@ -1,41 +1,40 @@
 //
-//  SKSDateOfferContentConfig.m
+//  ChatDateOfferContentConfig.m
 //  ChatKit
 //
 //  Created by iCrany on 2016/12/28.
 //
 //
 
-#import "SKSDateOfferContentConfig.h"
-#import "SKSChatCellConfig.h"
-#import "SKSChatMessageConstant.h"
-#import "SKSChatMessageModel.h"
-#import "SKSChatMessage.h"
-#import "SKSChatSessionConfig.h"
-#import "SKSChatDateOfferTopView.h"
-#import "SKSChatDateOfferBtnBottomView.h"
-#import "SKSChatDateOfferDescBottomView.h"
-#import "SKSDateOfferMessageObject.h"
+#import <ChatKit/SKSChatMessageModel.h>
+#import <ChatKit/SKSChatMessage.h>
+#import <ChatKit/SKSChatSessionConfig.h>
+#import <ChatKit/SKSChatCellConfig.h>
+#import "ChatDateOfferContentConfig.h"
+#import "ChatDateOfferTopView.h"
+#import "ChatDateOfferBtnBottomView.h"
+#import "ChatDateOfferDescBottomView.h"
+#import "ChatDateOfferMessageObject.h"
 
-@implementation SKSDateOfferContentConfig
+@implementation ChatDateOfferContentConfig
 
 - (CGSize)contentSizeWithCellWidth:(CGFloat)cellWidth {
 
-    CGSize topContentSize = [SKSChatDateOfferTopView getViewSizeWithMessageModel:self.messageModel];
+    CGSize topContentSize = [ChatDateOfferTopView getViewSizeWithMessageModel:self.messageModel];
     CGSize bottomContentSize = CGSizeZero;
 
-    SKSDateOfferMessageObject *messageObject = self.messageModel.message.messageAdditionalObject;
+    ChatDateOfferMessageObject *messageObject = self.messageModel.message.messageAdditionalObject;
 
     switch (self.messageModel.message.messageSourceType) {
         case SKSMessageSourceTypeSend: {
-            bottomContentSize = [SKSChatDateOfferDescBottomView getViewSizeWithMessageModel:self.messageModel];
+            bottomContentSize = [ChatDateOfferDescBottomView getViewSizeWithMessageModel:self.messageModel];
             break;
         }
         case SKSMessageSourceTypeReceive: {
             if (messageObject.dateOfferState == SKSDateOfferStateNotProcessed) {
-                bottomContentSize = [SKSChatDateOfferBtnBottomView getViewSizeWithMessageModel:self.messageModel];
+                bottomContentSize = [ChatDateOfferBtnBottomView getViewSizeWithMessageModel:self.messageModel];
             } else {
-                bottomContentSize = [SKSChatDateOfferDescBottomView getViewSizeWithMessageModel:self.messageModel];
+                bottomContentSize = [ChatDateOfferDescBottomView getViewSizeWithMessageModel:self.messageModel];
             }
             break;
         }
@@ -51,11 +50,11 @@
 }
 
 - (NSString *)cellContentClass {
-    return @"SKSChatDateOfferContentView";
+    return @"ChatDateOfferContentView";
 }
 
 - (NSString *)cellContentIdentifier {
-    return [NSString stringWithFormat:@"SKSChatDateOfferContentView-%@", self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive"];
+    return [NSString stringWithFormat:@"ChatDateOfferContentView-%@", self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive"];
 }
 
 - (UIEdgeInsets)contentViewInsets {

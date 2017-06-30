@@ -1,5 +1,5 @@
 //
-//  SKSChatDateOfferTopView.h
+//  ChatDateOfferTopView.h
 //  ChatKit
 //
 //  Created by iCrany on 2016/12/28.
@@ -10,7 +10,7 @@
 
 @class SKSChatMessageModel;
 
-@interface SKSChatDateOfferTopView : UIView
+@interface ChatDateOfferTopView : UIView
 
 - (instancetype)initWithMessageModel:(SKSChatMessageModel *)messageModel;
 

@@ -1,16 +1,14 @@
 //
-//  SKSDateOfferContentConfig.h
+//  ChatDateOfferContentConfig.h
 //  ChatKit
 //
 //  Created by iCrany on 2016/12/28.
 //
 //
 
+#import <ChatKit/SKSBaseContentConfig.h>
 
-
-#import "SKSBaseContentConfig.h"
-
-@interface SKSDateOfferContentConfig : SKSBaseContentConfig
+@interface ChatDateOfferContentConfig : SKSBaseContentConfig
 
 @property (nonatomic, strong) UIFont *titleFont;
 @property (nonatomic, strong) UIColor *titleColor;

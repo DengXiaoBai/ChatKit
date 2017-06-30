@@ -1,5 +1,5 @@
 //
-//  SKSDateOfferMessageObject.h
+//  ChatDateOfferMessageObject.h
 //  ChatKit
 //
 //  Created by iCrany on 2016/12/28.
@@ -8,11 +8,11 @@
 
 
 
-#import "SKSDateActivityMessageObject.h"
+#import "ChatDateActivityMessageObject.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SKSDateOfferMessageObject : SKSDateActivityMessageObject
+@interface ChatDateOfferMessageObject : ChatDateActivityMessageObject
 
 @property (nonatomic, strong) NSString *topDesc;
 

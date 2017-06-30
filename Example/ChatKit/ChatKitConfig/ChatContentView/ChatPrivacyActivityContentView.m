@@ -6,7 +6,6 @@
 //
 //
 
-#import <ChatKit/SKSDateJoinedPreviewView.h>
 #import <ChatKit/SKSChatMessage.h>
 #import <ChatKit/SKSChatSessionConfig.h>
 #import <ChatKit/SKSImageView.h>

@@ -1,38 +1,39 @@
 //
-//  SKSDateJoinedPreviewContentConfig.m
+//  ChatDateJoinedPreviewContentConfig.m
 //  ChatKit
 //
 //  Created by iCrany on 2016/12/29.
 //
 //
 
-#import "SKSDateJoinedPreviewContentConfig.h"
-#import "SKSChatMessageModel.h"
-#import "SKSChatMessage.h"
-#import "SKSDateJoinedPreviewView.h"
-#import "SKSDateJoinedPreviewMessageObject.h"
+#import <ChatKit/SKSChatMessageModel.h>
+#import <ChatKit/SKSChatMessageObject.h>
+#import <ChatKit/SKSChatMessage.h>
+#import "ChatDateJoinedPreviewContentConfig.h"
+#import "ChatDateJoinedPreviewView.h"
+#import "ChatDateJoinedPreviewMessageObject.h"
 
-@implementation SKSDateJoinedPreviewContentConfig
+@implementation ChatDateJoinedPreviewContentConfig
 
 - (CGSize)contentSizeWithCellWidth:(CGFloat)cellWidth {
-    CGSize contentViewSize = [SKSDateJoinedPreviewView getSizeWithMessageModel:self.messageModel];
+    CGSize contentViewSize = [ChatDateJoinedPreviewView getSizeWithMessageModel:self.messageModel];
     self.messageModel.contentViewSize = contentViewSize;
     return contentViewSize;
 }
 
 - (NSString *)cellContentClass {
-    return @"SKSChatDateJoinedPreviewContentView";
+    return @"ChatDateJoinedPreviewContentView";
 }
 
 - (NSString *)cellContentIdentifier {
     //需要判断是是否有玫瑰
-    SKSDateJoinedPreviewMessageObject *messageObject = self.messageModel.message.messageAdditionalObject;
+    ChatDateJoinedPreviewMessageObject *messageObject = self.messageModel.message.messageAdditionalObject;
     BOOL isHaveGift = messageObject.roses > 0 ? YES : NO;//Cell 重用相关
 
     //判断是否有倒计时
     BOOL isHaveCountDown = messageObject.state == SKSActivityState_PUBLISHED ? YES: NO;//Cell 重用相关
 
-    return [NSString stringWithFormat:@"SKSChatDateJoinedPreviewContentView-%@-%d-%d", self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive", isHaveGift, isHaveCountDown];
+    return [NSString stringWithFormat:@"ChatDateJoinedPreviewContentView-%@-%d-%d", self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive", isHaveGift, isHaveCountDown];
 }
 
 - (UIEdgeInsets)contentViewInsets {

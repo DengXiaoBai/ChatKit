@@ -1,5 +1,5 @@
 //
-//  SKSDateJoinedPreviewContentConfig.h
+//  ChatDateJoinedPreviewContentConfig.h
 //  ChatKit
 //
 //  Created by iCrany on 2016/12/29.
@@ -8,9 +8,9 @@
 
 
 
-#import "SKSBaseContentConfig.h"
+#import <ChatKit/SKSBaseContentConfig.h>
 
-@interface SKSDateJoinedPreviewContentConfig : SKSBaseContentConfig
+@interface ChatDateJoinedPreviewContentConfig : SKSBaseContentConfig
 
 @property (nonatomic, assign) CGFloat cellWidth;
 

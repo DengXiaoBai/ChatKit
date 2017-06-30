@@ -1,26 +1,26 @@
 //
-//  SKSChatDateOfferBtnBottomView.m
+//  ChatDateOfferBtnBottomView.m
 //  ChatKit
 //
 //  Created by iCrany on 2016/12/28.
 //
 //
 
-#import "SKSChatDateOfferBtnBottomView.h"
-#import "SKSChatMessageModel.h"
-#import "SKSDateOfferMessageObject.h"
-#import "SKSDateOfferContentConfig.h"
-#import "SKSChatSessionConfig.h"
-#import "SKSChatMessage.h"
-#import "SKSChatDateOfferTopView.h"
+#import <ChatKit/SKSChatMessageModel.h>
+#import <ChatKit/SKSChatSessionConfig.h>
+#import <ChatKit/SKSChatMessage.h>
+#import "ChatDateOfferBtnBottomView.h"
+#import "ChatDateOfferMessageObject.h"
+#import "ChatDateOfferContentConfig.h"
+#import "ChatDateOfferTopView.h"
 
 static const CGFloat kDefaultHeight = 40;
 
-@interface SKSChatDateOfferBtnBottomView()
+@interface ChatDateOfferBtnBottomView()
 
 @property (nonatomic, strong) SKSChatMessageModel *messageModel;
-@property (nonatomic, strong) SKSDateOfferContentConfig *contentConfig;
-@property (nonatomic, strong) SKSDateOfferMessageObject *messageObject;
+@property (nonatomic, strong) ChatDateOfferContentConfig *contentConfig;
+@property (nonatomic, strong) ChatDateOfferMessageObject *messageObject;
 
 @property (nonatomic, strong) UIButton *acceptBtn;
 @property (nonatomic, strong) UIButton *rejectBtn;
@@ -28,7 +28,7 @@ static const CGFloat kDefaultHeight = 40;
 
 @end
 
-@implementation SKSChatDateOfferBtnBottomView
+@implementation ChatDateOfferBtnBottomView
 
 - (instancetype)initWithMessageModel:(SKSChatMessageModel *)messageModel {
     self = [super init];
@@ -76,7 +76,7 @@ static const CGFloat kDefaultHeight = 40;
     self.messageObject = self.messageModel.message.messageAdditionalObject;
 
 
-    CGFloat contentWidth = [SKSChatDateOfferTopView getViewSizeWithMessageModel:self.messageModel].width;
+    CGFloat contentWidth = [ChatDateOfferTopView getViewSizeWithMessageModel:self.messageModel].width;
     CGFloat centerX = contentWidth / 2;
 
     [_rejectBtn setTitle:self.messageObject.rejectBtnTitle forState:UIControlStateNormal];
@@ -103,7 +103,7 @@ static const CGFloat kDefaultHeight = 40;
 }
 
 + (CGSize)getViewSizeWithMessageModel:(SKSChatMessageModel *)messageModel {
-    return CGSizeMake([SKSChatDateOfferTopView getViewSizeWithMessageModel:messageModel].width, kDefaultHeight);
+    return CGSizeMake([ChatDateOfferTopView getViewSizeWithMessageModel:messageModel].width, kDefaultHeight);
 }
 
 #pragma mark - Event Response

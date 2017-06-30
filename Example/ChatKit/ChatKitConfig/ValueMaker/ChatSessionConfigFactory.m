@@ -18,8 +18,6 @@
 #import <ChatKit/SKSTipContentConfig.h>
 #import <ChatKit/SKSCoreTextContentConfig.h>
 #import <ChatKit/SKSDateCallContentConfig.h>
-#import <ChatKit/SKSDateOfferContentConfig.h>
-#import <ChatKit/SKSDateJoinedPreviewContentConfig.h>
 #import <ChatKit/SKSImpressContentConfig.h>
 #import <ChatKit/SKSUnReadYellowContentConfig.h>
 #import <ChatKit/SKSChatMessageModel.h>
@@ -27,6 +25,8 @@
 #import "ChatSessionConfigFactory.h"
 #import "ChatPrivacyDateOfferContentConfig.h"
 #import "ChatPrivacyGiftOfferContentConfig.h"
+#import "ChatDateOfferContentConfig.h"
+#import "ChatDateJoinedPreviewContentConfig.h"
 
 @interface ChatSessionConfigFactory()
 
@@ -61,9 +61,9 @@
                 @(SKSMessageMediaTypeTipLabel) : [SKSTipContentConfig new],
                 @(SKSMessageMediaTypeCoreText) : [SKSCoreTextContentConfig new],
                 @(SKSMessageMediaTypeDataCall) : [SKSDateCallContentConfig new],
-                @(SKSMessageMediaTypeDateOffer) : [SKSDateOfferContentConfig new],
-                @(SKSMessageMediaTypeDateJoinedPreview) : [SKSDateJoinedPreviewContentConfig new],
-                @(SKSMessageMediaTypeConfirmMeet) : [SKSDateOfferContentConfig new],
+                @(SKSMessageMediaTypeDateOffer) : [ChatDateOfferContentConfig new],
+                @(SKSMessageMediaTypeDateJoinedPreview) : [ChatDateJoinedPreviewContentConfig new],
+                @(SKSMessageMediaTypeConfirmMeet) : [ChatDateOfferContentConfig new],
                 @(SKSMessageMediaTypeImpress) : [SKSImpressContentConfig new],
                 @(SKSMessageMediaTypeUnReadTip) : [SKSUnReadYellowContentConfig new],
                 @(SKSMessageMediaTypePrivacyActivity): [ChatPrivacyDateOfferContentConfig new],

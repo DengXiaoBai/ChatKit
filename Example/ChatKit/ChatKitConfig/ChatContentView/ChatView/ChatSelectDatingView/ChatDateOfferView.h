@@ -1,5 +1,5 @@
 //
-//  SKSChatDateOfferDescBottomView.h
+//  ChatDateOfferView.h
 //  ChatKit
 //
 //  Created by iCrany on 2016/12/28.
@@ -10,12 +10,18 @@
 
 @class SKSChatMessageModel;
 
-@interface SKSChatDateOfferDescBottomView : UIView
+@protocol DateOfferViewDelegate <NSObject>
+
+- (void)selectDatingViewBtnActionAtIndex:(NSInteger)atIndex;
+
+@end
+
+@interface ChatDateOfferView : UIView
+
+@property (nonatomic, weak) id<DateOfferViewDelegate> delegate;
 
 - (instancetype)initWithMessageModel:(SKSChatMessageModel *)messageModel;
 
 - (void)updateUIWithMessageModel:(SKSChatMessageModel *)messageModel force:(BOOL)force;
-
-+ (CGSize)getViewSizeWithMessageModel:(SKSChatMessageModel *)messageModel;
 
 @end

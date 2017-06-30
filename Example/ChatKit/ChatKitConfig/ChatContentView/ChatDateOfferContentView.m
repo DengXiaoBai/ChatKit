@@ -1,23 +1,23 @@
 //
-//  SKSChatDateOfferContentView.m
+//  ChatDateOfferContentView.m
 //  ChatKit
 //
 //  Created by iCrany on 2016/12/28.
 //
 //
 
-#import "SKSChatDateOfferContentView.h"
+#import "ChatDateOfferContentView.h"
 #import "SKSChatMessageModel.h"
 #import "SKSChatMessage.h"
-#import "SKSDateOfferView.h"
+#import "ChatDateOfferView.h"
 
-@interface SKSChatDateOfferContentView()<DateOfferViewDelegate>
+@interface ChatDateOfferContentView()<DateOfferViewDelegate>
 
-@property (nonatomic, strong) SKSDateOfferView *dateOfferContentView;
+@property (nonatomic, strong) ChatDateOfferView *dateOfferContentView;
 
 @end
 
-@implementation SKSChatDateOfferContentView
+@implementation ChatDateOfferContentView
 
 - (instancetype)initWithSKSMessageModel:(SKSChatMessageModel *)messageModel {
     self = [super initWithSKSMessageModel:messageModel];
@@ -30,7 +30,7 @@
 
 - (void)setupUI {
     if (!_dateOfferContentView) {
-        _dateOfferContentView = [[SKSDateOfferView alloc] initWithMessageModel:self.messageModel];
+        _dateOfferContentView = [[ChatDateOfferView alloc] initWithMessageModel:self.messageModel];
         _dateOfferContentView.delegate = self;
         [self addSubview:_dateOfferContentView];
     }

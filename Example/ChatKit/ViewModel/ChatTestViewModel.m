@@ -6,7 +6,6 @@
 //  Copyright © 2016年 Sachsen. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import <CoreLocation/CLLocation.h>
 #import <ChatKit/SKSMenuItemProtocol.h>
 #import <ChatKit/SKSChatMessage.h>
@@ -22,16 +21,16 @@
 #import <ChatKit/SKSMenuItemBaseObject.h>
 #import <ChatKit/SKSDateCallMessageObject.h>
 #import <ChatKit/SKSChatMessageConstant.h>
-#import <ChatKit/SKSDateJoinedPreviewMessageObject.h>
-#import <ChatKit/SKSDateOfferMessageObject.h>
-#import <ChatKit/SKSConfirmMeetMessageObject.h>
 #import <ChatKit/SKSImpressMessageObject.h>
 #import <GRMustache/GRMustacheTemplate.h>
 #import <ChatKit/SKSUnReadMessageObject.h>
 #import "ChatTestViewModel.h"
 #import "ChatDefaultValueMaker.h"
+#import "ChatDateActivityMessageObject.h"
 #import "ChatPrivacyDateOfferMessageObject.h"
 #import "ChatPrivacyGiftOfferMessageObject.h"
+#import "ChatConfirmMeetMessageObject.h"
+#import "ChatDateJoinedPreviewMessageObject.h"
 
 
 @interface ChatTestViewModel()
@@ -495,7 +494,7 @@
     chatMessage.timestampDesc = @"今天 23:34";
     chatMessage.messageId = time(NULL);
 
-    SKSDateOfferMessageObject *messageObject = [[SKSDateOfferMessageObject alloc] init];
+    ChatDateOfferMessageObject *messageObject = [[ChatDateOfferMessageObject alloc] init];
     messageObject.title = @"我们一起去吃饭";
     messageObject.dateOfferState = dateOfferState;
     messageObject.message = chatMessage;
@@ -526,7 +525,7 @@
     chatMessage.timestampDesc = @"今天 24: 50";
     chatMessage.messageId = time(NULL);
 
-    SKSDateJoinedPreviewMessageObject *messageObject = [[SKSDateJoinedPreviewMessageObject alloc] init];
+    ChatDateJoinedPreviewMessageObject *messageObject = [[ChatDateJoinedPreviewMessageObject alloc] init];
     messageObject.title = title;
     messageObject.roses = roseCount;
     messageObject.state = activityState;
@@ -583,7 +582,7 @@
     chatMessage.timestampDesc = @"今天 23:34";
     chatMessage.messageId = time(NULL);
 
-    SKSConfirmMeetMessageObject *messageObject = [[SKSConfirmMeetMessageObject alloc] init];
+    ChatConfirmMeetMessageObject *messageObject = [[ChatConfirmMeetMessageObject alloc] init];
     messageObject.title = @"我们一起去吃饭";
     messageObject.dateOfferState = dateOfferState;
     messageObject.nickname = @"我是帐号哟";

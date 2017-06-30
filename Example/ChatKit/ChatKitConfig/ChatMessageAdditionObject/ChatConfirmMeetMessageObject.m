@@ -1,14 +1,14 @@
 //
-//  SKSConfirmMeetMessageObject.m
+//  ChatConfirmMeetMessageObject.m
 //  ChatKit
 //
 //  Created by iCrany on 2017/2/8.
 //
 //
 
-#import "SKSConfirmMeetMessageObject.h"
+#import "ChatConfirmMeetMessageObject.h"
 
-@implementation SKSConfirmMeetMessageObject
+@implementation ChatConfirmMeetMessageObject
 
 - (NSString *)topDesc {
     return [NSString stringWithFormat:@"是否已与%@完成线下见面?", self.nickname];

@@ -6,14 +6,14 @@
 //
 //
 
-#import <ChatKit/SKSDateActivityMessageObject.h>
+#import "ChatDateActivityMessageObject.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
  * 私人邀约
  */
-@interface ChatPrivacyDateOfferMessageObject : SKSDateActivityMessageObject
+@interface ChatPrivacyDateOfferMessageObject : ChatDateActivityMessageObject
 
 @property (nonatomic, strong) NSString *aid;
 @property (nonatomic, strong) NSString *authorId;

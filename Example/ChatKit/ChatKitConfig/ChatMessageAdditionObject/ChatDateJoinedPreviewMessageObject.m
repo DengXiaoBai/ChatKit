@@ -1,14 +1,14 @@
 //
-//  SKSDateJoinedPreviewMessageObject.m
+//  ChatDateJoinedPreviewMessageObject.m
 //  ChatKit
 //
 //  Created by iCrany on 2016/12/29.
 //
 //
 
-#import "SKSDateJoinedPreviewMessageObject.h"
+#import "ChatDateJoinedPreviewMessageObject.h"
 
-@implementation SKSDateJoinedPreviewMessageObject
+@implementation ChatDateJoinedPreviewMessageObject
 
 - (NSString *)bottomDesc {
     return @"来自你参与的约会";
@@ -21,4 +21,5 @@
 - (NSString *)rosesIconImageName {
     return @"date-rose-icon";
 }
+
 @end
