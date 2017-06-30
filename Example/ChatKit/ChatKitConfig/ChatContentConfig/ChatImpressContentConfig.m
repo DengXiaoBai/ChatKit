@@ -11,6 +11,7 @@
 #import <ChatKit/SKSChatMessage.h>
 #import "ChatImpressContentConfig.h"
 #import "ChatImpressView.h"
+#import "ChatImpressContentView.h"
 
 @implementation ChatImpressContentConfig
 
@@ -43,11 +44,11 @@
 }
 
 - (NSString *)cellContentClass {
-    return @"ChatImpressContentView";
+    return NSStringFromClass(ChatImpressContentView.class);
 }
 
 - (NSString *)cellContentIdentifier {
-    return [NSString stringWithFormat:@"ChatImpressContentView-%@", self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive"];
+    return [NSString stringWithFormat:@"%@-%@", [self cellContentClass], self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive"];
 }
 
 - (UIEdgeInsets)contentViewInsets {
@@ -64,8 +65,6 @@
 
 - (void)updateWithMessageModel:(SKSChatMessageModel *)messageModel {
     self.messageModel = messageModel;
-
-
 }
 
 @end
