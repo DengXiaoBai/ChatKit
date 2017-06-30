@@ -47,7 +47,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [ChatSessionHelper sysnEmoticonList];
+    self.automaticallyAdjustsScrollViewInsets = NO;
     
     self.sksDelegate = self;
     self.sksDataSource = self;

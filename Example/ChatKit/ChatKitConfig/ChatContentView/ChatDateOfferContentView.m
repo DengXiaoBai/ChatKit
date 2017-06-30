@@ -6,9 +6,9 @@
 //
 //
 
+#import <ChatKit/SKSChatMessageModel.h>
+#import <ChatKit/SKSChatMessage.h>
 #import "ChatDateOfferContentView.h"
-#import "SKSChatMessageModel.h"
-#import "SKSChatMessage.h"
 #import "ChatDateOfferView.h"
 
 @interface ChatDateOfferContentView()<DateOfferViewDelegate>

@@ -6,8 +6,8 @@
 //
 //
 
+#import <ChatKit/SKSChatMessage.h>
 #import "ChatDateOfferMessageObject.h"
-#import "SKSChatMessage.h"
 
 @implementation ChatDateOfferMessageObject
 
