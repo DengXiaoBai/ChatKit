@@ -31,16 +31,22 @@
 		B712416BFB0E4C530BF43457 /* ChatConfirmMeetMessageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124249827848C30930566F /* ChatConfirmMeetMessageObject.m */; };
 		B712418B14CDC91291A7D605 /* ChatSessionConfigFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124D150956D787D806177C /* ChatSessionConfigFactory.m */; };
 		B712419E15CF2884490FCA03 /* ChatPrivacyDateOfferMessageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124E3F68092F816CF5A2BC /* ChatPrivacyDateOfferMessageObject.m */; };
+		B71242658F186373FF24890F /* ChatImpressContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124F6BF8B08AFF7872A25C /* ChatImpressContentView.m */; };
+		B7124363BF4545209DFDDFED /* ChatImpressContentConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B71244EE5D41162332C8C039 /* ChatImpressContentConfig.m */; };
+		B71243715FFEEFB8F2127A2B /* ChatYOMessageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B71248DF9C5605BF4AC53D77 /* ChatYOMessageObject.m */; };
 		B71243C73B99467A783A197E /* ChatDateActivityMessageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B71249912228A820E0A29963 /* ChatDateActivityMessageObject.m */; };
 		B71243D4D561D0B926043F78 /* ChatDateOfferContentConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124A03DC3A65EA81BD3CED /* ChatDateOfferContentConfig.m */; };
+		B712446043E51E1F821703BF /* ChatImpressMessageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124060B512B6070980D0AF /* ChatImpressMessageObject.m */; };
 		B71244C6D5C429AE8388F57A /* ChatPrivacyDateOfferBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124AFA1FE1434DA85E8682 /* ChatPrivacyDateOfferBtnView.m */; };
 		B712455A80FB8708FCD81A2D /* ChatDateOfferMessageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B71247B8505828FE2A3F3E99 /* ChatDateOfferMessageObject.m */; };
 		B71245B60D3F4A62AE5F042A /* in2.txt in Resources */ = {isa = PBXBuildFile; fileRef = B71241FAE55A4836F555A886 /* in2.txt */; };
 		B71246289F3BFB39F8D471DF /* ChatDateJoinedPreviewMessageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124AF54CDD4462976B911C /* ChatDateJoinedPreviewMessageObject.m */; };
 		B712465E4721BC2ACB709E71 /* ChatDateJoinedPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = B712400DE9D49472A204A0EB /* ChatDateJoinedPreviewView.m */; };
 		B7124736E1B6CB001D020B91 /* ChatPrivacyDateOfferContentConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124739D4C38807F6F702F6 /* ChatPrivacyDateOfferContentConfig.m */; };
+		B71247CB621DB2A0C1B2A473 /* ChatYOContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124682D07BFF829D4E8B87 /* ChatYOContentView.m */; };
 		B71247FC19117FE3EBD10193 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7124F128C874CCB98D25BBB /* Default-568h@2x.png */; };
 		B7124853E7C5EAF32205C656 /* ChatTestViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B71240C920A1A7100096BB1C /* ChatTestViewModel.m */; };
+		B71248F0EAF8A1739082FB5B /* ChatImpressBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124D5B0744241677E99A9E /* ChatImpressBottomView.m */; };
 		B71248FB78A8598B20EAC677 /* ChatPrivacyActivityOfferCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124711E72AD71E52A82E84 /* ChatPrivacyActivityOfferCoverView.m */; };
 		B712495BB39274E11209C13B /* EmojisList.plist in Resources */ = {isa = PBXBuildFile; fileRef = B71241845849F6AFCB9AEEC9 /* EmojisList.plist */; };
 		B71249D67FBCD0426316FF1F /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71242EBBCBFED9F9244BBEF /* UIFont.swift */; };
@@ -49,6 +55,8 @@
 		B7124BFDCDD5C8096CA8043E /* ChatPrivacyGiftOfferBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = B712453E8A5D29E9AA8BB3F6 /* ChatPrivacyGiftOfferBtnView.m */; };
 		B7124C59AD2C991E4726D243 /* ChatPrivacyGiftOfferMessageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B712415A6A207490A1319F72 /* ChatPrivacyGiftOfferMessageObject.m */; };
 		B7124D06B3A71A2C67663ED8 /* ChatDateOfferBtnBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = B71241BA4AC4769573A5E115 /* ChatDateOfferBtnBottomView.m */; };
+		B7124D9A2A03A83B24DACDD6 /* ChatImpressTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124893AE7A5165CC6044FD /* ChatImpressTopView.m */; };
+		B7124DB10254810F303C366F /* ChatImpressView.m in Sources */ = {isa = PBXBuildFile; fileRef = B712476A84FB8939CC9EB783 /* ChatImpressView.m */; };
 		B7124DBD9CE7F2FEFE0A28CD /* common-roses-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B71243B8A6718CAA2918B1E6 /* common-roses-icon.png */; };
 		B7124DC6AB60FF9C4936524C /* ChatSessionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124B59D0165110B91F6F4F /* ChatSessionHelper.m */; };
 		B7124E1A5AB89B26C474666C /* ChatDateOfferView.m in Sources */ = {isa = PBXBuildFile; fileRef = B712453DF5EBC938613FAEDE /* ChatDateOfferView.m */; };
@@ -58,6 +66,7 @@
 		B7124F013DFDCB92E59B77FB /* ChatDateOfferTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = B712485CD005F65C4F3DA2D0 /* ChatDateOfferTopView.m */; };
 		B7124F76CCEED8FDF60798AC /* ChatPrivacyActivityContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = B712459EB603E8115806A34D /* ChatPrivacyActivityContentView.m */; };
 		B7124F85DCD40C36E930B2F7 /* ChatDateOfferDescBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124F07B16D89F8E84D0444 /* ChatDateOfferDescBottomView.m */; };
+		B7124FF70F41A2E3479D48AA /* ChatYOContentConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124612608978D382635100 /* ChatYOContentConfig.m */; };
 		D19AC708A69802FC98B5732C /* Pods_ChatKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 235195F2020DB035610B0014 /* Pods_ChatKit_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,42 +107,56 @@
 		AA66345F2BCFEC7601A6D31F /* Pods-ChatKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatKit_Example/Pods-ChatKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B712400DE9D49472A204A0EB /* ChatDateJoinedPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatDateJoinedPreviewView.m; sourceTree = "<group>"; };
 		B7124041BBA76F8A61B47A02 /* ChatPrivacyGiftOfferView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyGiftOfferView.h; sourceTree = "<group>"; };
+		B7124060B512B6070980D0AF /* ChatImpressMessageObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatImpressMessageObject.m; sourceTree = "<group>"; };
 		B712408DEA59A94E306147C9 /* ChatPrivacyGiftOfferMessageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyGiftOfferMessageObject.h; sourceTree = "<group>"; };
 		B71240C920A1A7100096BB1C /* ChatTestViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTestViewModel.m; sourceTree = "<group>"; };
 		B71240FA3B330E24517DD67B /* ChatPrivacyActivityOfferCoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyActivityOfferCoverView.h; sourceTree = "<group>"; };
 		B712414F9E4626056F9A1BD3 /* ChatConfirmMeetMessageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatConfirmMeetMessageObject.h; sourceTree = "<group>"; };
+		B712415958C35CD28B66E35C /* ChatImpressContentConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatImpressContentConfig.h; sourceTree = "<group>"; };
 		B712415A6A207490A1319F72 /* ChatPrivacyGiftOfferMessageObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyGiftOfferMessageObject.m; sourceTree = "<group>"; };
 		B71241845849F6AFCB9AEEC9 /* EmojisList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = EmojisList.plist; sourceTree = "<group>"; };
 		B71241BA4AC4769573A5E115 /* ChatDateOfferBtnBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatDateOfferBtnBottomView.m; sourceTree = "<group>"; };
 		B71241C091B196B1CC103FB2 /* ChatDateActivityMessageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDateActivityMessageObject.h; sourceTree = "<group>"; };
 		B71241FAE55A4836F555A886 /* in2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = in2.txt; sourceTree = "<group>"; };
 		B7124249827848C30930566F /* ChatConfirmMeetMessageObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatConfirmMeetMessageObject.m; sourceTree = "<group>"; };
+		B71242E3FE12B79BA03BA4E8 /* ChatImpressContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatImpressContentView.h; sourceTree = "<group>"; };
 		B71242EBBCBFED9F9244BBEF /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		B7124337FE3667A4D1B944BF /* ChatYOMessageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatYOMessageObject.h; sourceTree = "<group>"; };
 		B7124359F2A3282F62F33762 /* UIFont+SKS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+SKS.m"; sourceTree = "<group>"; };
 		B71243B8A6718CAA2918B1E6 /* common-roses-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common-roses-icon.png"; sourceTree = "<group>"; };
 		B7124441A7D2C7B76823DE83 /* ChatPrivacyDateOfferBtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyDateOfferBtnView.h; sourceTree = "<group>"; };
+		B712449547F60FAC29F42A02 /* ChatImpressTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatImpressTopView.h; sourceTree = "<group>"; };
+		B71244EE5D41162332C8C039 /* ChatImpressContentConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatImpressContentConfig.m; sourceTree = "<group>"; };
 		B712452534AF695B9946D96D /* MarcosDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarcosDefinition.h; sourceTree = "<group>"; };
 		B712453DF5EBC938613FAEDE /* ChatDateOfferView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatDateOfferView.m; sourceTree = "<group>"; };
 		B712453E8A5D29E9AA8BB3F6 /* ChatPrivacyGiftOfferBtnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyGiftOfferBtnView.m; sourceTree = "<group>"; };
 		B712459431A1E6F1D2E37DE2 /* ChatSessionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatSessionHelper.h; sourceTree = "<group>"; };
 		B712459EB603E8115806A34D /* ChatPrivacyActivityContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyActivityContentView.m; sourceTree = "<group>"; };
 		B71245A79E6CDD8BA19C38B2 /* ChatSessionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatSessionViewController.h; sourceTree = "<group>"; };
+		B7124612608978D382635100 /* ChatYOContentConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatYOContentConfig.m; sourceTree = "<group>"; };
 		B712465DFFEC0AA79AE04485 /* ChatPrivacyDateOfferContentConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyDateOfferContentConfig.h; sourceTree = "<group>"; };
 		B7124662817B2211B07F0C9C /* ChatDateJoinedPreviewContentConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDateJoinedPreviewContentConfig.h; sourceTree = "<group>"; };
 		B712466C352B5FFFEAF252DF /* ChatDateOfferContentConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDateOfferContentConfig.h; sourceTree = "<group>"; };
+		B7124682D07BFF829D4E8B87 /* ChatYOContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatYOContentView.m; sourceTree = "<group>"; };
 		B71246A1B1193E833CA5950B /* ChatDateJoinedPreviewContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDateJoinedPreviewContentView.h; sourceTree = "<group>"; };
 		B71246EA19A807A3E14ECC8B /* ChatSessionConfigFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatSessionConfigFactory.h; sourceTree = "<group>"; };
 		B71246F36750C02804169838 /* ChatDateJoinedPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDateJoinedPreviewView.h; sourceTree = "<group>"; };
 		B7124711E72AD71E52A82E84 /* ChatPrivacyActivityOfferCoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyActivityOfferCoverView.m; sourceTree = "<group>"; };
 		B7124739D4C38807F6F702F6 /* ChatPrivacyDateOfferContentConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyDateOfferContentConfig.m; sourceTree = "<group>"; };
+		B712476A84FB8939CC9EB783 /* ChatImpressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatImpressView.m; sourceTree = "<group>"; };
 		B712476B948D493CFFF4943C /* ChatSessionConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatSessionConfig.m; sourceTree = "<group>"; };
 		B7124774F0BE2C661253DF35 /* chat_admin.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = chat_admin.html; sourceTree = "<group>"; };
 		B712478F7B374A7E6836AFF8 /* ChatDateOfferView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDateOfferView.h; sourceTree = "<group>"; };
 		B71247B8505828FE2A3F3E99 /* ChatDateOfferMessageObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatDateOfferMessageObject.m; sourceTree = "<group>"; };
 		B71247ED0C25BFF2A1DC8509 /* ChatDateJoinedPreviewContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatDateJoinedPreviewContentView.m; sourceTree = "<group>"; };
 		B712485CD005F65C4F3DA2D0 /* ChatDateOfferTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatDateOfferTopView.m; sourceTree = "<group>"; };
+		B7124893AE7A5165CC6044FD /* ChatImpressTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatImpressTopView.m; sourceTree = "<group>"; };
+		B712489FD7BCFF8877773DE1 /* ChatYOContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatYOContentView.h; sourceTree = "<group>"; };
+		B71248DF9C5605BF4AC53D77 /* ChatYOMessageObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatYOMessageObject.m; sourceTree = "<group>"; };
+		B71248FD88C115E4837CD537 /* ChatImpressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatImpressView.h; sourceTree = "<group>"; };
 		B71249912228A820E0A29963 /* ChatDateActivityMessageObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatDateActivityMessageObject.m; sourceTree = "<group>"; };
 		B712499A527494A78FE631F0 /* UIFont+SKS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+SKS.h"; sourceTree = "<group>"; };
+		B71249CB11FC1BE39A547147 /* ChatYOContentConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatYOContentConfig.h; sourceTree = "<group>"; };
 		B71249E8DF1A7551467E8A5C /* ChatPrivacyGiftOfferView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyGiftOfferView.m; sourceTree = "<group>"; };
 		B7124A03DC3A65EA81BD3CED /* ChatDateOfferContentConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatDateOfferContentConfig.m; sourceTree = "<group>"; };
 		B7124A102606B451F69AE1F8 /* ChatPrivacyGiftOfferContentConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyGiftOfferContentConfig.h; sourceTree = "<group>"; };
@@ -152,12 +175,14 @@
 		B7124D02C406466D6EBAD19F /* ChatDateOfferDescBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDateOfferDescBottomView.h; sourceTree = "<group>"; };
 		B7124D150956D787D806177C /* ChatSessionConfigFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatSessionConfigFactory.m; sourceTree = "<group>"; };
 		B7124D4915DBF9CBC7CF928D /* ChatSessionConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatSessionConfig.h; sourceTree = "<group>"; };
+		B7124D5B0744241677E99A9E /* ChatImpressBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatImpressBottomView.m; sourceTree = "<group>"; };
 		B7124D73330CD8C3E9E7287E /* ChatDateOfferTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDateOfferTopView.h; sourceTree = "<group>"; };
 		B7124DE37537965584676561 /* ChatPrivacyGiftOfferBtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyGiftOfferBtnView.h; sourceTree = "<group>"; };
 		B7124DFD47B20647AC68FF42 /* ChatPrivacyGiftOfferContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyGiftOfferContentView.m; sourceTree = "<group>"; };
 		B7124E3F68092F816CF5A2BC /* ChatPrivacyDateOfferMessageObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyDateOfferMessageObject.m; sourceTree = "<group>"; };
 		B7124E701D1691B6C59E4339 /* ChatTestViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTestViewModel.h; sourceTree = "<group>"; };
 		B7124E9969C8E3629D6FF2AA /* ChatDateOfferContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatDateOfferContentView.m; sourceTree = "<group>"; };
+		B7124EA5B4442E0B13A27894 /* ChatImpressMessageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatImpressMessageObject.h; sourceTree = "<group>"; };
 		B7124EC68447122FC61EF357 /* ChatSessionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatSessionViewController.m; sourceTree = "<group>"; };
 		B7124ED30C79BCC1C660A624 /* ChatPrivacyActivityContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyActivityContentView.h; sourceTree = "<group>"; };
 		B7124ED7ECE9BAF5F5FEC6E0 /* ChatDateOfferBtnBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDateOfferBtnBottomView.h; sourceTree = "<group>"; };
@@ -165,6 +190,8 @@
 		B7124EF30104F477E98E4BDE /* ChatPrivacyGiftOfferDescView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyGiftOfferDescView.h; sourceTree = "<group>"; };
 		B7124F07B16D89F8E84D0444 /* ChatDateOfferDescBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatDateOfferDescBottomView.m; sourceTree = "<group>"; };
 		B7124F128C874CCB98D25BBB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
+		B7124F6BF8B08AFF7872A25C /* ChatImpressContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatImpressContentView.m; sourceTree = "<group>"; };
+		B7124F7920383BB62932E93F /* ChatImpressBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatImpressBottomView.h; sourceTree = "<group>"; };
 		B7124FC2841A8B4CF2ED0337 /* ChatPrivacyDateOfferMessageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyDateOfferMessageObject.h; sourceTree = "<group>"; };
 		BF62EEA34FF602BBFB51C773 /* Pods_ChatKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7D7CB73EC78F0E19717646C /* Pods-ChatKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatKit_Tests/Pods-ChatKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -298,6 +325,7 @@
 				B7124797624F0FDD8DEA89E8 /* ChatPrivacyGiftOfferView */,
 				B71247C3480018EF001B8DF3 /* ChatDateJoinedPreviewView */,
 				B7124577CFAA5A13648C9D58 /* ChatSelectDatingView */,
+				B7124FF6AB8BBC4A0C10BAB7 /* ChatImpressView */,
 			);
 			path = ChatView;
 			sourceTree = "<group>";
@@ -422,6 +450,10 @@
 				B71247B8505828FE2A3F3E99 /* ChatDateOfferMessageObject.m */,
 				B712414F9E4626056F9A1BD3 /* ChatConfirmMeetMessageObject.h */,
 				B7124249827848C30930566F /* ChatConfirmMeetMessageObject.m */,
+				B7124EA5B4442E0B13A27894 /* ChatImpressMessageObject.h */,
+				B7124060B512B6070980D0AF /* ChatImpressMessageObject.m */,
+				B7124337FE3667A4D1B944BF /* ChatYOMessageObject.h */,
+				B71248DF9C5605BF4AC53D77 /* ChatYOMessageObject.m */,
 			);
 			path = ChatMessageAdditionObject;
 			sourceTree = "<group>";
@@ -438,6 +470,10 @@
 				B71247ED0C25BFF2A1DC8509 /* ChatDateJoinedPreviewContentView.m */,
 				B7124AB385A8A52B8E7BD8D2 /* ChatDateOfferContentView.h */,
 				B7124E9969C8E3629D6FF2AA /* ChatDateOfferContentView.m */,
+				B71242E3FE12B79BA03BA4E8 /* ChatImpressContentView.h */,
+				B7124F6BF8B08AFF7872A25C /* ChatImpressContentView.m */,
+				B712489FD7BCFF8877773DE1 /* ChatYOContentView.h */,
+				B7124682D07BFF829D4E8B87 /* ChatYOContentView.m */,
 			);
 			path = ChatContentView;
 			sourceTree = "<group>";
@@ -500,6 +536,10 @@
 				B7124C6B9F0E1895B7DC4ABB /* ChatDateJoinedPreviewContentConfig.m */,
 				B712466C352B5FFFEAF252DF /* ChatDateOfferContentConfig.h */,
 				B7124A03DC3A65EA81BD3CED /* ChatDateOfferContentConfig.m */,
+				B712415958C35CD28B66E35C /* ChatImpressContentConfig.h */,
+				B71244EE5D41162332C8C039 /* ChatImpressContentConfig.m */,
+				B71249CB11FC1BE39A547147 /* ChatYOContentConfig.h */,
+				B7124612608978D382635100 /* ChatYOContentConfig.m */,
 			);
 			path = ChatContentConfig;
 			sourceTree = "<group>";
@@ -520,6 +560,19 @@
 				B7124EC68447122FC61EF357 /* ChatSessionViewController.m */,
 			);
 			path = VC;
+			sourceTree = "<group>";
+		};
+		B7124FF6AB8BBC4A0C10BAB7 /* ChatImpressView */ = {
+			isa = PBXGroup;
+			children = (
+				B71248FD88C115E4837CD537 /* ChatImpressView.h */,
+				B712476A84FB8939CC9EB783 /* ChatImpressView.m */,
+				B712449547F60FAC29F42A02 /* ChatImpressTopView.h */,
+				B7124893AE7A5165CC6044FD /* ChatImpressTopView.m */,
+				B7124F7920383BB62932E93F /* ChatImpressBottomView.h */,
+				B7124D5B0744241677E99A9E /* ChatImpressBottomView.m */,
+			);
+			path = ChatImpressView;
 			sourceTree = "<group>";
 		};
 		D0471BF9983E94776CBC260D /* Pods */ = {
@@ -774,6 +827,15 @@
 				B7124A2B9B8DE99999EE7D4C /* ChatDateJoinedPreviewContentView.m in Sources */,
 				B712400860EAF421D7726114 /* ChatDateOfferContentView.m in Sources */,
 				B712416BFB0E4C530BF43457 /* ChatConfirmMeetMessageObject.m in Sources */,
+				B71242658F186373FF24890F /* ChatImpressContentView.m in Sources */,
+				B712446043E51E1F821703BF /* ChatImpressMessageObject.m in Sources */,
+				B71243715FFEEFB8F2127A2B /* ChatYOMessageObject.m in Sources */,
+				B7124363BF4545209DFDDFED /* ChatImpressContentConfig.m in Sources */,
+				B7124FF70F41A2E3479D48AA /* ChatYOContentConfig.m in Sources */,
+				B7124DB10254810F303C366F /* ChatImpressView.m in Sources */,
+				B7124D9A2A03A83B24DACDD6 /* ChatImpressTopView.m in Sources */,
+				B71248F0EAF8A1739082FB5B /* ChatImpressBottomView.m in Sources */,
+				B71247CB621DB2A0C1B2A473 /* ChatYOContentView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

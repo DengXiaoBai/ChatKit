@@ -1,14 +1,13 @@
 //
-//  SKSChatUserGuideContentView.m
+//  ChatYOContentView.h
 //  AtFirstSight
 //
 //  Created by iCrany on 2016/11/11.
 //  Copyright © 2016年 Sachsen. All rights reserved.
 //
 
-#import "SKSChatUserGuideContentView.h"
+#import <ChatKit/SKSChatBaseContentView.h>
 
-@implementation SKSChatUserGuideContentView
-
+@interface ChatYOContentView : SKSChatBaseContentView
 
 @end

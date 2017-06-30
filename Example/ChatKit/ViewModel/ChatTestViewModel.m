@@ -12,7 +12,6 @@
 #import <ChatKit/SKSDefaultValueMaker.h>
 #import <ChatKit/SKSChatMessageModel.h>
 #import <ChatKit/SKSChatSessionConfig.h>
-#import <ChatKit/SKSYOMessageObject.h>
 #import <ChatKit/SKSVoiceMessageObject.h>
 #import <ChatKit/SKSTypingMessageObject.h>
 #import <ChatKit/SKSLocationMessageObject.h>
@@ -21,7 +20,6 @@
 #import <ChatKit/SKSMenuItemBaseObject.h>
 #import <ChatKit/SKSDateCallMessageObject.h>
 #import <ChatKit/SKSChatMessageConstant.h>
-#import <ChatKit/SKSImpressMessageObject.h>
 #import <GRMustache/GRMustacheTemplate.h>
 #import <ChatKit/SKSUnReadMessageObject.h>
 #import "ChatTestViewModel.h"
@@ -31,6 +29,8 @@
 #import "ChatPrivacyGiftOfferMessageObject.h"
 #import "ChatConfirmMeetMessageObject.h"
 #import "ChatDateJoinedPreviewMessageObject.h"
+#import "ChatYOMessageObject.h"
+#import "ChatImpressMessageObject.h"
 
 
 @interface ChatTestViewModel()
@@ -93,7 +93,7 @@
     yoMessageModel.sessionConfig = self.sessionConfig;
     yoMessageModel.shouldShowReadControl = YES;
 
-    SKSYOMessageObject *yoMessageObject = [[SKSYOMessageObject alloc] initWithText:yoContent];
+    ChatYOMessageObject *yoMessageObject = [[ChatYOMessageObject alloc] initWithText:yoContent];
     yoMessageObject.message = yoMessage;
     yoMessage.messageAdditionalObject = yoMessageObject;
 
@@ -111,7 +111,7 @@
             @"color" : @"#507fe2"
     };
     NSString *yo1Content = [ChatTestViewModel dict2Json:yo1Dict];
-    SKSYOMessageObject *yoMessageObject1 = [[SKSYOMessageObject alloc] initWithText:yo1Content];
+    ChatYOMessageObject *yoMessageObject1 = [[ChatYOMessageObject alloc] initWithText:yo1Content];
     yoMessageObject1.message = yoMessage1;
     yoMessage1.messageAdditionalObject = yoMessageObject1;
 
@@ -446,9 +446,9 @@
     [_messageList addObject:privacyActivityMessageModel4];
     [_messageList addObject:privacyActivityMessageModel5];
 
-//    [_messageList addObject:privacySendRosesMessageModel];
-//    [_messageList addObject:privacySendRosesMessageModel1];
-//    [_messageList addObject:privacySendRosesMessageModel2];
+    [_messageList addObject:privacySendRosesMessageModel];
+    [_messageList addObject:privacySendRosesMessageModel1];
+    [_messageList addObject:privacySendRosesMessageModel2];
 }
 
 #pragma mark - Helper method
@@ -606,7 +606,7 @@
     chatMessage.timestampDesc = @"今天 23:36";
     chatMessage.messageId = time(NULL);
 
-    SKSImpressMessageObject *messageObject = [[SKSImpressMessageObject alloc] initWithUserId:userId nickname:nickname gender:gender impressStatus:impressStatus message:chatMessage];
+    ChatImpressMessageObject *messageObject = [[ChatImpressMessageObject alloc] initWithUserId:userId nickname:nickname gender:gender impressStatus:impressStatus message:chatMessage];
     chatMessage.messageAdditionalObject = messageObject;
 
     SKSChatMessageModel *messageModel = [[SKSChatMessageModel alloc] initWithMessage:chatMessage];

@@ -1,5 +1,5 @@
 //
-//  SKSChatImpressBottomView.h
+//  ChatImpressBottomView.h
 //  ChatKit
 //
 //  Created by iCrany on 2017/2/10.
@@ -10,15 +10,15 @@
 
 @class SKSChatMessageModel;
 
-@protocol SKSChatImpressBottomViewDelegate <NSObject>
+@protocol ChatImpressBottomViewDelegate <NSObject>
 
 - (void)impressBottomViewDidTapBtnIndex:(NSInteger)buttonIndex;
 
 @end
 
-@interface SKSChatImpressBottomView : UIView
+@interface ChatImpressBottomView : UIView
 
-@property (nonatomic, weak) id<SKSChatImpressBottomViewDelegate> delegate;
+@property (nonatomic, weak) id<ChatImpressBottomViewDelegate> delegate;
 
 - (instancetype)initWithMessageModel:(SKSChatMessageModel *)messageModel;
 

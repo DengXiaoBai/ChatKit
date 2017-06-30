@@ -1,14 +1,17 @@
 //
-//  SKSImpressMessageObject.m
+//  ChatImpressMessageObject.m
 //  ChatKit
 //
 //  Created by iCrany on 2017/2/10.
 //
 //
 
-#import "SKSImpressMessageObject.h"
+#import <ChatKit/SKSChatMessage.h>
+#import <ChatKit/SKSChatMessageConstant.h>
+#import <ChatKit/SKSChatMessageObject.h>
+#import "ChatImpressMessageObject.h"
 
-@implementation SKSImpressMessageObject
+@implementation ChatImpressMessageObject
 
 - (instancetype)initWithUserId:(NSString *)userId
                       nickname:(NSString *)nickname

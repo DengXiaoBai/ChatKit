@@ -8,7 +8,6 @@
 
 #import <ChatKit/SKSChatMessageConstant.h>
 #import <ChatKit/SKSNotSupportContentConfig.h>
-#import <ChatKit/SKSYOContentConfig.h>
 #import <ChatKit/SKSTextContentConfig.h>
 #import <ChatKit/SKSEmoticonContentConfig.h>
 #import <ChatKit/SKSVoiceContentConfig.h>
@@ -18,7 +17,6 @@
 #import <ChatKit/SKSTipContentConfig.h>
 #import <ChatKit/SKSCoreTextContentConfig.h>
 #import <ChatKit/SKSDateCallContentConfig.h>
-#import <ChatKit/SKSImpressContentConfig.h>
 #import <ChatKit/SKSUnReadYellowContentConfig.h>
 #import <ChatKit/SKSChatMessageModel.h>
 #import <ChatKit/SKSChatMessage.h>
@@ -27,6 +25,8 @@
 #import "ChatPrivacyGiftOfferContentConfig.h"
 #import "ChatDateOfferContentConfig.h"
 #import "ChatDateJoinedPreviewContentConfig.h"
+#import "ChatYOContentConfig.h"
+#import "ChatImpressContentConfig.h"
 
 @interface ChatSessionConfigFactory()
 
@@ -50,7 +50,7 @@
     if (self) {
         _dict = @{
                 @(SKSMessageMediaTypeUnsupport) : [SKSNotSupportContentConfig new],
-                @(SKSMessageMediaTypeYO) : [SKSYOContentConfig new],
+                @(SKSMessageMediaTypeYO) : [ChatYOContentConfig new],
                 @(SKSMessageMediaTypeText) : [SKSTextContentConfig new],
                 @(SKSMessageMediaTypeEmoticon) : [SKSEmoticonContentConfig new],
                 @(SKSMessageMediaTypeVoice) : [SKSVoiceContentConfig new],
@@ -64,7 +64,7 @@
                 @(SKSMessageMediaTypeDateOffer) : [ChatDateOfferContentConfig new],
                 @(SKSMessageMediaTypeDateJoinedPreview) : [ChatDateJoinedPreviewContentConfig new],
                 @(SKSMessageMediaTypeConfirmMeet) : [ChatDateOfferContentConfig new],
-                @(SKSMessageMediaTypeImpress) : [SKSImpressContentConfig new],
+                @(SKSMessageMediaTypeImpress) : [ChatImpressContentConfig new],
                 @(SKSMessageMediaTypeUnReadTip) : [SKSUnReadYellowContentConfig new],
                 @(SKSMessageMediaTypePrivacyActivity): [ChatPrivacyDateOfferContentConfig new],
                 @(SKSMessageMediaTypePrivacyGiftOffer): [ChatPrivacyGiftOfferContentConfig new],

@@ -1,16 +1,18 @@
 //
-//  SKSYOContentConfig.m
+//  ChatYOContentConfig.m
 //  AtFirstSight
 //
 //  Created by iCrany on 2016/12/7.
 //  Copyright © 2016年 Sachsen. All rights reserved.
 //
 
-#import "SKSYOContentConfig.h"
-#import "SKSChatMessage.h"
-#import "SKSChatMessageModel.h"
+#import <ChatKit/SKSBaseContentConfig.h>
+#import <ChatKit/SKSChatMessageModel.h>
+#import <ChatKit/SKSChatMessage.h>
+#import "ChatYOContentConfig.h"
+#import "ChatYOContentView.h"
 
-@implementation SKSYOContentConfig
+@implementation ChatYOContentConfig
 
 - (CGSize)contentSizeWithCellWidth:(CGFloat)cellWidth {
     self.messageModel.contentViewSize = CGSizeMake(58, 58);
@@ -20,12 +22,12 @@
 
 
 - (NSString *)cellContentClass {
-    return @"SKSChatYOContentView";
+    return NSStringFromClass(ChatYOContentView.class);
 }
 
 
 - (NSString *)cellContentIdentifier {
-    return [NSString stringWithFormat:@"SKSChatYOContentView-%@", self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive"];
+    return [NSString stringWithFormat:@"%@-%@", [self cellContentClass], self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive"];
 }
 
 

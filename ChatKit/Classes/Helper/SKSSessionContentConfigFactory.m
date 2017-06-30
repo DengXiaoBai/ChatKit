@@ -9,7 +9,6 @@
 #import "SKSSessionContentConfigFactory.h"
 #import "SKSChatMessageConstant.h"
 #import "SKSTextContentConfig.h"
-#import "SKSYOContentConfig.h"
 #import "SKSEmoticonContentConfig.h"
 #import "SKSVoiceContentConfig.h"
 #import "SKSTypingContentConfig.h"
@@ -20,7 +19,6 @@
 #import "SKSRealTimeVideoOrVoiceContentConfig.h"
 #import "SKSCoreTextContentConfig.h"
 #import "SKSDateCallContentConfig.h"
-#import "SKSImpressContentConfig.h"
 #import "SKSUnReadContentConfig.h"
 #import "SKSUnReadYellowContentConfig.h"
 
@@ -47,7 +45,6 @@
         //TODO: 设置配置实例
         _dict = @{
                 @(SKSMessageMediaTypeUnsupport) : [SKSNotSupportContentConfig new],
-                @(SKSMessageMediaTypeYO) : [SKSYOContentConfig new],
                 @(SKSMessageMediaTypeText) : [SKSTextContentConfig new],
                 @(SKSMessageMediaTypeEmoticon) : [SKSEmoticonContentConfig new],
                 @(SKSMessageMediaTypeVoice) : [SKSVoiceContentConfig new],
@@ -58,7 +55,6 @@
                 @(SKSMessageMediaTypeTipLabel) : [SKSTipContentConfig new],
                 @(SKSMessageMediaTypeCoreText) : [SKSCoreTextContentConfig new],
                 @(SKSMessageMediaTypeDataCall) : [SKSDateCallContentConfig new],
-                @(SKSMessageMediaTypeImpress) : [SKSImpressContentConfig new],
                 @(SKSMessageMediaTypeUnReadTip) : [SKSUnReadYellowContentConfig new],
         };
     }

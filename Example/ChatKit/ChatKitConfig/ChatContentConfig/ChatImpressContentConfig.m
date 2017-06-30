@@ -1,17 +1,18 @@
 //
-//  SKSImpressContentConfig.m
+//  ChatImpressContentConfig.m
 //  ChatKit
 //
 //  Created by iCrany on 2017/2/10.
 //
 //
 
-#import "SKSImpressContentConfig.h"
-#import "SKSChatMessage.h"
-#import "SKSChatImpressView.h"
-#import "SKSChatMessageModel.h"
+#import <ChatKit/SKSChatMessageModel.h>
+#import <ChatKit/SKSChatMessageConstant.h>
+#import <ChatKit/SKSChatMessage.h>
+#import "ChatImpressContentConfig.h"
+#import "ChatImpressView.h"
 
-@implementation SKSImpressContentConfig
+@implementation ChatImpressContentConfig
 
 - (CGSize)contentSizeWithCellWidth:(CGFloat)cellWidth {
     self.messageModel.contentViewSize = CGSizeMake(100, 100);
@@ -36,17 +37,17 @@
 
     self.bottomDescHeight = 42.0f;
 
-    CGSize contentViewSize = [SKSChatImpressView getViewSizeWithMessageModel:self.messageModel];
+    CGSize contentViewSize = [ChatImpressView getViewSizeWithMessageModel:self.messageModel];
     self.messageModel.contentViewSize = contentViewSize;
     return contentViewSize;
 }
 
 - (NSString *)cellContentClass {
-    return @"SKSChatImpressContentView";
+    return @"ChatImpressContentView";
 }
 
 - (NSString *)cellContentIdentifier {
-    return [NSString stringWithFormat:@"SKSChatImpressContentView-%@", self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive"];
+    return [NSString stringWithFormat:@"ChatImpressContentView-%@", self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive"];
 }
 
 - (UIEdgeInsets)contentViewInsets {

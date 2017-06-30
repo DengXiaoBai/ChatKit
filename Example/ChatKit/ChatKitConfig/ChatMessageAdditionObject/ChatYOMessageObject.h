@@ -1,16 +1,16 @@
 //
-//  SKSYOMessageObject.h
+//  ChatYOMessageObject.h
 //  AtFirstSight
 //
 //  Created by iCrany on 2016/11/10.
 //  Copyright (c) 2016 Sachsen. All rights reserved.
 //
 
-#import "SKSChatMessageObject.h"
+#import <ChatKit/SKSChatMessageObject.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SKSYOMessageObject : NSObject<SKSChatMessageObject>
+@interface ChatYOMessageObject : NSObject<SKSChatMessageObject>
 
 /**
  Yo文本内容

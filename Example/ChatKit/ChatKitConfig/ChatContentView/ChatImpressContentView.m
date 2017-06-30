@@ -1,24 +1,23 @@
 //
-//  SKSChatImpressContentView.m
+//  ChatImpressContentView.m
 //  ChatKit
 //
 //  Created by iCrany on 2017/2/10.
 //
 //
 
-#import "SKSChatImpressContentView.h"
-#import "SKSChatImpressView.h"
-#import "SKSChatMessageModel.h"
-#import "SKSChatMessage.h"
-#import "SKSImageView.h"
+#import <ChatKit/SKSChatMessageModel.h>
+#import <ChatKit/SKSChatMessage.h>
+#import "ChatImpressContentView.h"
+#import "ChatImpressView.h"
 
-@interface SKSChatImpressContentView() <SKSChatImpressViewDelegate>
+@interface ChatImpressContentView() <ChatImpressViewDelegate>
 
-@property (nonatomic, strong) SKSChatImpressView *impressView;
+@property (nonatomic, strong) ChatImpressView *impressView;
 
 @end
 
-@implementation SKSChatImpressContentView
+@implementation ChatImpressContentView
 
 - (instancetype)initWithSKSMessageModel:(SKSChatMessageModel *)messageModel {
     self = [super initWithSKSMessageModel:messageModel];
@@ -31,7 +30,7 @@
 
 - (void)setupUI {
     if (!_impressView) {
-        _impressView = [[SKSChatImpressView alloc] initWithMessageModel:self.messageModel];
+        _impressView = [[ChatImpressView alloc] initWithMessageModel:self.messageModel];
         _impressView.delegate = self;
         [self addSubview:_impressView];
     }

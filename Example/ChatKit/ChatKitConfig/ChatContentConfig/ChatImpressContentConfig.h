@@ -1,14 +1,15 @@
 //
-//  SKSImpressContentConfig.h
+//  ChatImpressContentConfig.h
 //  ChatKit
 //
 //  Created by iCrany on 2017/2/10.
 //
 //
 
-#import "SKSBaseContentConfig.h"
 
-@interface SKSImpressContentConfig : SKSBaseContentConfig
+#import <ChatKit/SKSBaseContentConfig.h>
+
+@interface ChatImpressContentConfig : SKSBaseContentConfig
 
 @property (nonatomic, assign) CGFloat cellWidth;
 @property (nonatomic, assign) CGFloat bottomDescHeight;//底部默认的高度

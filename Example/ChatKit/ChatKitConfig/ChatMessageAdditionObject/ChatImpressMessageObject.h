@@ -1,16 +1,17 @@
 //
-//  SKSImpressMessageObject.h
+//  ChatImpressMessageObject.h
 //  ChatKit
 //
 //  Created by iCrany on 2017/2/10.
 //
 //
 
-#import "SKSChatMessageObject.h"
+#import <ChatKit/SKSChatMessageObject.h>
+#import <ChatKit/SKSChatMessageConstant.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SKSImpressMessageObject : NSObject <SKSChatMessageObject>
+@interface ChatImpressMessageObject : NSObject <SKSChatMessageObject>
 
 @property (nonatomic, strong) NSString *userId;
 

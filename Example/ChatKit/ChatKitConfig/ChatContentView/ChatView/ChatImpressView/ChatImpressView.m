@@ -1,30 +1,30 @@
 //
-//  SKSChatImpressView.m
+//  ChatImpressView.m
 //  ChatKit
 //
 //  Created by iCrany on 2017/2/10.
 //
 //
 
-#import "SKSChatImpressView.h"
-#import "SKSChatMessageModel.h"
-#import "SKSChatImpressTopView.h"
-#import "SKSChatImpressBottomView.h"
-#import "SKSChatMessage.h"
-#import "SKSChatSessionConfig.h"
-#import "SKSImpressContentConfig.h"
+#import <ChatKit/SKSChatMessageModel.h>
+#import <ChatKit/SKSChatSessionConfig.h>
+#import <ChatKit/SKSChatMessage.h>
+#import "ChatImpressView.h"
+#import "ChatImpressTopView.h"
+#import "ChatImpressBottomView.h"
+#import "ChatImpressContentConfig.h"
 
-@interface SKSChatImpressView() <SKSChatImpressBottomViewDelegate>
+@interface ChatImpressView() <ChatImpressBottomViewDelegate>
 
 @property (nonatomic, strong) SKSChatMessageModel *messageModel;
-@property (nonatomic, strong) SKSImpressContentConfig *contentConfig;
+@property (nonatomic, strong) ChatImpressContentConfig *contentConfig;
 
-@property (nonatomic, strong) SKSChatImpressTopView *topView;
-@property (nonatomic, strong) SKSChatImpressBottomView *bottomView;
+@property (nonatomic, strong) ChatImpressTopView *topView;
+@property (nonatomic, strong) ChatImpressBottomView *bottomView;
 
 @end
 
-@implementation SKSChatImpressView
+@implementation ChatImpressView
 
 - (instancetype)initWithMessageModel:(SKSChatMessageModel *)messageModel {
     self = [super init];
@@ -38,12 +38,12 @@
 
 - (void)setupUI {
     if (!_topView) {
-        _topView = [[SKSChatImpressTopView alloc] initWithMessageModel:self.messageModel];
+        _topView = [[ChatImpressTopView alloc] initWithMessageModel:self.messageModel];
         [self addSubview:_topView];
     }
 
     if (!_bottomView) {
-        _bottomView = [[SKSChatImpressBottomView alloc] initWithMessageModel:self.messageModel];
+        _bottomView = [[ChatImpressBottomView alloc] initWithMessageModel:self.messageModel];
         _bottomView.delegate = self;
         [self addSubview:_bottomView];
     }
@@ -66,23 +66,23 @@
     [self.bottomView updateUIWithMessageModel:self.messageModel force:force];
 
     UIEdgeInsets topViewInsets = self.contentConfig.topDescInsets;
-    CGSize topViewSize = [SKSChatImpressTopView getViewSizeWithMessageModel:self.messageModel];
+    CGSize topViewSize = [ChatImpressTopView getViewSizeWithMessageModel:self.messageModel];
 
     UIEdgeInsets bottomViewInsets = self.contentConfig.bottomDescInsets;
-    CGSize bottomViewSize = [SKSChatImpressBottomView getViewSizeWithMessageModel:self.messageModel];
+    CGSize bottomViewSize = [ChatImpressBottomView getViewSizeWithMessageModel:self.messageModel];
 
     _topView.frame = CGRectMake(topViewInsets.left, topViewInsets.top, topViewSize.width, topViewSize.height);
     _bottomView.frame = CGRectMake(bottomViewInsets.left, topViewInsets.top + topViewSize.height + topViewInsets.bottom + bottomViewInsets.top, bottomViewSize.width, bottomViewSize.height);
 }
 
 + (CGSize)getViewSizeWithMessageModel:(SKSChatMessageModel *)messageModel {
-    SKSImpressContentConfig *contentConfig = [messageModel.sessionConfig chatContentConfigWithMessageModel:messageModel];
+    ChatImpressContentConfig *contentConfig = [messageModel.sessionConfig chatContentConfigWithMessageModel:messageModel];
 
     UIEdgeInsets topViewInsets = contentConfig.topDescInsets;
-    CGSize topSize = [SKSChatImpressTopView getViewSizeWithMessageModel:messageModel];
+    CGSize topSize = [ChatImpressTopView getViewSizeWithMessageModel:messageModel];
 
     UIEdgeInsets bottomViewInsets = contentConfig.bottomDescInsets;
-    CGSize bottomSize = [SKSChatImpressBottomView getViewSizeWithMessageModel:messageModel];
+    CGSize bottomSize = [ChatImpressBottomView getViewSizeWithMessageModel:messageModel];
 
     return CGSizeMake(topViewInsets.left + contentConfig.cellWidth + topViewInsets.right, topViewInsets.top + topSize.height + topViewInsets.bottom + bottomViewInsets.top + bottomSize.height + bottomViewInsets.bottom);
 }

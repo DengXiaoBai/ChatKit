@@ -1,5 +1,5 @@
 //
-//  SKSChatImpressView.h
+//  ChatImpressTopView.h
 //  ChatKit
 //
 //  Created by iCrany on 2017/2/10.
@@ -10,15 +10,7 @@
 
 @class SKSChatMessageModel;
 
-@protocol SKSChatImpressViewDelegate <NSObject>
-
-- (void)chatImpressViewDidTapBtnIndex:(NSInteger)buttonIndex;
-
-@end
-
-@interface SKSChatImpressView : UIView
-
-@property (nonatomic, weak) id<SKSChatImpressViewDelegate> delegate;
+@interface ChatImpressTopView : UIView
 
 - (instancetype)initWithMessageModel:(SKSChatMessageModel *)messageModel;
 

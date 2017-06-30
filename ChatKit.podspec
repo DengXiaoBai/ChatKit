@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ChatKit'
-  s.version          = '0.2.0'
+  s.version          = '0.2.1'
   s.summary          = 'Chatting framework for iOS.'
 
 # This description is used to generate tags and improve search results.
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-  Stringstech ChatKit for iOS
+  Chatting framework for iOS
                        DESC
 
   s.homepage         = 'https://github.com/Stringstech/'

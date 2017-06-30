@@ -6,25 +6,25 @@
 //
 //
 
-#import "SKSChatImpressTopView.h"
-#import "SKSChatMessageModel.h"
-#import "SKSImpressMessageObject.h"
-#import "SKSChatMessage.h"
-#import "SKSImpressContentConfig.h"
-#import "SKSChatSessionConfig.h"
+#import <ChatKit/SKSChatMessageModel.h>
+#import <ChatKit/SKSChatMessage.h>
+#import <ChatKit/SKSChatSessionConfig.h>
+#import "ChatImpressTopView.h"
+#import "ChatImpressMessageObject.h"
+#import "ChatImpressContentConfig.h"
 
-@interface SKSChatImpressTopView()
+@interface ChatImpressTopView()
 
 @property (nonatomic, strong) SKSChatMessageModel *messageModel;
-@property (nonatomic, strong) SKSImpressMessageObject *messageObject;
-@property (nonatomic, strong) SKSImpressContentConfig *contentConfig;
+@property (nonatomic, strong) ChatImpressMessageObject *messageObject;
+@property (nonatomic, strong) ChatImpressContentConfig *contentConfig;
 
 @property (nonatomic, strong) UILabel *descLabel;
 @property (nonatomic, strong) UIView *line;
 
 @end
 
-@implementation SKSChatImpressTopView
+@implementation ChatImpressTopView
 
 - (instancetype)initWithMessageModel:(SKSChatMessageModel *)messageModel {
     self = [super init];
@@ -79,8 +79,8 @@
 }
 
 + (CGSize)getViewSizeWithMessageModel:(SKSChatMessageModel *)messageModel {
-    SKSImpressMessageObject *messageObject = messageModel.message.messageAdditionalObject;
-    SKSImpressContentConfig *contentConfig = [messageModel.sessionConfig chatContentConfigWithMessageModel:messageModel];
+    ChatImpressMessageObject *messageObject = messageModel.message.messageAdditionalObject;
+    ChatImpressContentConfig *contentConfig = [messageModel.sessionConfig chatContentConfigWithMessageModel:messageModel];
 
     static UILabel *tempLabel;
     if (!tempLabel) {

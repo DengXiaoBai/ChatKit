@@ -1,15 +1,15 @@
 //
-//  SKSYOMessageObject.m
+//  ChatYOMessageObject.m
 //  AtFirstSight
 //
 //  Created by iCrany on 2016/11/10.
 //  Copyright (c) 2016 Sachsen. All rights reserved.
 //
 
-#import "SKSYOMessageObject.h"
-#import "SKSChatMessage.h"
+#import <ChatKit/SKSChatMessage.h>
+#import "ChatYOMessageObject.h"
 
-@implementation SKSYOMessageObject
+@implementation ChatYOMessageObject
 
 - (instancetype)initWithText:(NSString *)text {
     self = [super init];

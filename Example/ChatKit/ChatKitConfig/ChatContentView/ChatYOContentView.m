@@ -1,26 +1,25 @@
 //
-//  SKSChatYOContentView.m
+//  ChatYOContentView.m
 //  AtFirstSight
 //
 //  Created by iCrany on 2016/11/11.
 //  Copyright © 2016年 Sachsen. All rights reserved.
 //
 
-#import "SKSChatYOContentView.h"
-#import "SKSChatMessageModel.h"
-#import "SKSChatMessage.h"
-#import "SKSChatCellLayoutConfig.h"
-#import "SKSImageView.h"
-#import "SKSYOMessageObject.h"
+#import <ChatKit/SKSChatMessageModel.h>
+#import <ChatKit/SKSChatMessage.h>
+#import <ChatKit/SKSImageView.h>
+#import "ChatYOContentView.h"
+#import "ChatYOMessageObject.h"
 
-@interface SKSChatYOContentView()
+@interface ChatYOContentView()
 
 @property (nonatomic, strong) UILabel *yoLabel;
-@property (nonatomic, strong) SKSYOMessageObject *yoMessageObject;
+@property (nonatomic, strong) ChatYOMessageObject *yoMessageObject;
 
 @end
 
-@implementation SKSChatYOContentView
+@implementation ChatYOContentView
 
 - (instancetype)initWithSKSMessageModel:(SKSChatMessageModel *)messageModel {
     self = [super initWithSKSMessageModel:messageModel];
@@ -33,8 +32,8 @@
 
 - (void)setupUI {
     
-    if (![self.messageModel.message.messageAdditionalObject isKindOfClass:[SKSYOMessageObject class]]) {
-        NSAssert(NO, @"MessageAdditionalObject is not kind of SKSYOMessageObject");
+    if (![self.messageModel.message.messageAdditionalObject isKindOfClass:[ChatYOMessageObject class]]) {
+        NSAssert(NO, @"MessageAdditionalObject is not kind of ChatYOMessageObject");
         return;
     }
     

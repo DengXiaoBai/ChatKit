@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SKSYOMessageObject.h"
+#import "SKSChatMessageObject.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

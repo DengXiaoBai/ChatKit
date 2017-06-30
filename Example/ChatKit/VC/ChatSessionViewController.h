@@ -7,8 +7,6 @@
 //
 
 #import <ChatKit/SKSChatMessageViewController.h>
-#import "SKSChatMessageViewController.h"
-
 
 /**
  用于测试继承 SKSChatMessageViewController 子类的实现的方法

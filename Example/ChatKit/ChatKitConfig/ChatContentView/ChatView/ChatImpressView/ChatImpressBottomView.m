@@ -6,25 +6,25 @@
 //
 //
 
-#import "SKSChatImpressBottomView.h"
-#import "SKSChatMessageModel.h"
-#import "SKSImpressMessageObject.h"
-#import "SKSChatMessage.h"
-#import "SKSChatSessionConfig.h"
-#import "SKSImpressContentConfig.h"
+#import <ChatKit/SKSChatMessageModel.h>
+#import <ChatKit/SKSChatMessage.h>
+#import <ChatKit/SKSChatSessionConfig.h>
+#import "ChatImpressBottomView.h"
+#import "ChatImpressMessageObject.h"
+#import "ChatImpressContentConfig.h"
 
-@interface SKSChatImpressBottomView()
+@interface ChatImpressBottomView()
 
 @property (nonatomic, strong) SKSChatMessageModel *messageModel;
-@property (nonatomic, strong) SKSImpressMessageObject *messageObject;
-@property (nonatomic, strong) SKSImpressContentConfig *contentConfig;
+@property (nonatomic, strong) ChatImpressMessageObject *messageObject;
+@property (nonatomic, strong) ChatImpressContentConfig *contentConfig;
 
 @property (nonatomic, strong) UIButton *goToImpressBtn;
 @property (nonatomic, strong) UILabel *descLabel;
 
 @end
 
-@implementation SKSChatImpressBottomView
+@implementation ChatImpressBottomView
 
 - (instancetype)initWithMessageModel:(SKSChatMessageModel *)messageModel {
     self = [super init];
@@ -116,7 +116,7 @@
 
 
 + (CGSize)getViewSizeWithMessageModel:(SKSChatMessageModel *)messageModel {
-    SKSImpressContentConfig *contentConfig = [messageModel.sessionConfig chatContentConfigWithMessageModel:messageModel];
+    ChatImpressContentConfig *contentConfig = [messageModel.sessionConfig chatContentConfigWithMessageModel:messageModel];
     return CGSizeMake(contentConfig.cellWidth, contentConfig.bottomDescHeight);
 }
 
