@@ -6,10 +6,10 @@
 //
 //
 
-#import <ChatKit/SKSChatMessage.h>
-#import <ChatKit/SKSChatSessionConfig.h>
-#import <DTCoreText/DTAttributedTextView.h>
-#import <DTCoreText/DTCoreText.h>
+#import "../../../../../../../../Library/Caches/AppCode2017.2/DerivedData/ChatKit-audcfvhkaxgfyvhffdyzmapwhhcu/Build/Products/Debug-iphoneos/ChatKit/ChatKit.framework/Headers/SKSChatMessage.h"
+#import "../../../../../../../../Library/Caches/AppCode2017.2/DerivedData/ChatKit-audcfvhkaxgfyvhffdyzmapwhhcu/Build/Products/Debug-iphoneos/ChatKit/ChatKit.framework/Headers/SKSChatSessionConfig.h"
+#import "../../../../../../../../Library/Caches/AppCode2017.2/DerivedData/ChatKit-audcfvhkaxgfyvhffdyzmapwhhcu/Build/Products/Debug-iphoneos/DTCoreText/DTCoreText.framework/Headers/DTAttributedTextView.h"
+#import "../../../../../../../../Library/Caches/AppCode2017.2/DerivedData/ChatKit-audcfvhkaxgfyvhffdyzmapwhhcu/Build/Products/Debug-iphoneos/DTCoreText/DTCoreText.framework/Headers/DTCoreText.h"
 #import "ChatPrivacyGiftOfferView.h"
 #import "ChatPrivacyGiftOfferBtnView.h"
 #import "ChatPrivacyGiftOfferDescView.h"

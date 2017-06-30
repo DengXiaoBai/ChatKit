@@ -6,9 +6,9 @@
 //
 //
 
-#import <ChatKit/SKSChatMessage.h>
-#import <ChatKit/SKSChatSessionConfig.h>
-#import <ChatKit/UIColor+SKS.h>
+#import "../../../../../../../../Library/Caches/AppCode2017.2/DerivedData/ChatKit-audcfvhkaxgfyvhffdyzmapwhhcu/Build/Products/Debug-iphoneos/ChatKit/ChatKit.framework/Headers/SKSChatMessage.h"
+#import "../../../../../../../../Library/Caches/AppCode2017.2/DerivedData/ChatKit-audcfvhkaxgfyvhffdyzmapwhhcu/Build/Products/Debug-iphoneos/ChatKit/ChatKit.framework/Headers/SKSChatSessionConfig.h"
+#import "../../../../../../../../Library/Caches/AppCode2017.2/DerivedData/ChatKit-audcfvhkaxgfyvhffdyzmapwhhcu/Build/Products/Debug-iphoneos/ChatKit/ChatKit.framework/Headers/UIColor+SKS.h"
 #import "ChatPrivacyGiftOfferDescView.h"
 #import "ChatPrivacyGiftOfferMessageObject.h"
 #import "ChatPrivacyGiftOfferContentConfig.h"

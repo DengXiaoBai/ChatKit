@@ -22,26 +22,26 @@
 		7B4E2B05F9C2F58BFFD70CD2 /* Pods_ChatKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF62EEA34FF602BBFB51C773 /* Pods_ChatKit_Example.framework */; };
 		B7124017B1D1137E787C980F /* chat_admin.html in Resources */ = {isa = PBXBuildFile; fileRef = B7124774F0BE2C661253DF35 /* chat_admin.html */; };
 		B712401CD55EA913A82328DA /* common-coin-icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B7124EE8215808B496ED1E58 /* common-coin-icon.jpg */; };
+		B71240242719ECA8D7D8D92E /* ChatPrivacyGiftOfferView.m in Sources */ = {isa = PBXBuildFile; fileRef = B71249E8DF1A7551467E8A5C /* ChatPrivacyGiftOfferView.m */; };
 		B712407152C7ED0D20A7AE7A /* UIFont+SKS.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124359F2A3282F62F33762 /* UIFont+SKS.m */; };
+		B71240E84A02425AF4C1305C /* ChatPrivacyGiftOfferDescView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124C6DEC398D17F38DFD98 /* ChatPrivacyGiftOfferDescView.m */; };
 		B71241214DAEBEE008600E99 /* ChatSessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124EC68447122FC61EF357 /* ChatSessionViewController.m */; };
-		B7124148F327CAC96EC90C06 /* ChatPrivacyGiftOfferBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = B71246ECC1163928D265AA7D /* ChatPrivacyGiftOfferBtnView.m */; };
 		B712414C90FCA14ACC543B30 /* ChatPrivacyGiftOfferContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124DFD47B20647AC68FF42 /* ChatPrivacyGiftOfferContentView.m */; };
 		B712418B14CDC91291A7D605 /* ChatSessionConfigFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124D150956D787D806177C /* ChatSessionConfigFactory.m */; };
-		B712418BEAC23750A96E5BAF /* ChatPrivacyGiftOfferView.m in Sources */ = {isa = PBXBuildFile; fileRef = B71245722FA699195D1E1C20 /* ChatPrivacyGiftOfferView.m */; };
 		B712419E15CF2884490FCA03 /* ChatPrivacyDateOfferMessageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124E3F68092F816CF5A2BC /* ChatPrivacyDateOfferMessageObject.m */; };
+		B71244C6D5C429AE8388F57A /* ChatPrivacyDateOfferBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124AFA1FE1434DA85E8682 /* ChatPrivacyDateOfferBtnView.m */; };
 		B71245B60D3F4A62AE5F042A /* in2.txt in Resources */ = {isa = PBXBuildFile; fileRef = B71241FAE55A4836F555A886 /* in2.txt */; };
 		B7124736E1B6CB001D020B91 /* ChatPrivacyDateOfferContentConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124739D4C38807F6F702F6 /* ChatPrivacyDateOfferContentConfig.m */; };
-		B71247F9F98D665F562ACE3C /* ChatPrivacyActivityOfferCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = B71248AAC3B9A2679F17B955 /* ChatPrivacyActivityOfferCoverView.m */; };
 		B71247FC19117FE3EBD10193 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7124F128C874CCB98D25BBB /* Default-568h@2x.png */; };
 		B7124853E7C5EAF32205C656 /* ChatTestViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B71240C920A1A7100096BB1C /* ChatTestViewModel.m */; };
-		B71248B0BDA5856ECDA9ACA9 /* ChatPrivacyGiftOfferDescView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124C00A3CAC7E181D8EE1C /* ChatPrivacyGiftOfferDescView.m */; };
+		B71248FB78A8598B20EAC677 /* ChatPrivacyActivityOfferCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124711E72AD71E52A82E84 /* ChatPrivacyActivityOfferCoverView.m */; };
 		B712495BB39274E11209C13B /* EmojisList.plist in Resources */ = {isa = PBXBuildFile; fileRef = B71241845849F6AFCB9AEEC9 /* EmojisList.plist */; };
 		B71249D67FBCD0426316FF1F /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71242EBBCBFED9F9244BBEF /* UIFont.swift */; };
 		B7124B3164EA9BBAD164A0A0 /* ChatSessionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B712476B948D493CFFF4943C /* ChatSessionConfig.m */; };
+		B7124BFDCDD5C8096CA8043E /* ChatPrivacyGiftOfferBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = B712453E8A5D29E9AA8BB3F6 /* ChatPrivacyGiftOfferBtnView.m */; };
 		B7124C59AD2C991E4726D243 /* ChatPrivacyGiftOfferMessageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B712415A6A207490A1319F72 /* ChatPrivacyGiftOfferMessageObject.m */; };
 		B7124DBD9CE7F2FEFE0A28CD /* common-roses-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B71243B8A6718CAA2918B1E6 /* common-roses-icon.png */; };
 		B7124DC6AB60FF9C4936524C /* ChatSessionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124B59D0165110B91F6F4F /* ChatSessionHelper.m */; };
-		B7124E2D0B77E44B6D467F91 /* ChatPrivacyDateOfferBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124F49AFF229A72EFFB299 /* ChatPrivacyDateOfferBtnView.m */; };
 		B7124E36DD14803F31D6067C /* ChatPrivacyGiftOfferContentConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124B2554DE865C94667E05 /* ChatPrivacyGiftOfferContentConfig.m */; };
 		B7124EA52DC27EBCE71CFAB8 /* ChatDefaultValueMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124ABF27B9F8C7DC0B63F9 /* ChatDefaultValueMaker.m */; };
 		B7124F76CCEED8FDF60798AC /* ChatPrivacyActivityContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = B712459EB603E8115806A34D /* ChatPrivacyActivityContentView.m */; };
@@ -83,49 +83,49 @@
 		7B13179241DDD12685EFDA9B /* Pods-ChatKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatKit_Tests/Pods-ChatKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		7F829344B002556D9AC5E0A9 /* ChatKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ChatKit.podspec; path = ../ChatKit.podspec; sourceTree = "<group>"; };
 		AA66345F2BCFEC7601A6D31F /* Pods-ChatKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatKit_Example/Pods-ChatKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		B7124041BBA76F8A61B47A02 /* ChatPrivacyGiftOfferView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyGiftOfferView.h; sourceTree = "<group>"; };
 		B712408DEA59A94E306147C9 /* ChatPrivacyGiftOfferMessageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyGiftOfferMessageObject.h; sourceTree = "<group>"; };
 		B71240C920A1A7100096BB1C /* ChatTestViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTestViewModel.m; sourceTree = "<group>"; };
+		B71240FA3B330E24517DD67B /* ChatPrivacyActivityOfferCoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyActivityOfferCoverView.h; sourceTree = "<group>"; };
 		B712415A6A207490A1319F72 /* ChatPrivacyGiftOfferMessageObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyGiftOfferMessageObject.m; sourceTree = "<group>"; };
 		B71241845849F6AFCB9AEEC9 /* EmojisList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = EmojisList.plist; sourceTree = "<group>"; };
 		B71241FAE55A4836F555A886 /* in2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = in2.txt; sourceTree = "<group>"; };
-		B712429CC6B2AC42981A0C4E /* ChatPrivacyGiftOfferDescView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyGiftOfferDescView.h; sourceTree = "<group>"; };
 		B71242EBBCBFED9F9244BBEF /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		B7124359F2A3282F62F33762 /* UIFont+SKS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+SKS.m"; sourceTree = "<group>"; };
-		B71243B0E37A73051113E6FD /* ChatPrivacyDateOfferBtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyDateOfferBtnView.h; sourceTree = "<group>"; };
 		B71243B8A6718CAA2918B1E6 /* common-roses-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common-roses-icon.png"; sourceTree = "<group>"; };
+		B7124441A7D2C7B76823DE83 /* ChatPrivacyDateOfferBtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyDateOfferBtnView.h; sourceTree = "<group>"; };
 		B712452534AF695B9946D96D /* MarcosDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarcosDefinition.h; sourceTree = "<group>"; };
-		B71245722FA699195D1E1C20 /* ChatPrivacyGiftOfferView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyGiftOfferView.m; sourceTree = "<group>"; };
+		B712453E8A5D29E9AA8BB3F6 /* ChatPrivacyGiftOfferBtnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyGiftOfferBtnView.m; sourceTree = "<group>"; };
 		B712459431A1E6F1D2E37DE2 /* ChatSessionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatSessionHelper.h; sourceTree = "<group>"; };
 		B712459EB603E8115806A34D /* ChatPrivacyActivityContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyActivityContentView.m; sourceTree = "<group>"; };
 		B71245A79E6CDD8BA19C38B2 /* ChatSessionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatSessionViewController.h; sourceTree = "<group>"; };
-		B71245ACD76F5DCA3250C498 /* ChatPrivacyGiftOfferBtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyGiftOfferBtnView.h; sourceTree = "<group>"; };
 		B712465DFFEC0AA79AE04485 /* ChatPrivacyDateOfferContentConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyDateOfferContentConfig.h; sourceTree = "<group>"; };
 		B71246EA19A807A3E14ECC8B /* ChatSessionConfigFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatSessionConfigFactory.h; sourceTree = "<group>"; };
-		B71246ECC1163928D265AA7D /* ChatPrivacyGiftOfferBtnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyGiftOfferBtnView.m; sourceTree = "<group>"; };
+		B7124711E72AD71E52A82E84 /* ChatPrivacyActivityOfferCoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyActivityOfferCoverView.m; sourceTree = "<group>"; };
 		B7124739D4C38807F6F702F6 /* ChatPrivacyDateOfferContentConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyDateOfferContentConfig.m; sourceTree = "<group>"; };
 		B712476B948D493CFFF4943C /* ChatSessionConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatSessionConfig.m; sourceTree = "<group>"; };
 		B7124774F0BE2C661253DF35 /* chat_admin.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = chat_admin.html; sourceTree = "<group>"; };
-		B71247A189AA985A83543CE2 /* ChatPrivacyActivityOfferCoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyActivityOfferCoverView.h; sourceTree = "<group>"; };
-		B71248AAC3B9A2679F17B955 /* ChatPrivacyActivityOfferCoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyActivityOfferCoverView.m; sourceTree = "<group>"; };
 		B712499A527494A78FE631F0 /* UIFont+SKS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+SKS.h"; sourceTree = "<group>"; };
+		B71249E8DF1A7551467E8A5C /* ChatPrivacyGiftOfferView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyGiftOfferView.m; sourceTree = "<group>"; };
 		B7124A102606B451F69AE1F8 /* ChatPrivacyGiftOfferContentConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyGiftOfferContentConfig.h; sourceTree = "<group>"; };
-		B7124A8A38BBB0B9EF808C77 /* ChatPrivacyGiftOfferView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyGiftOfferView.h; sourceTree = "<group>"; };
 		B7124A8BECEE4C0E0F28C08B /* ChatPrivacyGiftOfferContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyGiftOfferContentView.h; sourceTree = "<group>"; };
 		B7124AAEC6CD7E31F336D4CC /* ChatDefaultValueMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDefaultValueMaker.h; sourceTree = "<group>"; };
 		B7124ABF27B9F8C7DC0B63F9 /* ChatDefaultValueMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatDefaultValueMaker.m; sourceTree = "<group>"; };
+		B7124AFA1FE1434DA85E8682 /* ChatPrivacyDateOfferBtnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyDateOfferBtnView.m; sourceTree = "<group>"; };
 		B7124B2554DE865C94667E05 /* ChatPrivacyGiftOfferContentConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyGiftOfferContentConfig.m; sourceTree = "<group>"; };
 		B7124B59D0165110B91F6F4F /* ChatSessionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatSessionHelper.m; sourceTree = "<group>"; };
-		B7124C00A3CAC7E181D8EE1C /* ChatPrivacyGiftOfferDescView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyGiftOfferDescView.m; sourceTree = "<group>"; };
+		B7124C6DEC398D17F38DFD98 /* ChatPrivacyGiftOfferDescView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyGiftOfferDescView.m; sourceTree = "<group>"; };
 		B7124D150956D787D806177C /* ChatSessionConfigFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatSessionConfigFactory.m; sourceTree = "<group>"; };
 		B7124D4915DBF9CBC7CF928D /* ChatSessionConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatSessionConfig.h; sourceTree = "<group>"; };
+		B7124DE37537965584676561 /* ChatPrivacyGiftOfferBtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyGiftOfferBtnView.h; sourceTree = "<group>"; };
 		B7124DFD47B20647AC68FF42 /* ChatPrivacyGiftOfferContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyGiftOfferContentView.m; sourceTree = "<group>"; };
 		B7124E3F68092F816CF5A2BC /* ChatPrivacyDateOfferMessageObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyDateOfferMessageObject.m; sourceTree = "<group>"; };
 		B7124E701D1691B6C59E4339 /* ChatTestViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTestViewModel.h; sourceTree = "<group>"; };
 		B7124EC68447122FC61EF357 /* ChatSessionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatSessionViewController.m; sourceTree = "<group>"; };
 		B7124ED30C79BCC1C660A624 /* ChatPrivacyActivityContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyActivityContentView.h; sourceTree = "<group>"; };
 		B7124EE8215808B496ED1E58 /* common-coin-icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "common-coin-icon.jpg"; sourceTree = "<group>"; };
+		B7124EF30104F477E98E4BDE /* ChatPrivacyGiftOfferDescView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyGiftOfferDescView.h; sourceTree = "<group>"; };
 		B7124F128C874CCB98D25BBB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
-		B7124F49AFF229A72EFFB299 /* ChatPrivacyDateOfferBtnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyDateOfferBtnView.m; sourceTree = "<group>"; };
 		B7124FC2841A8B4CF2ED0337 /* ChatPrivacyDateOfferMessageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyDateOfferMessageObject.h; sourceTree = "<group>"; };
 		BF62EEA34FF602BBFB51C773 /* Pods_ChatKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7D7CB73EC78F0E19717646C /* Pods-ChatKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatKit_Tests/Pods-ChatKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -252,17 +252,13 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		B712419E595DA244A2DF074C /* ChatPrivacyGiftOfferView */ = {
+		B71242EE246A777156F38824 /* ChatView */ = {
 			isa = PBXGroup;
 			children = (
-				B7124A8A38BBB0B9EF808C77 /* ChatPrivacyGiftOfferView.h */,
-				B71245722FA699195D1E1C20 /* ChatPrivacyGiftOfferView.m */,
-				B71245ACD76F5DCA3250C498 /* ChatPrivacyGiftOfferBtnView.h */,
-				B71246ECC1163928D265AA7D /* ChatPrivacyGiftOfferBtnView.m */,
-				B712429CC6B2AC42981A0C4E /* ChatPrivacyGiftOfferDescView.h */,
-				B7124C00A3CAC7E181D8EE1C /* ChatPrivacyGiftOfferDescView.m */,
+				B71244191E3EC0C0DA2C59C2 /* ChatPrivacyAcitivityView */,
+				B7124797624F0FDD8DEA89E8 /* ChatPrivacyGiftOfferView */,
 			);
-			path = ChatPrivacyGiftOfferView;
+			path = ChatView;
 			sourceTree = "<group>";
 		};
 		B71243FBFB0D95D36AE8F636 /* BridgeHeader */ = {
@@ -273,13 +269,13 @@
 			path = BridgeHeader;
 			sourceTree = "<group>";
 		};
-		B71244D4EBED441B32BE3F94 /* ChatPrivacyAcitivityView */ = {
+		B71244191E3EC0C0DA2C59C2 /* ChatPrivacyAcitivityView */ = {
 			isa = PBXGroup;
 			children = (
-				B71243B0E37A73051113E6FD /* ChatPrivacyDateOfferBtnView.h */,
-				B7124F49AFF229A72EFFB299 /* ChatPrivacyDateOfferBtnView.m */,
-				B71247A189AA985A83543CE2 /* ChatPrivacyActivityOfferCoverView.h */,
-				B71248AAC3B9A2679F17B955 /* ChatPrivacyActivityOfferCoverView.m */,
+				B7124441A7D2C7B76823DE83 /* ChatPrivacyDateOfferBtnView.h */,
+				B7124AFA1FE1434DA85E8682 /* ChatPrivacyDateOfferBtnView.m */,
+				B71240FA3B330E24517DD67B /* ChatPrivacyActivityOfferCoverView.h */,
+				B7124711E72AD71E52A82E84 /* ChatPrivacyActivityOfferCoverView.m */,
 			);
 			path = ChatPrivacyAcitivityView;
 			sourceTree = "<group>";
@@ -303,6 +299,19 @@
 				B71241FAE55A4836F555A886 /* in2.txt */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		B7124797624F0FDD8DEA89E8 /* ChatPrivacyGiftOfferView */ = {
+			isa = PBXGroup;
+			children = (
+				B7124041BBA76F8A61B47A02 /* ChatPrivacyGiftOfferView.h */,
+				B71249E8DF1A7551467E8A5C /* ChatPrivacyGiftOfferView.m */,
+				B7124DE37537965584676561 /* ChatPrivacyGiftOfferBtnView.h */,
+				B712453E8A5D29E9AA8BB3F6 /* ChatPrivacyGiftOfferBtnView.m */,
+				B7124EF30104F477E98E4BDE /* ChatPrivacyGiftOfferDescView.h */,
+				B7124C6DEC398D17F38DFD98 /* ChatPrivacyGiftOfferDescView.m */,
+			);
+			path = ChatPrivacyGiftOfferView;
 			sourceTree = "<group>";
 		};
 		B7124800559BC5AD5FD00BFB /* Extension */ = {
@@ -351,8 +360,7 @@
 				B7124DFD47B20647AC68FF42 /* ChatPrivacyGiftOfferContentView.m */,
 				B7124ED30C79BCC1C660A624 /* ChatPrivacyActivityContentView.h */,
 				B712459EB603E8115806A34D /* ChatPrivacyActivityContentView.m */,
-				B71244D4EBED441B32BE3F94 /* ChatPrivacyAcitivityView */,
-				B712419E595DA244A2DF074C /* ChatPrivacyGiftOfferView */,
+				B71242EE246A777156F38824 /* ChatView */,
 			);
 			path = ChatContentView;
 			sourceTree = "<group>";
@@ -664,14 +672,14 @@
 				B7124F76CCEED8FDF60798AC /* ChatPrivacyActivityContentView.m in Sources */,
 				B712419E15CF2884490FCA03 /* ChatPrivacyDateOfferMessageObject.m in Sources */,
 				B7124C59AD2C991E4726D243 /* ChatPrivacyGiftOfferMessageObject.m in Sources */,
-				B7124E2D0B77E44B6D467F91 /* ChatPrivacyDateOfferBtnView.m in Sources */,
-				B712418BEAC23750A96E5BAF /* ChatPrivacyGiftOfferView.m in Sources */,
-				B7124148F327CAC96EC90C06 /* ChatPrivacyGiftOfferBtnView.m in Sources */,
-				B71248B0BDA5856ECDA9ACA9 /* ChatPrivacyGiftOfferDescView.m in Sources */,
 				B7124B3164EA9BBAD164A0A0 /* ChatSessionConfig.m in Sources */,
 				B71249D67FBCD0426316FF1F /* UIFont.swift in Sources */,
 				B712407152C7ED0D20A7AE7A /* UIFont+SKS.m in Sources */,
-				B71247F9F98D665F562ACE3C /* ChatPrivacyActivityOfferCoverView.m in Sources */,
+				B71244C6D5C429AE8388F57A /* ChatPrivacyDateOfferBtnView.m in Sources */,
+				B71248FB78A8598B20EAC677 /* ChatPrivacyActivityOfferCoverView.m in Sources */,
+				B71240242719ECA8D7D8D92E /* ChatPrivacyGiftOfferView.m in Sources */,
+				B7124BFDCDD5C8096CA8043E /* ChatPrivacyGiftOfferBtnView.m in Sources */,
+				B71240E84A02425AF4C1305C /* ChatPrivacyGiftOfferDescView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

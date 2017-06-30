@@ -9,10 +9,10 @@
 #import "ChatPrivacyGiftOfferBtnView.h"
 #import "ChatPrivacyGiftOfferContentConfig.h"
 #import "ChatPrivacyGiftOfferMessageObject.h"
-#import <Masonry/Masonry.h>
-#import <ChatKit/SKSChatMessageModel.h>
-#import <ChatKit/SKSChatMessage.h>
-#import <ChatKit/SKSChatSessionConfig.h>
+#import "../../../../../../../../Library/Caches/AppCode2017.2/DerivedData/ChatKit-audcfvhkaxgfyvhffdyzmapwhhcu/Build/Products/Debug-iphoneos/Masonry/Masonry.framework/Headers/Masonry.h"
+#import "../../../../../../../../Library/Caches/AppCode2017.2/DerivedData/ChatKit-audcfvhkaxgfyvhffdyzmapwhhcu/Build/Products/Debug-iphoneos/ChatKit/ChatKit.framework/Headers/SKSChatMessageModel.h"
+#import "../../../../../../../../Library/Caches/AppCode2017.2/DerivedData/ChatKit-audcfvhkaxgfyvhffdyzmapwhhcu/Build/Products/Debug-iphoneos/ChatKit/ChatKit.framework/Headers/SKSChatMessage.h"
+#import "../../../../../../../../Library/Caches/AppCode2017.2/DerivedData/ChatKit-audcfvhkaxgfyvhffdyzmapwhhcu/Build/Products/Debug-iphoneos/ChatKit/ChatKit.framework/Headers/SKSChatSessionConfig.h"
 
 @interface ChatPrivacyGiftOfferBtnView()
 
