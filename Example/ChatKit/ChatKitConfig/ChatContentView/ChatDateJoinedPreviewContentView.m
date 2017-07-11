@@ -6,13 +6,13 @@
 //
 //
 
+#import <ChatKit/SKSChatMessageModel.h>
+#import <ChatKit/SKSChatSessionConfig.h>
+#import <ChatKit/SKSChatMessage.h>
+#import <ChatKit/SKSImageView.h>
 #import "ChatDateJoinedPreviewContentView.h"
-#import "SKSChatMessageModel.h"
-#import "SKSChatSessionConfig.h"
 #import "ChatDateJoinedPreviewContentConfig.h"
 #import "ChatDateJoinedPreviewView.h"
-#import "SKSChatMessage.h"
-#import "SKSImageView.h"
 
 @interface ChatDateJoinedPreviewContentView()
 

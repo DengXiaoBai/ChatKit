@@ -6,7 +6,6 @@
 //
 //
 
-#include "../../../../../../../../Library/Caches/AppCode2017.2/DerivedData/ChatKit-audcfvhkaxgfyvhffdyzmapwhhcu/Build/Products/Debug-iphoneos/ChatKit/ChatKit.framework/Headers/SKSChatMessageModel.h"
 
 @protocol ChatPrivacyGiftOfferViewDelegate <NSObject>
 

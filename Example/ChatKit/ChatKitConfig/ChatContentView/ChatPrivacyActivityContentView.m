@@ -9,6 +9,7 @@
 #import <ChatKit/SKSChatMessage.h>
 #import <ChatKit/SKSChatSessionConfig.h>
 #import <ChatKit/SKSImageView.h>
+#import <ChatKit/SKSChatMessageModel.h>
 #import "ChatPrivacyActivityContentView.h"
 #import "ChatPrivacyDateOfferContentConfig.h"
 #import "ChatPrivacyDateOfferMessageObject.h"
