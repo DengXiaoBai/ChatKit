@@ -36,4 +36,6 @@
 
 @property (nonatomic, assign, readonly) CGFloat bottomViewHeight;
 
+@property (nonatomic, strong, readonly) UIColor *backgroundColor;
+
 @end

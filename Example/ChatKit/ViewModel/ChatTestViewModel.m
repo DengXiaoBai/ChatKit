@@ -331,9 +331,10 @@
     SKSChatMessageModel *privacyActivityMessageModel5 = [self wrapperPrivacyActivityWithPlace:@"地点六，凑字数lallalalalallalalalalalalal拉拉拉拉" detailPlace:@"" title:@"地点标题六标题标题标题标题标题" withCash:600 privateActivityState:SKSPrivacyActivityStateInvalid messageSourceType:SKSMessageSourceTypeSend];
 
     //Privacy send roses message
-    SKSChatMessageModel *privacySendRosesMessageModel = [self wrapperPrivacySendRosesWithRosesCount:300 state:SKSPrivacyGiftOfferStateUnhandle];
-    SKSChatMessageModel *privacySendRosesMessageModel1 = [self wrapperPrivacySendRosesWithRosesCount:400 state:SKSPrivacyGiftOfferStateAccept];
-    SKSChatMessageModel *privacySendRosesMessageModel2 = [self wrapperPrivacySendRosesWithRosesCount:500 state:SKSPrivacyGiftOfferStateReject];
+    SKSChatMessageModel *privacySendRosesMessageModel = [self wrapperPrivacySendRosesWithRosesCount:300 state:SKSPrivacyGiftOfferStateUnhandle sourceType:SKSMessageSourceTypeReceive];
+    SKSChatMessageModel *privacySendRosesMessageModel1 = [self wrapperPrivacySendRosesWithRosesCount:400 state:SKSPrivacyGiftOfferStateAccept sourceType:SKSMessageSourceTypeReceive];
+    SKSChatMessageModel *privacySendRosesMessageModel2 = [self wrapperPrivacySendRosesWithRosesCount:500 state:SKSPrivacyGiftOfferStateReject sourceType:SKSMessageSourceTypeReceive];
+    SKSChatMessageModel *privacySendRosesMessageModel3 = [self wrapperPrivacySendRosesWithRosesCount:500 state:SKSPrivacyGiftOfferStateReject sourceType:SKSMessageSourceTypeSend];
 
     [_messageList addObject:textMessageModel4];
     [_messageList addObject:textMessageModel2];
@@ -449,6 +450,7 @@
     [_messageList addObject:privacySendRosesMessageModel];
     [_messageList addObject:privacySendRosesMessageModel1];
     [_messageList addObject:privacySendRosesMessageModel2];
+    [_messageList addObject:privacySendRosesMessageModel3];
 }
 
 #pragma mark - Helper method
@@ -765,9 +767,9 @@
     return messageModel;
 }
 
-- (SKSChatMessageModel *)wrapperPrivacySendRosesWithRosesCount:(int32_t)rosesCount state:(SKSPrivacyGiftOfferState)state {
+- (SKSChatMessageModel *)wrapperPrivacySendRosesWithRosesCount:(int32_t)rosesCount state:(SKSPrivacyGiftOfferState)state sourceType:(SKSMessageSourceType)sourceType {
     SKSChatMessage *chatMessage = [[SKSChatMessage alloc] init];
-    chatMessage.messageSourceType = SKSMessageSourceTypeReceive;
+    chatMessage.messageSourceType = sourceType;
     chatMessage.messageMediaType = SKSMessageMediaTypePrivacyGiftOffer;
 
     ChatPrivacyGiftOfferMessageObject *messageObject = [[ChatPrivacyGiftOfferMessageObject alloc] initWithRoseCount:rosesCount leftBtnTitle:@"接受" rightBtnTitle:@"退回" state:state];

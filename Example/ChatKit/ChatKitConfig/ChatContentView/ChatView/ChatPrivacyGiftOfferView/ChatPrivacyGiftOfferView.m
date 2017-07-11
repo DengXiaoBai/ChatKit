@@ -59,19 +59,21 @@
     _displayCoreTextView.shouldDrawImages = NO;
     _displayCoreTextView.userInteractionEnabled = NO;
     _displayCoreTextView.textDelegate = self;
+    _displayCoreTextView.backgroundColor = self.contentConfig.backgroundColor;
     [self addSubview:_displayCoreTextView];
 
-    self.lineView = [[UIView alloc] init];
-    self.lineView.backgroundColor = self.contentConfig.lineColor;
-    [self addSubview:self.lineView];
+    if (self.messageModel.message.messageSourceType == SKSMessageSourceTypeReceive) {
+        self.lineView = [[UIView alloc] init];
+        self.lineView.backgroundColor = self.contentConfig.lineColor;
+        [self addSubview:self.lineView];
 
-    self.bottomBtnView = [[ChatPrivacyGiftOfferBtnView alloc] initWithMessageModel:self.messageModel];
-    self.bottomBtnView.delegate = self;
-    [self addSubview:self.bottomBtnView];
+        self.bottomBtnView = [[ChatPrivacyGiftOfferBtnView alloc] initWithMessageModel:self.messageModel];
+        self.bottomBtnView.delegate = self;
+        [self addSubview:self.bottomBtnView];
 
-
-    self.bottomDescView = [[ChatPrivacyGiftOfferDescView alloc] initWithMessageModel:self.messageModel];
-    [self addSubview:self.bottomDescView];
+        self.bottomDescView = [[ChatPrivacyGiftOfferDescView alloc] initWithMessageModel:self.messageModel];
+        [self addSubview:self.bottomDescView];
+    }
 }
 
 - (void)layoutSubviews {
@@ -100,20 +102,35 @@
     self.displayCoreTextView.frame = CGRectMake(titleLabelInset.left, titleLabelInset.top, titleSize.width, titleSize.height);
     self.lineView.frame = CGRectMake(titleLabelInset.left, titleLabelInset.top + titleSize.height + self.contentConfig.hLineInsets.top, titleSize.width, 1);
 
-    switch(self.messageObject.state) {
-        case SKSPrivacyGiftOfferStateUnhandle: {
-            self.bottomBtnView.hidden = NO;
-            self.bottomDescView.hidden = YES;
+    switch (self.messageModel.message.messageSourceType) {
+        case SKSMessageSourceTypeReceive: {
+            switch(self.messageObject.state) {
+                case SKSPrivacyGiftOfferStateUnhandle: {
+                    self.bottomBtnView.hidden = NO;
+                    self.bottomDescView.hidden = YES;
+                    break;
+                }
+                case SKSPrivacyGiftOfferStateAccept: {
+                    self.bottomBtnView.hidden = YES;
+                    self.bottomDescView.hidden = NO;
+                    break;
+                }
+                case SKSPrivacyGiftOfferStateReject: {
+                    self.bottomBtnView.hidden = YES;
+                    self.bottomDescView.hidden = NO;
+                    break;
+                }
+                default: {
+                    break;
+                }
+            }
+
+            CGFloat y = titleLabelInset.top + titleSize.height + titleLabelInset.bottom + self.contentConfig.hLineInsets.top + 1;
+            self.bottomDescView.frame = CGRectMake(titleLabelInset.left, y, titleSize.width, self.contentConfig.bottomViewHeight);
+            self.bottomBtnView.frame = CGRectMake(titleLabelInset.left, y, titleSize.width, self.contentConfig.bottomViewHeight);
             break;
         }
-        case SKSPrivacyGiftOfferStateAccept: {
-            self.bottomBtnView.hidden = YES;
-            self.bottomDescView.hidden = NO;
-            break;
-        }
-        case SKSPrivacyGiftOfferStateReject: {
-            self.bottomBtnView.hidden = YES;
-            self.bottomDescView.hidden = NO;
+        case SKSMessageSourceTypeSend: {
             break;
         }
         default: {
@@ -121,9 +138,6 @@
         }
     }
 
-    CGFloat y = titleLabelInset.top + titleSize.height + titleLabelInset.bottom + self.contentConfig.hLineInsets.top + 1;
-    self.bottomDescView.frame = CGRectMake(titleLabelInset.left, y, titleSize.width, self.contentConfig.bottomViewHeight);
-    self.bottomBtnView.frame = CGRectMake(titleLabelInset.left, y, titleSize.width, self.contentConfig.bottomViewHeight);
 }
 
 #pragma mark - Public method
@@ -149,8 +163,23 @@
 
     UIEdgeInsets titleInset = contentConfig.contentLabelInsets;
 
-    CGSize contentSize = CGSizeMake(titleInset.left + titleSize.width + titleInset.right,
-            titleInset.top + titleSize.height + titleInset.bottom + contentConfig.vLineInsets.top + 1 + contentConfig.hLineInsets.bottom + contentConfig.bottomViewHeight);
+    CGSize contentSize = CGSizeZero;
+    switch (messageModel.message.messageSourceType) {
+        case SKSMessageSourceTypeReceive: {
+            contentSize = CGSizeMake(titleInset.left + titleSize.width + titleInset.right,
+                    titleInset.top + titleSize.height + titleInset.bottom + contentConfig.vLineInsets.top + 1 + contentConfig.hLineInsets.bottom + contentConfig.bottomViewHeight);
+            break;
+        }
+        case SKSMessageSourceTypeSend: {
+            contentSize = CGSizeMake(titleInset.left + titleSize.width + titleInset.right,
+                    titleInset.top + titleSize.height + titleInset.bottom);
+            break;
+        }
+        default: {
+            break;
+        }
+    }
+
     return contentSize;
 }
 

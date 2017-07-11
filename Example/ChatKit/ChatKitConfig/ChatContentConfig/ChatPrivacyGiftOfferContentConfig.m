@@ -41,6 +41,8 @@
 
 @property (nonatomic, assign) CGFloat bottomViewHeight;//跟 ChatPrivacyGiftOfferDescView 的高度一致, 要大于 inset.top + height + inset.bottom 的值
 
+@property (nonatomic, strong) UIColor *backgroundColor;
+
 @end
 
 @implementation ChatPrivacyGiftOfferContentConfig
@@ -86,6 +88,12 @@
 - (void)updateWithMessageModel:(SKSChatMessageModel *)messageModel {
     [super updateWithMessageModel:messageModel];
     self.messageModel = messageModel;
+
+    if (self.messageModel.message.messageSourceType == SKSMessageSourceTypeReceive) {
+        self.backgroundColor = UIColor.whiteColor;
+    } else {
+        self.backgroundColor = RGB(229, 229, 229);
+    }
 }
 
 

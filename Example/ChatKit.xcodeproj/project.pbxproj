@@ -31,6 +31,7 @@
 		B712416BFB0E4C530BF43457 /* ChatConfirmMeetMessageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124249827848C30930566F /* ChatConfirmMeetMessageObject.m */; };
 		B712418B14CDC91291A7D605 /* ChatSessionConfigFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124D150956D787D806177C /* ChatSessionConfigFactory.m */; };
 		B712419E15CF2884490FCA03 /* ChatPrivacyDateOfferMessageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124E3F68092F816CF5A2BC /* ChatPrivacyDateOfferMessageObject.m */; };
+		B712422993C7667596C8DFE9 /* chat_admin_send.html in Resources */ = {isa = PBXBuildFile; fileRef = B712470249644D2CFE257B94 /* chat_admin_send.html */; };
 		B71242658F186373FF24890F /* ChatImpressContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124F6BF8B08AFF7872A25C /* ChatImpressContentView.m */; };
 		B7124363BF4545209DFDDFED /* ChatImpressContentConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B71244EE5D41162332C8C039 /* ChatImpressContentConfig.m */; };
 		B71243715FFEEFB8F2127A2B /* ChatYOMessageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B71248DF9C5605BF4AC53D77 /* ChatYOMessageObject.m */; };
@@ -141,6 +142,7 @@
 		B71246A1B1193E833CA5950B /* ChatDateJoinedPreviewContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDateJoinedPreviewContentView.h; sourceTree = "<group>"; };
 		B71246EA19A807A3E14ECC8B /* ChatSessionConfigFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatSessionConfigFactory.h; sourceTree = "<group>"; };
 		B71246F36750C02804169838 /* ChatDateJoinedPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDateJoinedPreviewView.h; sourceTree = "<group>"; };
+		B712470249644D2CFE257B94 /* chat_admin_send.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = chat_admin_send.html; sourceTree = "<group>"; };
 		B7124711E72AD71E52A82E84 /* ChatPrivacyActivityOfferCoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyActivityOfferCoverView.m; sourceTree = "<group>"; };
 		B7124739D4C38807F6F702F6 /* ChatPrivacyDateOfferContentConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyDateOfferContentConfig.m; sourceTree = "<group>"; };
 		B712476A84FB8939CC9EB783 /* ChatImpressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatImpressView.m; sourceTree = "<group>"; };
@@ -381,6 +383,7 @@
 				B7124EE8215808B496ED1E58 /* common-coin-icon.jpg */,
 				B71243B8A6718CAA2918B1E6 /* common-roses-icon.png */,
 				B71241FAE55A4836F555A886 /* in2.txt */,
+				B712470249644D2CFE257B94 /* chat_admin_send.html */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -682,6 +685,7 @@
 				B7124DBD9CE7F2FEFE0A28CD /* common-roses-icon.png in Resources */,
 				B71245B60D3F4A62AE5F042A /* in2.txt in Resources */,
 				B71247FC19117FE3EBD10193 /* Default-568h@2x.png in Resources */,
+				B712422993C7667596C8DFE9 /* chat_admin_send.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
