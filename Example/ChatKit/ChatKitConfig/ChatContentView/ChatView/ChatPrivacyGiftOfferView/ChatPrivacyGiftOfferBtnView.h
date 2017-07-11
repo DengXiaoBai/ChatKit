@@ -10,7 +10,7 @@
 
 @class SKSChatMessageModel;
 
-@protocol SKSPrivacyGiftOfferBtnViewDelegate <NSObject>
+@protocol ChatPrivacyGiftOfferBtnViewDelegate <NSObject>
 
 - (void)privacyGiftOfferButtonTapIndex:(NSInteger)buttonIndex;
 
@@ -18,7 +18,7 @@
 
 @interface ChatPrivacyGiftOfferBtnView : UIView
 
-@property (nonatomic, weak) id<SKSPrivacyGiftOfferBtnViewDelegate> delegate;
+@property (nonatomic, weak) id<ChatPrivacyGiftOfferBtnViewDelegate> delegate;
 
 - (instancetype)initWithMessageModel:(SKSChatMessageModel *)messageModel;
 - (void)updateUIWithMessageModel:(SKSChatMessageModel *)messageModel force:(BOOL)force;

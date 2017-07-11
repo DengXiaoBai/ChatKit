@@ -19,7 +19,7 @@
 #import "ChatPrivacyGiftOfferContentConfig.h"
 
 
-@interface ChatPrivacyGiftOfferView() <SKSPrivacyGiftOfferBtnViewDelegate, DTAttributedTextContentViewDelegate>
+@interface ChatPrivacyGiftOfferView() <ChatPrivacyGiftOfferBtnViewDelegate, DTAttributedTextContentViewDelegate>
 
 @property (nonatomic, strong) SKSChatMessageModel *messageModel;
 @property (nonatomic, strong) ChatPrivacyGiftOfferContentConfig *contentConfig;
@@ -183,7 +183,7 @@
     return contentSize;
 }
 
-#pragma mark - SKSPrivacySendRosesBtnViewDelegate
+#pragma mark - ChatPrivacyGiftOfferBtnViewDelegate
 - (void)privacyGiftOfferButtonTapIndex:(NSInteger)buttonIndex {
     if ([self.delegate respondsToSelector:@selector(privacySendRosesViewButtonTapIndex:)]) {
         [self.delegate privacySendRosesViewButtonTapIndex:buttonIndex];
