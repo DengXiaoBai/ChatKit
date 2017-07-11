@@ -56,6 +56,8 @@
     self.tableView.backgroundColor = self.view.backgroundColor;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView reloadData];
+
+//    [self.keyboardView disableKeyboardView:YES];//Disable the keyboard view
 }
 
 - (void)didReceiveMemoryWarning {

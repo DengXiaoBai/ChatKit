@@ -35,6 +35,8 @@ static NSInteger kTextRowMaxLimit = 4;
 @property (nonatomic, strong) SKSKeyboardBaseMoreView *moreView;
 @property (nonatomic, strong) SKSEmoticonContainerView *emoticonContainerView;
 
+@property (nonatomic, strong) UIView *disableKeyboardMaskView;//键盘至灰UI
+
 /**
  缓存记录输入文字控件的高度，用于在语音按钮之间做切换的时候使用
  */
@@ -500,6 +502,11 @@ static NSInteger kTextRowMaxLimit = 4;
     [self stopRecordTimer];
 }
 
+- (void)disableKeyboardView:(BOOL)disable {
+    self.disableKeyboardMaskView.hidden = !disable;
+}
+
+
 #pragma mark - Helper method
 - (void)hideVoiceBtnUI {
     _voiceBtn.selected = NO;
@@ -791,6 +798,21 @@ static NSInteger kTextRowMaxLimit = 4;
         [_emoticonBtn setButtonInputView:_emoticonContainerView];
     }
     return _emoticonContainerView;
+}
+
+- (UIView *)disableKeyboardMaskView {
+    if (!_disableKeyboardMaskView) {
+        _disableKeyboardMaskView = [[UIView alloc] init];
+        _disableKeyboardMaskView.translatesAutoresizingMaskIntoConstraints = NO;
+        _disableKeyboardMaskView.userInteractionEnabled = YES;
+        _disableKeyboardMaskView.backgroundColor = UIColor.whiteColor;
+        _disableKeyboardMaskView.alpha = 0.7049;
+        [self addSubview:_disableKeyboardMaskView];
+        [_disableKeyboardMaskView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self);
+        }];
+    }
+    return _disableKeyboardMaskView;
 }
 
 @end

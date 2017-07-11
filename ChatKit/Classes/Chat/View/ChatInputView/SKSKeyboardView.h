@@ -105,4 +105,10 @@
 - (void)didRTCStartRecording;//easy_rtc 开始录音之后的回调，用于开启定时器等之类的资源
 - (void)clearResource;//清理资源
 
+/**
+ * 是否禁用键盘
+ * @param disable
+ */
+- (void)disableKeyboardView:(BOOL)disable;
+
 @end
