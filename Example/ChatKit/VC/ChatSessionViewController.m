@@ -166,6 +166,7 @@
 }
 
 - (void)messageCellDidTapAction:(SKSChatMessageModel *)messageModel cell:(SKSMessageCell *)cell {
+    DLog(@"messageCellDidTapAction:cell: method");
     switch (messageModel.message.messageMediaType) {
         case SKSMessageMediaTypeVoice: {
             SKSVoiceMessageObject *messageObject = messageModel.message.messageAdditionalObject;
@@ -180,6 +181,7 @@
     }
 }
 
+
 - (void)messageCellDidTapMenuItemWithMessageModel:(SKSChatMessageModel *)messageModel menuItemType:(SKSMessageMenuSelectType)menuItemType {
 
 }
@@ -190,6 +192,14 @@
 
 - (void)messageCellDidCustomTapAction:(SKSChatMessageModel *)messageModel buttonIndex:(NSInteger)buttonIndex {
     DLog(@"messageCellDidCustomTapAction, buttonIndex: %ld", (long)buttonIndex);
+}
+
+- (void)messageCellDidTapCoreTextLinkAction:(SKSChatMessageModel *)messageModel url:(NSURL *)url {
+    DLog(@"messageCellDidTapCoreTextLinkAction:url: %@", url);
+}
+
+- (void)messageCellDidLongPressCoreTextLinkAction:(SKSChatMessageModel *)messageModel url:(NSURL *)url {
+    DLog(@"messageCellDidLongPressCoreTextLinkAction:url: %@", url);
 }
 
 #pragma mark - SKSChatKeyboardViewProtocol

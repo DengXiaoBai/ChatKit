@@ -23,8 +23,21 @@
 
 /**
  * 聊天 Cell 中的内容视图里面的按钮点击回调
- * */
+ * @param atIndex begin at 0
+ */
 - (void)chatBaseContentViewBtnActionAtIndex:(NSInteger)atIndex;
+
+/**
+ * 富文本中的链接点击事件回调, 对于非链接的点击事件，还是调用 chatMessageContentDidTapAction 方法
+ * @param url 链接地址
+ */
+- (void)chatCoreTextDidTapAction:(NSURL *)url;
+
+/**
+ * 富文本中的链接长按事件回调, 对于非链接的长按事件，还是调用 chatMessageContentDidLongPressAction 方法
+ * @param url 点击地址
+ */
+- (void)chatCoreTextDidLongPressAction:(NSURL *)url;
 
 @end
 

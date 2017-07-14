@@ -267,7 +267,6 @@
 				6003F59D195388D20070C39A /* SKSAppDelegate.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
-				B7124D092AB0575A1098C194 /* VO */,
 				B7124FE4A13045152AD53BB4 /* VC */,
 				B71245242B783615FC83E089 /* ViewModel */,
 				B71246346C53EB61C63FC33E /* Resource */,
@@ -479,13 +478,6 @@
 				B7124682D07BFF829D4E8B87 /* ChatYOContentView.m */,
 			);
 			path = ChatContentView;
-			sourceTree = "<group>";
-		};
-		B7124D092AB0575A1098C194 /* VO */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = VO;
 			sourceTree = "<group>";
 		};
 		B7124D301BCFB2FF6F708E34 /* Category */ = {

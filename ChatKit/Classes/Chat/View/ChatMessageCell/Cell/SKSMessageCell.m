@@ -18,7 +18,6 @@
 #import "SKSMessageAvatarButton.h"
 #import "SKSMenuItemProtocol.h"
 #import "SKSChatTextContentView.h"
-#import "UIColor+SKS.h"
 #import "UIResponder+SKS.h"
 #import "SKSInputTextView.h"
 #import "SKSButtonInputView.h"
@@ -408,6 +407,19 @@
 - (void)chatBaseContentViewBtnActionAtIndex:(NSInteger)atIndex {
     if ([self.delegate respondsToSelector:@selector(messageCellDidCustomTapAction:buttonIndex:)]) {
         [self.delegate messageCellDidCustomTapAction:self.messageModel buttonIndex:atIndex];
+    }
+}
+
+
+- (void)chatCoreTextDidTapAction:(NSURL *)url {
+    if ([self.delegate respondsToSelector:@selector(messageCellDidTapCoreTextLinkAction:url:)]) {
+        [self.delegate messageCellDidTapCoreTextLinkAction:self.messageModel url:url];
+    }
+}
+
+- (void)chatCoreTextDidLongPressAction:(NSURL *)url {
+    if ([self.delegate respondsToSelector:@selector(messageCellDidLongPressCoreTextLinkAction:url:)]) {
+        [self.delegate messageCellDidLongPressCoreTextLinkAction:self.messageModel url:url];
     }
 }
 

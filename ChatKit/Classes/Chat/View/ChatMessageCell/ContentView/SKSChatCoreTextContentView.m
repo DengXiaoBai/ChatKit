@@ -7,8 +7,9 @@
 //
 
 #import "SKSChatCoreTextContentView.h"
-#import "DTAttributedTextView.h"
 #import "SKSCoreTextMessageObject.h"
+#import <DTCoreText/DTAttributedTextView.h>
+#import <DTCoreText/DTLinkButton.h>
 #import <DTCoreText/DTCoreText.h>
 #import "SKSChatMessageModel.h"
 #import "SKSChatMessage.h"
@@ -34,9 +35,8 @@
 - (void)setupUI {
     if (!_displayCoreTextView) {
         _displayCoreTextView = [[DTAttributedTextView alloc] initWithFrame:CGRectZero];
-        _displayCoreTextView.shouldDrawLinks = YES;
+        _displayCoreTextView.shouldDrawLinks = NO;
         _displayCoreTextView.shouldDrawImages = NO;
-        _displayCoreTextView.userInteractionEnabled = NO;
         _displayCoreTextView.textDelegate = self;
         [self addSubview:_displayCoreTextView];
     }
@@ -90,6 +90,59 @@
         return imageView;
     }
     return nil;
+}
+
+- (UIView *)attributedTextContentView:(DTAttributedTextContentView *)attributedTextContentView viewForAttributedString:(NSAttributedString *)string frame:(CGRect)frame {
+
+    NSDictionary *attributes = [string attributesAtIndex:0 effectiveRange:NULL];
+
+    NSURL *URL = [attributes objectForKey:DTLinkAttribute];
+    NSString *identifier = [attributes objectForKey:DTGUIDAttribute];
+
+
+    DTLinkButton *button = [[DTLinkButton alloc] initWithFrame:frame];
+    button.URL = URL;
+    button.minimumHitSize = CGSizeMake(25, 25); // adjusts it's bounds so that button is always large enough
+    button.GUID = identifier;
+
+    // get image with normal link text
+    UIImage *normalImage = [attributedTextContentView contentImageWithBounds:frame options:DTCoreTextLayoutFrameDrawingDefault];
+    [button setImage:normalImage forState:UIControlStateNormal];
+
+    // get image for highlighted link text
+    UIImage *highlightImage = [attributedTextContentView contentImageWithBounds:frame options:DTCoreTextLayoutFrameDrawingDrawLinksHighlighted];
+    [button setImage:highlightImage forState:UIControlStateHighlighted];
+
+    // use normal push action for opening URL
+    [button addTarget:self action:@selector(linkPushed:) forControlEvents:UIControlEventTouchUpInside];
+
+    // demonstrate combination with long press
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(linkLongPressed:)];
+    [button addGestureRecognizer:longPress];
+
+    return button;
+}
+
+
+#pragma mark - Event Response
+- (void)linkPushed:(DTLinkButton *)sender {
+    if ([self.delegate respondsToSelector:@selector(chatCoreTextDidTapAction:)]) {
+        [self.delegate chatCoreTextDidTapAction:sender.URL];
+    }
+}
+
+- (void)linkLongPressed:(UILongPressGestureRecognizer *)sender {
+    switch (sender.state) {
+        case UIGestureRecognizerStateBegan: {
+            if ([self.delegate respondsToSelector:@selector(chatCoreTextDidLongPressAction:)]) {
+                [self.delegate chatCoreTextDidLongPressAction:((DTLinkButton *)sender.view).URL];
+            }
+            break;
+        }
+        default: {
+            break;
+        }
+    }
 }
 
 #pragma mark - Override method

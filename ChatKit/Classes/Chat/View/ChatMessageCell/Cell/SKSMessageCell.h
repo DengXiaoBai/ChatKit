@@ -14,7 +14,6 @@
 @class SKSChatMessage;
 @class SKSChatBaseContentView;
 @class SKSChatMessageModel;
-@class SKSVoiceLoadingView;
 @class SKSMessageCell;
 
 
@@ -79,6 +78,21 @@
  @param buttonIndex 用户点击的Button Index
  */
 - (void)messageCellDidCustomTapAction:(SKSChatMessageModel *)messageModel buttonIndex:(NSInteger)buttonIndex;
+
+/**
+ * 自定义Cell ContentView 中的富文本中的链接单击事件
+ * @param messageModel 消息Model
+ * @param url   url地址, 不一定要是 http/https 等协议，也可以是自定义的字符串
+ */
+- (void)messageCellDidTapCoreTextLinkAction:(SKSChatMessageModel *)messageModel url:(NSURL *)url;
+
+
+/**
+ * 自定义Cell ContentView 中的富文本中的链接长按事件
+ * @param messageModel 消息Model
+ * @param url url地址, 不一定要是 http/https 等协议，也可以是自定义的字符串
+ */
+- (void)messageCellDidLongPressCoreTextLinkAction:(SKSChatMessageModel *)messageModel url:(NSURL *)url;
 
 @end
 

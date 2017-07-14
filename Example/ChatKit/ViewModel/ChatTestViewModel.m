@@ -227,7 +227,7 @@
 
     //指定字体格式:
     NSString * fontTestContent = @"<p><font size='15px' face=\"PingFangSC-Medium\">PingFangSC-Medium 字体</font></p>";
-    SKSChatMessageModel *coreTextMessageModel = [self wrapperCoreTextMessageWithMsgId:11111 htmlText:@"<h2>这个是CoreText</h2>"];
+    SKSChatMessageModel *coreTextMessageModel = [self wrapperCoreTextMessageWithMsgId:11111 htmlText:@"<p><h2>这个是CoreText</h2>, <a style='color:red; text-decoration:none' href='ChatSessionViewController.nickname.tapAction'>你好sdfdsfsfsdf</a></p>"];
     SKSChatMessageModel *coreTextMessageModel1 = [self wrapperCoreTextMessageWithMsgId:11112 htmlText:fontTestContent];
 
     //附近有人置顶了一个约会，快来看看吧！一起吃饭聊天看电影
@@ -451,6 +451,9 @@
     [_messageList addObject:privacySendRosesMessageModel1];
     [_messageList addObject:privacySendRosesMessageModel2];
     [_messageList addObject:privacySendRosesMessageModel3];
+
+    [_messageList addObject:coreTextMessageModel];
+    [_messageList addObject:coreTextMessageModel1];
 }
 
 #pragma mark - Helper method

@@ -146,7 +146,6 @@
 
     UIEdgeInsets titleLabelInset = self.contentConfig.activityTitleLabelInsets;
     self.titleLabel.text = self.messageObject.title;
-    DLog("title: %@ privacyActivityState: %d", self.messageObject.title, self.messageObject.privacyActivityState);
     if (self.messageObject.privacyActivityState == SKSPrivacyActivityStateReject) {
         self.titleLabel.textColor = self.contentConfig.descLabelTextColor;
     } else {
