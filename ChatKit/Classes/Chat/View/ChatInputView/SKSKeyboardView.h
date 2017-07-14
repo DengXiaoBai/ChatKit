@@ -107,7 +107,7 @@
 
 /**
  * 是否禁用键盘
- * @param disable
+ * @param disable 是否禁用键盘
  */
 - (void)disableKeyboardView:(BOOL)disable;
 

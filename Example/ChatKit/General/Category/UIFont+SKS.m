@@ -8,7 +8,7 @@
 
 static const NSString *kPingFangSCRegular   = @"PingFangSC-Regular";
 static const NSString *kPingFangSCMedium    = @"PingFangSC-Medium";
-static const NSString *kPingFangSCBlod      = @"PingFangSC-Semibold";
+static const NSString *kPingFangSCBold      = @"PingFangSC-Semibold";
 
 @implementation UIFont (SKS)
 
@@ -21,7 +21,7 @@ static const NSString *kPingFangSCBlod      = @"PingFangSC-Semibold";
 }
 
 + (UIFont *)boldDefaultFontOfSize:(CGFloat)size {
-    return [UIFont fontWithName:kPingFangSCBlod size:size];
+    return [UIFont fontWithName:kPingFangSCBold size:size];
 }
 
 @end

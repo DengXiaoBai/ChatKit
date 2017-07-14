@@ -23,11 +23,10 @@
     }
     
     NSString *identifier = [layoutConfig getCellIdentifierWithMessageModel:messageModel];
-//    NSString *contentViewClassName = [layoutConfig getCellContentViewClassNameWithMessageModel:messageModel];
-    
+
     SKSMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
-        [tableView registerClass:NSClassFromString(@"SKSMessageCell") forCellReuseIdentifier:identifier];
+        [tableView registerClass:SKSMessageCell.class forCellReuseIdentifier:identifier];
         cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     }
     
