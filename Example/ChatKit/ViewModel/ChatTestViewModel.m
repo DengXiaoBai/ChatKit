@@ -328,7 +328,8 @@
     SKSChatMessageModel *privacyActivityMessageModel2 = [self wrapperPrivacyActivityWithPlace:@"地点三，凑字数lallalalalallalalalalalalal拉拉拉拉" detailPlace:@"" title:@"地点标题三标题标题标题标题标题" withCash:600 privateActivityState:SKSPrivacyActivityStateThinkAbout messageSourceType:SKSMessageSourceTypeReceive];
     SKSChatMessageModel *privacyActivityMessageModel3 = [self wrapperPrivacyActivityWithPlace:@"地点四，凑字数lallalalalallalalalalalalal拉拉拉拉" detailPlace:@"" title:@"地点标题四标题标题标题标题标题" withCash:600 privateActivityState:SKSPrivacyActivityStateReject messageSourceType:SKSMessageSourceTypeReceive];
     SKSChatMessageModel *privacyActivityMessageModel4 = [self wrapperPrivacyActivityWithPlace:@"地点五，凑字数lallalalalallalalalalalalal拉拉拉拉" detailPlace:@"" title:@"地点标题五标题标题标题标题标题" withCash:600 privateActivityState:SKSPrivacyActivityStateInvalid messageSourceType:SKSMessageSourceTypeReceive];
-    SKSChatMessageModel *privacyActivityMessageModel5 = [self wrapperPrivacyActivityWithPlace:@"地点六，凑字数lallalalalallalalalalalalal拉拉拉拉" detailPlace:@"" title:@"地点标题六标题标题标题标题标题" withCash:600 privateActivityState:SKSPrivacyActivityStateInvalid messageSourceType:SKSMessageSourceTypeSend];
+    SKSChatMessageModel *privacyActivityMessageModel5 = [self wrapperPrivacyActivityWithPlace:@"地点六，凑字数lallalalalallalalalalalalal拉拉拉拉" detailPlace:@"" title:@"地点标题六标题标题标题标题标题" withCash:600 privateActivityState:SKSPrivacyActivityStateAccept messageSourceType:SKSMessageSourceTypeSend];
+    SKSChatMessageModel *privacyActivityMessageModel6 = [self wrapperPrivacyActivityWithPlace:@"地点七，凑字数lallalalalallalalalalalalal拉拉拉拉" detailPlace:@"" title:@"地点标题七标题标题标题标题标题" withCash:600 privateActivityState:SKSPrivacyActivityStateUnhandle messageSourceType:SKSMessageSourceTypeSend];
 
     //Privacy send roses message
     SKSChatMessageModel *privacySendRosesMessageModel = [self wrapperPrivacySendRosesWithRosesCount:300 state:SKSPrivacyGiftOfferStateUnhandle sourceType:SKSMessageSourceTypeReceive];
@@ -440,13 +441,6 @@
     [_messageList addObject:realTimeVoiceMessageModel];
     [_messageList addObject:realTimeVoiceMessageModel1];
 
-    [_messageList addObject:privacyActivityMessageModel];
-    [_messageList addObject:privacyActivityMessageModel1];
-    [_messageList addObject:privacyActivityMessageModel2];
-    [_messageList addObject:privacyActivityMessageModel3];
-    [_messageList addObject:privacyActivityMessageModel4];
-    [_messageList addObject:privacyActivityMessageModel5];
-
     [_messageList addObject:privacySendRosesMessageModel];
     [_messageList addObject:privacySendRosesMessageModel1];
     [_messageList addObject:privacySendRosesMessageModel2];
@@ -454,6 +448,15 @@
 
     [_messageList addObject:coreTextMessageModel];
     [_messageList addObject:coreTextMessageModel1];
+
+    [_messageList addObject:privacyActivityMessageModel];
+    [_messageList addObject:privacyActivityMessageModel1];
+    [_messageList addObject:privacyActivityMessageModel2];
+    [_messageList addObject:privacyActivityMessageModel3];
+    [_messageList addObject:privacyActivityMessageModel4];
+    [_messageList addObject:privacyActivityMessageModel5];
+    [_messageList addObject:privacyActivityMessageModel6];
+
 }
 
 #pragma mark - Helper method

@@ -56,6 +56,8 @@
 
 @property (nonatomic, assign) UIEdgeInsets distinctLabelInsets;
 
+@property (nonatomic, assign) UIEdgeInsets privacyDateOfferStateLabelInsets;
+
 @end
 
 @implementation ChatPrivacyDateOfferContentConfig
@@ -107,6 +109,7 @@
     self.placeLabelInsets = UIEdgeInsetsMake(7, 7, 0, 0);
 
     self.distinctLabelInsets = UIEdgeInsetsMake(7, 0, 0, 6);
+    self.privacyDateOfferStateLabelInsets = UIEdgeInsetsMake(self.coverDescLabelInsets.top, 0, 0, 10);
 }
 
 - (void)updateWithMessageModel:(SKSChatMessageModel *)messageModel {

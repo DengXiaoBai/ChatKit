@@ -48,8 +48,26 @@
 
 
 #pragma mark - Public method
+
+- (NSString *)privacyDateOfferStateStr {
+    switch (self.privacyActivityState) {
+        case SKSPrivacyActivityStateAccept: {
+            return @"对方接受了你的私人邀约";
+        }
+        case SKSPrivacyActivityStateReject: {
+            return @"对方拒绝了你的私人邀约";
+        }
+        case SKSPrivacyActivityStateUnhandle: {
+            return @"等待对方反馈";
+        }
+        default: {
+            return @"";
+        }
+    }
+}
+
 - (NSString *)durationStr {
-    return @"今天 12：30 ~ 13：30";
+    return @"尽快";
 }
 
 - (NSString *)leftBtnTitle {

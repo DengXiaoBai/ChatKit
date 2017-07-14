@@ -54,6 +54,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign, readonly) UIEdgeInsets distinctLabelInsets;
 
+@property (nonatomic, assign, readonly) UIEdgeInsets privacyDateOfferStateLabelInsets;
+
 @end
 
 NS_ASSUME_NONNULL_END

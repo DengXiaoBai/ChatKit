@@ -42,6 +42,8 @@ NS_ASSUME_NONNULL_BEGIN
                    withCash:(int32_t)withCash
        privacyActivityState:(SKSPrivacyActivityState)privacyActivityState;
 
+- (NSString *)privacyDateOfferStateStr;
+
 - (NSString *)durationStr;
 - (NSString *)leftBtnTitle;
 - (NSString *)middleBtnTitle;

@@ -30,6 +30,9 @@
 @property (nonatomic, strong) UILabel *placeLabel;
 @property (nonatomic, strong) UILabel *distanceLabel;
 
+//for privacyDateOffer status ui
+@property (nonatomic, strong) UILabel *privacyDateOfferStatusLabel;
+
 @end
 
 @implementation ChatPrivacyActivityOfferCoverView
@@ -105,6 +108,13 @@
     self.distanceLabel.font = self.contentConfig.descLabelFont;
     self.distanceLabel.textColor = self.contentConfig.descLabelTextColor;
     [self addSubview:self.distanceLabel];
+
+    if (self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend) {//发送方有状态显示
+        self.privacyDateOfferStatusLabel = [[UILabel alloc] init];
+        self.privacyDateOfferStatusLabel.font = self.contentConfig.coverDescLabelFont;
+        self.privacyDateOfferStatusLabel.textColor = self.contentConfig.coverDescLabelTextColor;
+        [self addSubview:self.privacyDateOfferStatusLabel];
+    }
 
     self.coverImageView.backgroundColor = UIColor.lightGrayColor;
 }
@@ -195,6 +205,17 @@
     CGFloat distinctX = placeX + placeLabelSize.width + placeInsets.right + distinctInsets.left;
     CGFloat distinctY = durationY + durationLabelSize.height + durationInsets.bottom + distinctInsets.top;
     self.distanceLabel.frame = CGRectMake(distinctX, distinctY, distinctLabelSize.width, distinctLabelSize.height);
+
+
+    if (self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend) {
+        DLog(@"privacyDateOfferStateStr: %@", self.messageObject.privacyDateOfferStateStr);
+        self.privacyDateOfferStatusLabel.text = [self.messageObject privacyDateOfferStateStr];
+        CGSize statusLabelSize = [self.privacyDateOfferStatusLabel sizeThatFits:CGSizeMake(self.contentConfig.coverSize.width - self.coverDescLabel.frame.origin.x - self.coverDescLabel.frame.size.width, FLT_MAX)];
+        CGFloat statusLabelX = self.contentConfig.coverSize.width - self.contentConfig.privacyDateOfferStateLabelInsets.right - statusLabelSize.width;
+        CGFloat statusLabelY = self.contentConfig.privacyDateOfferStateLabelInsets.top;
+        self.privacyDateOfferStatusLabel.frame = CGRectMake(statusLabelX, statusLabelY, statusLabelSize.width, statusLabelSize.height);
+    }
+
 }
 
 + (CGSize)getSizeWithMessageModel:(SKSChatMessageModel *)messageModel {
