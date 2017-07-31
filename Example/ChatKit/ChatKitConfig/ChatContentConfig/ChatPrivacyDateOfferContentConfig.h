@@ -56,6 +56,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign, readonly) UIEdgeInsets privacyDateOfferStateLabelInsets;
 
+@property (nonatomic, strong, readonly) UIColor *separateLineColor;
+@property (nonatomic, assign, readonly) UIEdgeInsets separateLineInsets;
+
+@property (nonatomic, strong, readonly) UIFont *tradeLabelFont;
+@property (nonatomic, strong, readonly) UIColor *tradeLabelColor;
+@property (nonatomic, assign, readonly) UIEdgeInsets tradeLabelInsets;
+
+@property (nonatomic, strong, readonly) UIFont *cancelBtnFont;
+@property (nonatomic, strong, readonly) UIColor *cancelBtnBgColor;
+@property (nonatomic, strong, readonly) UIColor *cancelBtnColor;
+@property (nonatomic, assign, readonly) CGSize cancelBtnSize;
+@property (nonatomic, assign, readonly) UIEdgeInsets cancelBtnInsets;
+
 @end
 
 NS_ASSUME_NONNULL_END

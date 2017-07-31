@@ -14,6 +14,7 @@
 #import "MarcosDefinition.h"
 #import "ChatPrivacyDateOfferMessageObject.h"
 #import "ChatPrivacyActivityContentView.h"
+#import "ChatPrivacyDateOfferCancelBtnView.h"
 
 @interface ChatPrivacyDateOfferContentConfig()
 
@@ -57,6 +58,19 @@
 @property (nonatomic, assign) UIEdgeInsets distinctLabelInsets;
 
 @property (nonatomic, assign) UIEdgeInsets privacyDateOfferStateLabelInsets;
+
+@property (nonatomic, strong) UIColor *separateLineColor;
+@property (nonatomic, assign) UIEdgeInsets separateLineInsets;
+
+@property (nonatomic, strong) UIFont *tradeLabelFont;
+@property (nonatomic, strong) UIColor *tradeLabelColor;
+@property (nonatomic, assign) UIEdgeInsets tradeLabelInsets;
+
+@property (nonatomic, strong) UIFont *cancelBtnFont;
+@property (nonatomic, strong) UIColor *cancelBtnBgColor;
+@property (nonatomic, strong) UIColor *cancelBtnColor;
+@property (nonatomic, assign) CGSize cancelBtnSize;
+@property (nonatomic, assign) UIEdgeInsets cancelBtnInsets;
 
 @end
 
@@ -110,6 +124,19 @@
 
     self.distinctLabelInsets = UIEdgeInsetsMake(7, 0, 0, 6);
     self.privacyDateOfferStateLabelInsets = UIEdgeInsetsMake(self.coverDescLabelInsets.top, 0, 0, 10);
+
+    self.separateLineColor = RGB(248, 248, 248);
+    self.separateLineInsets = UIEdgeInsetsMake(8, 0, 0, 0);
+
+    self.tradeLabelFont = FONT_DEFAULT(10);
+    self.tradeLabelColor = RGB(155, 155, 155);
+    self.tradeLabelInsets = UIEdgeInsetsMake(8, 12, 0, 12);
+
+    self.cancelBtnFont = FONT_DEFAULT(10);
+    self.cancelBtnBgColor = RGB(255, 126, 126);
+    self.cancelBtnColor = RGB(255, 255, 255);
+    self.cancelBtnSize = CGSizeMake(62, 20);
+    self.cancelBtnInsets = UIEdgeInsetsMake(10, 2, 0, 0);
 }
 
 - (void)updateWithMessageModel:(SKSChatMessageModel *)messageModel {
@@ -129,7 +156,14 @@
     if (self.messageModel.message.messageSourceType != SKSMessageSourceTypeSend) {
         contentSize = CGSizeMake(topViewSize.width, topViewSize.height + bottomViewSize.height);
     } else {
-        contentSize = CGSizeMake(topViewSize.width, topViewSize.height);
+        //需要检测私人邀约的状态，被拒绝以及约会已完成的话就没有取消邀约按钮
+        ChatPrivacyDateOfferMessageObject *messageObject = self.messageModel.message.messageAdditionalObject;
+        if (messageObject.privacyActivityState != SKSPrivacyActivityStateReject && messageObject.privacyActivityState != SKSPrivacyActivityStateSuccess) {
+            CGSize cancelBottomViewSize = [ChatPrivacyDateOfferCancelBtnView getViewSizeWithMessageModel:self.messageModel maxWidth:topViewSize.width];
+            contentSize = CGSizeMake(topViewSize.width, topViewSize.height + cancelBottomViewSize.height);
+        } else {
+            contentSize = CGSizeMake(topViewSize.width, topViewSize.height);
+        }
     }
 
     self.messageModel.contentViewSize = contentSize;

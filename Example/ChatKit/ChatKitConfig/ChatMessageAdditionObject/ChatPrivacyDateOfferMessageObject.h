@@ -48,6 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)leftBtnTitle;
 - (NSString *)middleBtnTitle;
 - (NSString *)rightBtnTitle;
+- (NSString *)cancelBtnTitle;
 
 - (NSString *)acceptedBtnTitle;
 - (NSString *)rejectedBtnTitle;
@@ -56,6 +57,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)cashTitle;
 - (NSString *)distinctTitle;
 - (NSString *)placeTitle;
+
+- (NSString *)privacyOfferTradingTips;//私人邀约交易提示文案
 
 @end
 

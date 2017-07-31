@@ -15,6 +15,7 @@
 #import "ChatPrivacyDateOfferMessageObject.h"
 #import "ChatPrivacyDateOfferBtnView.h"
 #import "ChatPrivacyActivityOfferCoverView.h"
+#import "ChatPrivacyDateOfferCancelBtnView.h"
 
 @interface ChatPrivacyActivityContentView() <ChatPrivacyDateOfferBtnViewDelegate>
 
@@ -22,6 +23,7 @@
 @property (nonatomic, strong) ChatPrivacyDateOfferMessageObject *messageObject;
 @property (nonatomic, strong) ChatPrivacyActivityOfferCoverView *topView;
 @property (nonatomic, strong) ChatPrivacyDateOfferBtnView *btnView;
+@property (nonatomic, strong) ChatPrivacyDateOfferCancelBtnView *cancelBtnView;
 @end
 
 @implementation ChatPrivacyActivityContentView
@@ -50,6 +52,12 @@
         self.btnView = [[ChatPrivacyDateOfferBtnView alloc] initWithMessageModel:self.messageModel];
         self.btnView.delegate = self;
         [self addSubview:self.btnView];
+    } else {
+        if (self.messageObject.privacyActivityState != SKSPrivacyActivityStateReject && self.messageObject.privacyActivityState != SKSPrivacyActivityStateSuccess) {
+            self.cancelBtnView = [[ChatPrivacyDateOfferCancelBtnView alloc] initWithMessageModel:self.messageModel];
+            self.cancelBtnView.delegate = self;
+            [self addSubview:self.cancelBtnView];
+        }
     }
 
     self.bubbleImageView.hidden = YES;
@@ -76,8 +84,11 @@
 
     if (self.messageModel.message.messageSourceType != SKSMessageSourceTypeSend) {
         [self.btnView updateUIWithMessageModel:self.messageModel force:force];
+    } else {
+        if (self.messageObject.privacyActivityState != SKSPrivacyActivityStateReject && self.messageObject.privacyActivityState != SKSPrivacyActivityStateSuccess) {
+            [self.cancelBtnView updateUIWithMessageModel:self.messageModel force:force];
+        }
     }
-
 
     CGSize contentViewSize = self.messageModel.contentViewSize;
     UIEdgeInsets contentViewInsets = self.messageModel.contentViewInsets;
@@ -87,6 +98,10 @@
 
     if (self.messageModel.message.messageSourceType != SKSMessageSourceTypeSend) {
         self.btnView.frame = CGRectMake(contentViewInsets.left, contentViewInsets.top + dateJoinedContentSize.height, dateJoinedContentSize.width, contentViewSize.height - dateJoinedContentSize.height);
+    } else {
+        if (self.messageObject.privacyActivityState != SKSPrivacyActivityStateReject && self.messageObject.privacyActivityState != SKSPrivacyActivityStateSuccess) {
+            self.cancelBtnView.frame = CGRectMake(contentViewInsets.left, contentViewInsets.top + dateJoinedContentSize.height, dateJoinedContentSize.width, contentViewSize.height - dateJoinedContentSize.height);
+        }
     }
 }
 

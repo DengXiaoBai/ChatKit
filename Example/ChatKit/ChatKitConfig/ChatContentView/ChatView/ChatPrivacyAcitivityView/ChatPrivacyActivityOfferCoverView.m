@@ -30,6 +30,10 @@
 @property (nonatomic, strong) UILabel *placeLabel;
 @property (nonatomic, strong) UILabel *distanceLabel;
 
+@property (nonatomic, strong) UIView *separateLineView;
+@property (nonatomic, strong) UILabel *tradeTipsLabel;
+@property (nonatomic, assign) CGSize tradeTipsSize;
+
 //for privacyDateOffer status ui
 @property (nonatomic, strong) UILabel *privacyDateOfferStatusLabel;
 
@@ -108,6 +112,19 @@
     self.distanceLabel.font = self.contentConfig.descLabelFont;
     self.distanceLabel.textColor = self.contentConfig.descLabelTextColor;
     [self addSubview:self.distanceLabel];
+
+    self.separateLineView = [[UIView alloc] init];
+    self.separateLineView.backgroundColor = self.contentConfig.separateLineColor;
+    [self addSubview:self.separateLineView];
+
+    self.tradeTipsLabel = [[UILabel alloc] init];
+    self.tradeTipsLabel.numberOfLines = 0;
+    self.tradeTipsLabel.font = self.contentConfig.tradeLabelFont;
+    self.tradeTipsLabel.textColor = self.contentConfig.tradeLabelColor;
+    self.tradeTipsLabel.text = self.messageObject.privacyOfferTradingTips;
+    self.tradeTipsSize = [self.tradeTipsLabel sizeThatFits:CGSizeMake(self.contentConfig.coverSize.width - self.contentConfig.tradeLabelInsets.left - self.contentConfig.tradeLabelInsets.right, FLT_MAX)];
+    [self addSubview:self.tradeTipsLabel];
+
 
     if (self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend) {//发送方有状态显示
         self.privacyDateOfferStatusLabel = [[UILabel alloc] init];
@@ -207,8 +224,17 @@
     self.distanceLabel.frame = CGRectMake(distinctX, distinctY, distinctLabelSize.width, distinctLabelSize.height);
 
 
+    //Update the separate line frame
+    CGFloat separateLineX = self.contentConfig.separateLineInsets.left;
+    CGFloat separateLineY = distinctY + distinctLabelSize.height + distinctInsets.bottom + self.contentConfig.separateLineInsets.top;
+    self.separateLineView.frame = CGRectMake(separateLineX, separateLineY, self.contentConfig.coverSize.width, 1);
+
+    //Update tradeLabel frame
+    CGFloat tradeTipsX = self.contentConfig.tradeLabelInsets.left;
+    CGFloat tradeTipsY = separateLineY + 1 + self.contentConfig.separateLineInsets.bottom + self.contentConfig.tradeLabelInsets.top;
+    self.tradeTipsLabel.frame = CGRectMake(tradeTipsX, tradeTipsY, self.tradeTipsSize.width, self.tradeTipsSize.height);
+
     if (self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend) {
-        DLog(@"privacyDateOfferStateStr: %@", self.messageObject.privacyDateOfferStateStr);
         self.privacyDateOfferStatusLabel.text = [self.messageObject privacyDateOfferStateStr];
         CGSize statusLabelSize = [self.privacyDateOfferStatusLabel sizeThatFits:CGSizeMake(self.contentConfig.coverSize.width - self.coverDescLabel.frame.origin.x - self.coverDescLabel.frame.size.width, FLT_MAX)];
         CGFloat statusLabelX = self.contentConfig.coverSize.width - self.contentConfig.privacyDateOfferStateLabelInsets.right - statusLabelSize.width;
@@ -220,7 +246,18 @@
 
 + (CGSize)getSizeWithMessageModel:(SKSChatMessageModel *)messageModel {
     ChatPrivacyDateOfferContentConfig *contentConfig = [messageModel.sessionConfig chatContentConfigWithMessageModel:messageModel];
-    return CGSizeMake(contentConfig.coverSize.width, 182);
+    ChatPrivacyDateOfferMessageObject *messageObject = messageModel.message.messageAdditionalObject;
+
+    static UILabel *tradeLabel;
+    if (tradeLabel == nil) {
+        tradeLabel = [[UILabel alloc] init];
+        tradeLabel.numberOfLines = 0;
+        tradeLabel.font = contentConfig.tradeLabelFont;
+    }
+
+    tradeLabel.text = messageObject.privacyOfferTradingTips;
+    CGSize tradeLabelSize = [tradeLabel sizeThatFits:CGSizeMake(contentConfig.coverSize.width - contentConfig.tradeLabelInsets.left - contentConfig.tradeLabelInsets.right, FLT_MAX)];
+    return CGSizeMake(contentConfig.coverSize.width, 182 + contentConfig.separateLineInsets.top + 1 + contentConfig.separateLineInsets.bottom + contentConfig.tradeLabelInsets.top + tradeLabelSize.height + contentConfig.tradeLabelInsets.bottom);
 }
 
 

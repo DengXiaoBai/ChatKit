@@ -330,6 +330,8 @@
     SKSChatMessageModel *privacyActivityMessageModel4 = [self wrapperPrivacyActivityWithPlace:@"地点五，凑字数lallalalalallalalalalalalal拉拉拉拉" detailPlace:@"" title:@"地点标题五标题标题标题标题标题" withCash:600 privateActivityState:SKSPrivacyActivityStateInvalid messageSourceType:SKSMessageSourceTypeReceive];
     SKSChatMessageModel *privacyActivityMessageModel5 = [self wrapperPrivacyActivityWithPlace:@"地点六，凑字数lallalalalallalalalalalalal拉拉拉拉" detailPlace:@"" title:@"地点标题六标题标题标题标题标题" withCash:600 privateActivityState:SKSPrivacyActivityStateAccept messageSourceType:SKSMessageSourceTypeSend];
     SKSChatMessageModel *privacyActivityMessageModel6 = [self wrapperPrivacyActivityWithPlace:@"地点七，凑字数lallalalalallalalalalalalal拉拉拉拉" detailPlace:@"" title:@"地点标题七标题标题标题标题标题" withCash:600 privateActivityState:SKSPrivacyActivityStateUnhandle messageSourceType:SKSMessageSourceTypeSend];
+    SKSChatMessageModel *privacyActivityMessageModel7 = [self wrapperPrivacyActivityWithPlace:@"地点七，凑字数lallalalalallalalalalalalal拉拉拉拉" detailPlace:@"" title:@"地点标题七标题标题标题标题标题" withCash:600 privateActivityState:SKSPrivacyActivityStateReject messageSourceType:SKSMessageSourceTypeSend];
+    SKSChatMessageModel *privacyActivityMessageModel8 = [self wrapperPrivacyActivityWithPlace:@"地点七，凑字数lallalalalallalalalalalalal拉拉拉拉" detailPlace:@"" title:@"地点标题七标题标题标题标题标题" withCash:600 privateActivityState:SKSPrivacyActivityStateSuccess messageSourceType:SKSMessageSourceTypeSend];
 
     //Privacy send roses message
     SKSChatMessageModel *privacySendRosesMessageModel = [self wrapperPrivacySendRosesWithRosesCount:300 state:SKSPrivacyGiftOfferStateUnhandle sourceType:SKSMessageSourceTypeReceive];
@@ -456,6 +458,8 @@
     [_messageList addObject:privacyActivityMessageModel4];
     [_messageList addObject:privacyActivityMessageModel5];
     [_messageList addObject:privacyActivityMessageModel6];
+    [_messageList addObject:privacyActivityMessageModel7];
+    [_messageList addObject:privacyActivityMessageModel8];
 
 }
 

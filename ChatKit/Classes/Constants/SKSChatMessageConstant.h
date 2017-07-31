@@ -278,6 +278,7 @@ typedef NS_ENUM(NSInteger, SKSPrivacyActivityState) {
     SKSPrivacyActivityStateThinkAbout   = 2,//考虑
     SKSPrivacyActivityStateReject       = 3,//拒绝
     SKSPrivacyActivityStateInvalid      = 4,//无效
+    SKSPrivacyActivityStateSuccess      = 5,//完成
 };
 
 /**
