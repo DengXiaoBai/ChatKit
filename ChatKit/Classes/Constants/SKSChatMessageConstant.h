@@ -250,14 +250,6 @@ typedef NS_ENUM(NSInteger, SKSImpressStatus) {
     SKSImpressStatusInvalid     = 2,//评价失效
 };
 
-/**
- *  约会提示来源
- * */
-typedef NS_ENUM(NSInteger, SKSDateActivityTipFrom) {
-    SKSDateActivityTipFromPublisher         = 0,//发自约会的发布者
-    SKSDateActivityTipFromParticipant       = 1,//来自约会的报名者
-    SKSDateActivityTipFromAdminRecommend    = 2,//来自管理员推荐的约会
-};
 
 /**
  * 键盘的表情控件中的发送按钮状态
