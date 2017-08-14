@@ -7,6 +7,7 @@
 //
 
 #import "ChatDateActivityMessageObject.h"
+#import "ChatConstant.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

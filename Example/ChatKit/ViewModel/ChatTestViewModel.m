@@ -31,6 +31,7 @@
 #import "ChatDateJoinedPreviewMessageObject.h"
 #import "ChatYOMessageObject.h"
 #import "ChatImpressMessageObject.h"
+#import "ChatConstant.h"
 
 
 @interface ChatTestViewModel()
@@ -746,6 +747,7 @@
 }
 
 - (SKSChatMessageModel *)wrapperPrivacyActivityWithPlace:(NSString *)place detailPlace:(NSString *)detailPlace title:(NSString *)title withCash:(int32_t)withCrash privateActivityState:(SKSPrivacyActivityState)privacyActivityState messageSourceType:(SKSMessageSourceType)messageSourceType {
+
     SKSChatMessage *chatMessage = [[SKSChatMessage alloc] init];
     chatMessage.messageSourceType = messageSourceType;
     chatMessage.messageMediaType = SKSMessageMediaTypePrivacyActivity;

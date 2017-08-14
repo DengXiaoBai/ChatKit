@@ -8,6 +8,7 @@
 
 #import <ChatKit/SKSChatMessageConstant.h>
 #import <ChatKit/SKSChatMessageObject.h>
+#import "ChatConstant.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

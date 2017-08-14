@@ -126,6 +126,7 @@
 		B71242F7D10A7EE205A53B4E /* ChatPrivacyDateOfferCancelBtnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyDateOfferCancelBtnView.m; sourceTree = "<group>"; };
 		B7124337FE3667A4D1B944BF /* ChatYOMessageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatYOMessageObject.h; sourceTree = "<group>"; };
 		B7124359F2A3282F62F33762 /* UIFont+SKS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+SKS.m"; sourceTree = "<group>"; };
+		B7124362DCE2F44CF9050148 /* ChatConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatConstant.h; sourceTree = "<group>"; };
 		B71243B8A6718CAA2918B1E6 /* common-roses-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common-roses-icon.png"; sourceTree = "<group>"; };
 		B7124441A7D2C7B76823DE83 /* ChatPrivacyDateOfferBtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyDateOfferBtnView.h; sourceTree = "<group>"; };
 		B712449547F60FAC29F42A02 /* ChatImpressTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatImpressTopView.h; sourceTree = "<group>"; };
@@ -501,6 +502,7 @@
 				B7124800559BC5AD5FD00BFB /* Extension */,
 				B71243FBFB0D95D36AE8F636 /* BridgeHeader */,
 				B7124D301BCFB2FF6F708E34 /* Category */,
+				B7124F8F8093B89E0068040A /* Constant */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -551,6 +553,14 @@
 				B7124B59D0165110B91F6F4F /* ChatSessionHelper.m */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		B7124F8F8093B89E0068040A /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				B7124362DCE2F44CF9050148 /* ChatConstant.h */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 		B7124FE4A13045152AD53BB4 /* VC */ = {
