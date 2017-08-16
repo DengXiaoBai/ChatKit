@@ -53,6 +53,11 @@
     self.sksDataSource = self;
 
     self.view.backgroundColor = RGB(249, 249, 249);
+    [self.tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.mas_top).offset(64);
+        make.left.right.equalTo(self.view);
+        make.bottom.equalTo(self.keyboardView.mas_top);
+    }];
     self.tableView.backgroundColor = self.view.backgroundColor;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView reloadData];
@@ -291,6 +296,27 @@
 }
 
 #pragma mark - SKSKeyboardViewDelegate
+- (void)inputTextViewHeightDidChange:(NSString *)text {
+    [self.keyboardView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.equalTo(self.view);
+        make.height.equalTo(@(self.keyboardView.customInputViewHeight));
+        make.bottom.equalTo(self.view.mas_bottom).offset(-self.keyboardView.systemKeyboardViewHeight);
+    }];
+
+    //update tableView insets
+    [self.tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(self.view);
+        make.top.equalTo(self.view.mas_top).offset(64);
+        make.bottom.equalTo(self.keyboardView.mas_top);
+    }];
+
+    [self.tableView layoutIfNeeded];
+    [self.keyboardView layoutIfNeeded];
+
+    //tableView scroll to bottom
+    [self tableViewScrollToBottomWithIsAnimated:YES];
+}
+
 - (void)inputTextViewDidChange:(NSString *)text {
     DLog(@"[inputTextViewDidChange] text: %@", text);
 }

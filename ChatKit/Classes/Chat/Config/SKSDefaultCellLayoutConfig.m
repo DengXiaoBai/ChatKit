@@ -75,21 +75,30 @@
     //Calculate the bubbleView UIEdgeInsets(top2CellTop, left2CellLeft, bottom2CellBottom, right2CellRight)
     switch (messageModel.message.messageSourceType) {
         case SKSMessageSourceTypeReceive: {
-            bubbleViewInsets = UIEdgeInsetsMake(timestampInsets.top + timestampSize.height + timestampInsets.bottom + noTimestampBubbleViewInsets.top, avatarViewInsets.left + avatarViewSize.width + avatarViewInsets.right + noTimestampBubbleViewInsets.left + noTimestampBubbleViewInsets.right, noTimestampBubbleViewInsets.bottom, noTimestampBubbleViewInsets.right);
+            bubbleViewInsets = UIEdgeInsetsMake(timestampInsets.top + timestampSize.height + timestampInsets.bottom + noTimestampBubbleViewInsets.top,
+                    avatarViewInsets.left + avatarViewSize.width + avatarViewInsets.right + noTimestampBubbleViewInsets.left + noTimestampBubbleViewInsets.right,
+                    noTimestampBubbleViewInsets.bottom,
+                    noTimestampBubbleViewInsets.right);
             
             break;
         }
         case SKSMessageSourceTypeSend: {
             CGFloat left = screen_width - (avatarViewInsets.right + avatarViewSize.width + avatarViewInsets.left) - (contentInsets.left + contentSize.width + contentInsets.right) - noTimestampBubbleViewInsets.left;
-            bubbleViewInsets = UIEdgeInsetsMake(timestampInsets.top + timestampSize.height + timestampInsets.bottom + noTimestampBubbleViewInsets.top, left, noTimestampBubbleViewInsets.bottom, noTimestampBubbleViewInsets.right + (avatarViewInsets.right + avatarViewSize.width + avatarViewInsets.left));
-            
+            bubbleViewInsets = UIEdgeInsetsMake(timestampInsets.top + timestampSize.height + timestampInsets.bottom + noTimestampBubbleViewInsets.top,
+                    left,
+                    noTimestampBubbleViewInsets.bottom,
+                    noTimestampBubbleViewInsets.right + (avatarViewInsets.right + avatarViewSize.width + avatarViewInsets.left));
+
             break;
         }
         case SKSMessageSourceTypeSendCenter:
         case SKSMessageSourceTypeReceiveCenter:
         case SKSMessageSourceTypeCenter: {
             CGFloat left = (screen_width - contentSize.width - contentInsets.left - contentInsets.right) / 2;
-            bubbleViewInsets = UIEdgeInsetsMake(timestampInsets.top + timestampSize.height + timestampInsets.bottom + noTimestampBubbleViewInsets.top, left, noTimestampBubbleViewInsets.bottom, noTimestampBubbleViewInsets.right + (avatarViewInsets.right + avatarViewSize.width + avatarViewInsets.left));
+            bubbleViewInsets = UIEdgeInsetsMake(timestampInsets.top + timestampSize.height + timestampInsets.bottom + noTimestampBubbleViewInsets.top,
+                    left,
+                    noTimestampBubbleViewInsets.bottom,
+                    noTimestampBubbleViewInsets.right + (avatarViewInsets.right + avatarViewSize.width + avatarViewInsets.left));
             
             break;
         }

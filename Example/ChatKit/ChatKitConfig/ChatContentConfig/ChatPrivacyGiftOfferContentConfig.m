@@ -8,6 +8,8 @@
 
 #import <ChatKit/SKSChatMessageModel.h>
 #import <ChatKit/SKSChatMessage.h>
+#import <ChatKit/SKSChatSessionConfig.h>
+#import <ChatKit/SKSChatCellConfig.h>
 #import "ChatPrivacyGiftOfferView.h"
 #import "ChatPrivacyGiftOfferContentConfig.h"
 #import "ChatPrivacyGiftOfferContentView.h"
@@ -117,11 +119,25 @@
 
 
 - (UIEdgeInsets)contentViewInsets {
-    return UIEdgeInsetsMake(5, 15, 5, 15);
+
+    id<SKSChatCellConfig> cellConfig = [self.messageModel.sessionConfig chatCellConfigWithMessage:self.messageModel.message];
+
+    switch (self.messageModel.message.messageSourceType) {
+        case SKSMessageSourceTypeReceive: {
+            return UIEdgeInsetsMake(5, 5 + [cellConfig getBubbleViewArrowWidth], 5, 5);
+        }
+        case SKSMessageSourceTypeSend: {
+            return UIEdgeInsetsMake(5, 5, 5, 5 + [cellConfig getBubbleViewArrowWidth]);
+        }
+        default: {
+            NSAssert(NO, @"not support messageSourceType");
+        }
+    }
+    return UIEdgeInsetsZero;
 }
 
 - (UIEdgeInsets)bubbleViewInsetsRegardlessOfTheTimestampSituation {
-    return UIEdgeInsetsMake(5, 15, 5, 15);
+    return UIEdgeInsetsMake(5, 0, 5, 0);
 }
 
 - (UIEdgeInsets)timestampViewInsets {
