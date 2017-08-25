@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) double placeLat;
 @property (nonatomic, assign) double placeLng;
 @property (nonatomic, assign) int32_t withCrash;//附带的现金数量
-@property (nonatomic, assign) SKSPrivacyActivityState privacyActivityState;
+@property (nonatomic, assign) SKSPrivacyDateOfferState privacyDateOfferState;
 
 
 - (instancetype)initWithAid:(NSString *)aid
@@ -41,7 +41,7 @@ NS_ASSUME_NONNULL_BEGIN
                    placeLat:(double)placeLat
                    placeLng:(double)placeLng
                    withCash:(int32_t)withCash
-       privacyActivityState:(SKSPrivacyActivityState)privacyActivityState;
+      privacyDateOfferState:(SKSPrivacyDateOfferState)privacyDateOfferState;
 
 - (NSString *)privacyDateOfferStateStr;
 

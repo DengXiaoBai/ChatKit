@@ -12,14 +12,15 @@
 /**
  * 私人邀约的当前状态
  */
-typedef NS_ENUM(NSInteger, SKSPrivacyActivityState) {
-    SKSPrivacyActivityStateUnhandle                 = 0,//未处理
-    SKSPrivacyActivityStateAccept                   = 1,//接受
-    SKSPrivacyActivityStateThinkAbout               = 2,//考虑
-    SKSPrivacyActivityStateReject                   = 3,//拒绝
-    SKSPrivacyActivityStateInvalid                  = 4,//无效
-    SKSPrivacyActivityStateSuccess                  = 5,//完成
-    SKSPrivacyActivityStateUnhandleButSendAnaly     = 6,//未处理，但是发送了统计
+typedef NS_ENUM(NSInteger, SKSPrivacyDateOfferState) {
+    SKSPrivacyDateOfferStateUnhandle                 = 0,//未处理
+    SKSPrivacyDateOfferStateAccept                   = 1,//接受
+    SKSPrivacyDateOfferStateThinkAbout               = 2,//考虑
+    SKSPrivacyDateOfferStateReject                   = 3,//拒绝
+    SKSPrivacyDateOfferStateInvalid                  = 4,//无效
+    SKSPrivacyDateOfferStateMet                      = 5,//完成
+    SKSPrivacyDateOfferStateCanceled                 = 6,//发布者自己取消了
+    SKSPrivacyDateOfferStateCancelJoined             = 7,//被邀约者自己取消
 };
 
 /**
@@ -30,7 +31,6 @@ typedef NS_ENUM(NSInteger, SKSPrivacyGiftOfferState) {
     SKSPrivacyGiftOfferStateAccept                  = 1,//接受
     SKSPrivacyGiftOfferStateReject                  = 2,//拒绝
     SKSPrivacyGiftOfferStateInvalid                 = 3,//无效
-    SKSPrivacyGiftOfferStateUnhandleButSendAnaly    = 4,//未处理，但是发送了统计
 };
 
 
@@ -44,7 +44,6 @@ typedef NS_ENUM(NSInteger, SKSDateOfferState) {
     SKSDateOfferStateOfferNoResponse        = 6,//邀约未被受邀者响应
     SKSDateOfferStateOfferAcceptedOverLimit = 7,//应邀者已达上限
     SKSDateOfferStateOfferInvalid           = 8,//无效的 DateOffer 状态
-    SKSDateOfferStateNotProcessedButSendAnaly = 9,//未做任何操作，但是发送了统计的状态
 };
 
 

@@ -13,7 +13,7 @@
 #import "ChatPrivacyActivityOfferCoverView.h"
 #import "MarcosDefinition.h"
 #import "ChatPrivacyDateOfferMessageObject.h"
-#import "ChatPrivacyActivityContentView.h"
+#import "ChatPrivacyDateOfferContentView.h"
 #import "ChatPrivacyDateOfferCancelBtnView.h"
 
 @interface ChatPrivacyDateOfferContentConfig()
@@ -158,7 +158,7 @@
     } else {
         //需要检测私人邀约的状态，被拒绝以及约会已完成的话就没有取消邀约按钮
         ChatPrivacyDateOfferMessageObject *messageObject = self.messageModel.message.messageAdditionalObject;
-        if (messageObject.privacyActivityState != SKSPrivacyActivityStateReject && messageObject.privacyActivityState != SKSPrivacyActivityStateSuccess) {
+        if (messageObject.privacyDateOfferState != SKSPrivacyDateOfferStateReject && messageObject.privacyDateOfferState != SKSPrivacyDateOfferStateMet) {
             CGSize cancelBottomViewSize = [ChatPrivacyDateOfferCancelBtnView getViewSizeWithMessageModel:self.messageModel maxWidth:topViewSize.width];
             contentSize = CGSizeMake(topViewSize.width, topViewSize.height + cancelBottomViewSize.height);
         } else {
@@ -172,13 +172,13 @@
 
 
 - (NSString *)cellContentClass {
-    return NSStringFromClass(ChatPrivacyActivityContentView.class);
+    return NSStringFromClass(ChatPrivacyDateOfferContentView.class);
 }
 
 
 - (NSString *)cellContentIdentifier {
     ChatPrivacyDateOfferMessageObject *messageObject = self.messageModel.message.messageAdditionalObject;
-    return [NSString stringWithFormat:@"%@-%ld-%ld", [self cellContentClass], (long)self.messageModel.message.messageSourceType, (long)messageObject.privacyActivityState];
+    return [NSString stringWithFormat:@"%@-%ld-%ld", [self cellContentClass], (long)self.messageModel.message.messageSourceType, (long)messageObject.privacyDateOfferState];
 }
 
 

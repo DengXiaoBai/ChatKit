@@ -24,7 +24,7 @@
                    placeLat:(double)placeLat
                    placeLng:(double)placeLng
                    withCash:(int32_t)withCash
-       privacyActivityState:(SKSPrivacyActivityState)privacyActivityState {
+      privacyDateOfferState:(SKSPrivacyDateOfferState)privacyDateOfferState {
     self = [super init];
 
     if (self) {
@@ -41,7 +41,7 @@
         self.placeLat = placeLat;
         self.placeLng = placeLng;
         self.withCrash = withCash;
-        self.privacyActivityState = privacyActivityState;
+        self.privacyDateOfferState = privacyDateOfferState;
     }
     return self;
 }
@@ -50,14 +50,14 @@
 #pragma mark - Public method
 
 - (NSString *)privacyDateOfferStateStr {
-    switch (self.privacyActivityState) {
-        case SKSPrivacyActivityStateAccept: {
+    switch (self.privacyDateOfferState) {
+        case SKSPrivacyDateOfferStateAccept: {
             return @"对方接受了你的私人邀约";
         }
-        case SKSPrivacyActivityStateReject: {
+        case SKSPrivacyDateOfferStateReject: {
             return @"对方拒绝了你的私人邀约";
         }
-        case SKSPrivacyActivityStateUnhandle: {
+        case SKSPrivacyDateOfferStateUnhandle: {
             return @"等待对方反馈";
         }
         default: {

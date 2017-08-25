@@ -324,15 +324,15 @@
     SKSChatMessageModel *unReadMessageModel3 = [self wrapperUnReadMessageWithUnReadCount:199];
 
     //Privacy Activity message
-    SKSChatMessageModel *privacyActivityMessageModel = [self wrapperPrivacyActivityWithPlace:@"地点一，凑字数lalla" detailPlace:@"" title:@"地点标题一标题标题标题标题标题" withCash:400 privateActivityState:SKSPrivacyActivityStateUnhandle messageSourceType:SKSMessageSourceTypeReceive];
-    SKSChatMessageModel *privacyActivityMessageModel1 = [self wrapperPrivacyActivityWithPlace:@"地点二，凑字数lallalalalallalalalalalalal拉拉拉拉" detailPlace:@"" title:@"地点标题二标题标题标题标题标题" withCash:500 privateActivityState:SKSPrivacyActivityStateAccept messageSourceType:SKSMessageSourceTypeReceive];
-    SKSChatMessageModel *privacyActivityMessageModel2 = [self wrapperPrivacyActivityWithPlace:@"地点三，凑字数lallalalalallalalalalalalal拉拉拉拉" detailPlace:@"" title:@"地点标题三标题标题标题标题标题" withCash:600 privateActivityState:SKSPrivacyActivityStateThinkAbout messageSourceType:SKSMessageSourceTypeReceive];
-    SKSChatMessageModel *privacyActivityMessageModel3 = [self wrapperPrivacyActivityWithPlace:@"地点四，凑字数lallalalalallalalalalalalal拉拉拉拉" detailPlace:@"" title:@"地点标题四标题标题标题标题标题" withCash:600 privateActivityState:SKSPrivacyActivityStateReject messageSourceType:SKSMessageSourceTypeReceive];
-    SKSChatMessageModel *privacyActivityMessageModel4 = [self wrapperPrivacyActivityWithPlace:@"地点五，凑字数lallalalalallalalalalalalal拉拉拉拉" detailPlace:@"" title:@"地点标题五标题标题标题标题标题" withCash:600 privateActivityState:SKSPrivacyActivityStateInvalid messageSourceType:SKSMessageSourceTypeReceive];
-    SKSChatMessageModel *privacyActivityMessageModel5 = [self wrapperPrivacyActivityWithPlace:@"地点六，凑字数lallalalalallalalalalalalal拉拉拉拉" detailPlace:@"" title:@"地点标题六标题标题标题标题标题" withCash:600 privateActivityState:SKSPrivacyActivityStateAccept messageSourceType:SKSMessageSourceTypeSend];
-    SKSChatMessageModel *privacyActivityMessageModel6 = [self wrapperPrivacyActivityWithPlace:@"地点七，凑字数lallalalalallalalalalalalal拉拉拉拉" detailPlace:@"" title:@"地点标题七标题标题标题标题标题" withCash:600 privateActivityState:SKSPrivacyActivityStateUnhandle messageSourceType:SKSMessageSourceTypeSend];
-    SKSChatMessageModel *privacyActivityMessageModel7 = [self wrapperPrivacyActivityWithPlace:@"地点七，凑字数lallalalalallalalalalalalal拉拉拉拉" detailPlace:@"" title:@"地点标题七标题标题标题标题标题" withCash:600 privateActivityState:SKSPrivacyActivityStateReject messageSourceType:SKSMessageSourceTypeSend];
-    SKSChatMessageModel *privacyActivityMessageModel8 = [self wrapperPrivacyActivityWithPlace:@"地点七，凑字数lallalalalallalalalalalalal拉拉拉拉" detailPlace:@"" title:@"地点标题七标题标题标题标题标题" withCash:600 privateActivityState:SKSPrivacyActivityStateSuccess messageSourceType:SKSMessageSourceTypeSend];
+    SKSChatMessageModel *privacyActivityMessageModel = [self wrapperPrivacyActivityWithPlace:@"地点一，凑字数lalla" detailPlace:@"" title:@"地点标题一标题标题标题标题标题" withCash:400 privateDateOfferState:SKSPrivacyDateOfferStateUnhandle messageSourceType:SKSMessageSourceTypeReceive];
+    SKSChatMessageModel *privacyActivityMessageModel1 = [self wrapperPrivacyActivityWithPlace:@"地点二，凑字数lallalalalallalalalalalalal拉拉拉拉" detailPlace:@"" title:@"地点标题二标题标题标题标题标题" withCash:500 privateDateOfferState:SKSPrivacyDateOfferStateAccept messageSourceType:SKSMessageSourceTypeReceive];
+    SKSChatMessageModel *privacyActivityMessageModel2 = [self wrapperPrivacyActivityWithPlace:@"地点三，凑字数lallalalalallalalalalalalal拉拉拉拉" detailPlace:@"" title:@"地点标题三标题标题标题标题标题" withCash:600 privateDateOfferState:SKSPrivacyDateOfferStateThinkAbout messageSourceType:SKSMessageSourceTypeReceive];
+    SKSChatMessageModel *privacyActivityMessageModel3 = [self wrapperPrivacyActivityWithPlace:@"地点四，凑字数lallalalalallalalalalalalal拉拉拉拉" detailPlace:@"" title:@"地点标题四标题标题标题标题标题" withCash:600 privateDateOfferState:SKSPrivacyDateOfferStateReject messageSourceType:SKSMessageSourceTypeReceive];
+    SKSChatMessageModel *privacyActivityMessageModel4 = [self wrapperPrivacyActivityWithPlace:@"地点五，凑字数lallalalalallalalalalalalal拉拉拉拉" detailPlace:@"" title:@"地点标题五标题标题标题标题标题" withCash:600 privateDateOfferState:SKSPrivacyDateOfferStateInvalid messageSourceType:SKSMessageSourceTypeReceive];
+    SKSChatMessageModel *privacyActivityMessageModel5 = [self wrapperPrivacyActivityWithPlace:@"地点六，凑字数lallalalalallalalalalalalal拉拉拉拉" detailPlace:@"" title:@"地点标题六标题标题标题标题标题" withCash:600 privateDateOfferState:SKSPrivacyDateOfferStateAccept messageSourceType:SKSMessageSourceTypeSend];
+    SKSChatMessageModel *privacyActivityMessageModel6 = [self wrapperPrivacyActivityWithPlace:@"地点七，凑字数lallalalalallalalalalalalal拉拉拉拉" detailPlace:@"" title:@"地点标题七标题标题标题标题标题" withCash:600 privateDateOfferState:SKSPrivacyDateOfferStateUnhandle messageSourceType:SKSMessageSourceTypeSend];
+    SKSChatMessageModel *privacyActivityMessageModel7 = [self wrapperPrivacyActivityWithPlace:@"地点七，凑字数lallalalalallalalalalalalal拉拉拉拉" detailPlace:@"" title:@"地点标题七标题标题标题标题标题" withCash:600 privateDateOfferState:SKSPrivacyDateOfferStateReject messageSourceType:SKSMessageSourceTypeSend];
+    SKSChatMessageModel *privacyActivityMessageModel8 = [self wrapperPrivacyActivityWithPlace:@"地点七，凑字数lallalalalallalalalalalalal拉拉拉拉" detailPlace:@"" title:@"地点标题七标题标题标题标题标题" withCash:600 privateDateOfferState:SKSPrivacyDateOfferStateMet messageSourceType:SKSMessageSourceTypeSend];
 
     //Privacy send roses message
     SKSChatMessageModel *privacySendRosesMessageModel = [self wrapperPrivacySendRosesWithRosesCount:300 state:SKSPrivacyGiftOfferStateUnhandle sourceType:SKSMessageSourceTypeReceive];
@@ -746,14 +746,14 @@
     return messageModel;
 }
 
-- (SKSChatMessageModel *)wrapperPrivacyActivityWithPlace:(NSString *)place detailPlace:(NSString *)detailPlace title:(NSString *)title withCash:(int32_t)withCrash privateActivityState:(SKSPrivacyActivityState)privacyActivityState messageSourceType:(SKSMessageSourceType)messageSourceType {
+- (SKSChatMessageModel *)wrapperPrivacyActivityWithPlace:(NSString *)place detailPlace:(NSString *)detailPlace title:(NSString *)title withCash:(int32_t)withCrash privateDateOfferState:(SKSPrivacyDateOfferState)privacyDateOfferState messageSourceType:(SKSMessageSourceType)messageSourceType {
 
     SKSChatMessage *chatMessage = [[SKSChatMessage alloc] init];
     chatMessage.messageSourceType = messageSourceType;
     chatMessage.messageMediaType = SKSMessageMediaTypePrivacyActivity;
     chatMessage.menuItemList = [self getMenuItemListWithMessage:chatMessage];
 
-    ChatPrivacyDateOfferMessageObject *messageObject = [[ChatPrivacyDateOfferMessageObject alloc] initWithAid:@"" authorId:@"" title:title coverUrl:@"" startTime:time(NULL) duration:6400 place:place detailPlace:@"" lat:0 lng:0 placeLat:0 placeLng:0 withCash:withCrash privacyActivityState:privacyActivityState];
+    ChatPrivacyDateOfferMessageObject *messageObject = [[ChatPrivacyDateOfferMessageObject alloc] initWithAid:@"" authorId:@"" title:title coverUrl:@"" startTime:time(NULL) duration:6400 place:place detailPlace:@"" lat:0 lng:0 placeLat:0 placeLng:0 withCash:withCrash privacyDateOfferState:privacyDateOfferState];
     messageObject.roses = 30;
     messageObject.message = chatMessage;
     chatMessage.messageAdditionalObject = messageObject;

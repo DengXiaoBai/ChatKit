@@ -121,12 +121,12 @@
     self.messageModel = messageModel;
     self.messageObject = self.messageModel.message.messageAdditionalObject;
 
-    switch (self.messageObject.privacyActivityState) {
-        case SKSPrivacyActivityStateThinkAbout: {
+    switch (self.messageObject.privacyDateOfferState) {
+        case SKSPrivacyDateOfferStateThinkAbout: {
             self.middleBtn.enabled = NO;
             break;
         }
-        case SKSPrivacyActivityStateAccept: {
+        case SKSPrivacyDateOfferStateAccept: {
             [self.leftBtn setTitleColor:self.contentConfig.btnDisableColor forState:UIControlStateNormal];
             [self.leftBtn setTitle:self.messageObject.acceptedBtnTitle  forState:UIControlStateNormal];
             self.leftBtn.enabled = NO;
@@ -134,7 +134,7 @@
             self.rightBtn.hidden = YES;
             break;
         }
-        case SKSPrivacyActivityStateReject: {
+        case SKSPrivacyDateOfferStateReject: {
             [self.leftBtn setTitleColor:self.contentConfig.btnDisableColor forState:UIControlStateNormal];
             [self.leftBtn setTitle:self.messageObject.rejectedBtnTitle forState:UIControlStateNormal];
             self.leftBtn.enabled = NO;
@@ -147,7 +147,7 @@
         }
     }
 
-    if (self.messageObject.privacyActivityState == SKSPrivacyActivityStateThinkAbout) {
+    if (self.messageObject.privacyDateOfferState == SKSPrivacyDateOfferStateThinkAbout) {
         self.middleBtn.enabled = NO;
     }
 

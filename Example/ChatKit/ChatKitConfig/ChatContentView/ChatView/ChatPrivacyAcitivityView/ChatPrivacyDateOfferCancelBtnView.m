@@ -76,9 +76,9 @@
     self.messageModel = messageModel;
     self.messageObject = self.messageModel.message.messageAdditionalObject;
 
-    switch (self.messageObject.privacyActivityState) {
-        case SKSPrivacyActivityStateReject:
-        case SKSPrivacyActivityStateSuccess: {
+    switch (self.messageObject.privacyDateOfferState) {
+        case SKSPrivacyDateOfferStateReject:
+        case SKSPrivacyDateOfferStateMet: {
             self.hidden = YES;
             break;
         }
