@@ -651,7 +651,7 @@
 				ORGANIZATIONNAME = iCrany;
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = BR6M459V2X;
+						DevelopmentTeam = FM629VZ3X3;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Manual;
 					};
@@ -969,14 +969,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = BR6M459V2X;
+				DEVELOPMENT_TEAM = FM629VZ3X3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ChatKit/ChatKit-Prefix.pch";
 				INFOPLIST_FILE = "ChatKit/ChatKit-Info.plist";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f7de6ecb-76b7-4eec-9bd1-c57df32a2184";
+				PROVISIONING_PROFILE = "d98792d9-6aeb-4711-89e3-28079552295b";
 				PROVISIONING_PROFILE_SPECIFIER = "iOS Development Wildcard";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_NAME)/General/BridgeHeader/ChatKit-Example-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -991,14 +991,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = BR6M459V2X;
+				DEVELOPMENT_TEAM = FM629VZ3X3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ChatKit/ChatKit-Prefix.pch";
 				INFOPLIST_FILE = "ChatKit/ChatKit-Info.plist";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f7de6ecb-76b7-4eec-9bd1-c57df32a2184";
+				PROVISIONING_PROFILE = "d98792d9-6aeb-4711-89e3-28079552295b";
 				PROVISIONING_PROFILE_SPECIFIER = "iOS Development Wildcard";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_NAME)/General/BridgeHeader/ChatKit-Example-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

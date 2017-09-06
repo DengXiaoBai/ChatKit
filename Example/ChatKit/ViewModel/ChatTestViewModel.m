@@ -461,6 +461,10 @@
     [_messageList addObject:privacyActivityMessageModel6];
     [_messageList addObject:privacyActivityMessageModel7];
     [_messageList addObject:privacyActivityMessageModel8];
+    
+    [_messageList addObject:impressMessageModel];
+    [_messageList addObject:impressMessageModel1];
+    [_messageList addObject:impressMessageModel2];
 
 }
 

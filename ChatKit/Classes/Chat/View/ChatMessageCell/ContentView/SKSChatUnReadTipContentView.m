@@ -73,7 +73,7 @@
 - (void)updateUIWithMessageModel:(SKSChatMessageModel *)messageModel force:(BOOL)force {
     [super updateUIWithMessageModel:messageModel force:force];
 
-    if (self.messageModel.message.messageId != messageModel.message.messageId && self.messageModel.message.messageId != 0 && !force) {
+    if (self.messageModel.message.messageId == messageModel.message.messageId && self.messageModel.message.messageId != 0 && !force) {
         return;
     }
 

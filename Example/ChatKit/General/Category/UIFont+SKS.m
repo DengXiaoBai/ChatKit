@@ -6,9 +6,9 @@
 #import "UIFont+SKS.h"
 
 
-static const NSString *kPingFangSCRegular   = @"PingFangSC-Regular";
-static const NSString *kPingFangSCMedium    = @"PingFangSC-Medium";
-static const NSString *kPingFangSCBold      = @"PingFangSC-Semibold";
+static NSString *kPingFangSCRegular   = @"PingFangSC-Regular";
+static NSString *kPingFangSCMedium    = @"PingFangSC-Medium";
+static NSString *kPingFangSCBold      = @"PingFangSC-Semibold";
 
 @implementation UIFont (SKS)
 
