@@ -11,6 +11,7 @@
 #import "SKSChatMessage.h"
 #import "SKSDateCallView.h"
 #import "SKSDateCallMessageObject.h"
+#import "SKSChatDateCallContentView.h"
 
 @implementation SKSDateCallContentConfig
 
@@ -21,7 +22,7 @@
 }
 
 - (NSString *)cellContentClass {
-    return @"SKSChatDateCallContentView";
+    return NSStringFromClass([SKSChatDateCallContentView class]);
 }
 
 - (NSString *)cellContentIdentifier {
@@ -29,7 +30,7 @@
     SKSMessageSourceType sourceType = self.messageModel.message.messageSourceType;
     BOOL isTheActivityAuthorUserId = [self.messageModel.message.toId isEqualToString:messageObject.activityAuthorId] && self.messageModel.message.toId.length > 0 && sourceType == SKSMessageSourceTypeReceive;
     BOOL isNeedShowTwoRow = !isTheActivityAuthorUserId && messageObject.callState != SKSMessageCallStateAccept;
-    return [NSString stringWithFormat:@"SKSChatDateCallContentView-%@-isNeedShowTwoRow:%d", self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive", isNeedShowTwoRow];
+    return [NSString stringWithFormat:@"%@-%@-isNeedShowTwoRow:%d", [self cellContentClass], self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive", isNeedShowTwoRow];
 }
 
 - (UIEdgeInsets)contentViewInsets {

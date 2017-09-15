@@ -15,6 +15,7 @@
 #import "ChatDateOfferBtnBottomView.h"
 #import "ChatDateOfferDescBottomView.h"
 #import "ChatDateOfferMessageObject.h"
+#import "ChatDateOfferContentView.h"
 
 @implementation ChatDateOfferContentConfig
 
@@ -50,11 +51,11 @@
 }
 
 - (NSString *)cellContentClass {
-    return @"ChatDateOfferContentView";
+    return NSStringFromClass([ChatDateOfferContentView class]);
 }
 
 - (NSString *)cellContentIdentifier {
-    return [NSString stringWithFormat:@"ChatDateOfferContentView-%@", self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive"];
+    return [NSString stringWithFormat:@"%@-%@", [self cellContentClass], self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive"];
 }
 
 - (UIEdgeInsets)contentViewInsets {

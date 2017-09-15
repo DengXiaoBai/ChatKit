@@ -11,6 +11,7 @@
 #import "SKSChatMessage.h"
 #import "SKSChatSessionConfig.h"
 #import "SKSChatCellConfig.h"
+#import "SKSChatLocationContentView.h"
 
 @implementation SKSLocationContentConfig
 
@@ -24,12 +25,12 @@
 
 
 - (NSString *)cellContentClass {
-    return @"SKSChatLocationContentView";
+    return NSStringFromClass([SKSChatLocationContentView class]);
 }
 
 
 - (NSString *)cellContentIdentifier {
-    return [NSString stringWithFormat:@"SKSChatLocationContentView-%@", self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive"];
+    return [NSString stringWithFormat:@"%@-%@", [self cellContentClass], self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive"];
 }
 
 

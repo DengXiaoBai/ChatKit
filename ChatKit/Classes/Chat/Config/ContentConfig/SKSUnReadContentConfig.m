@@ -13,6 +13,7 @@
 #import "SKSChatCellConfig.h"
 #import "SKSUnReadMessageObject.h"
 #import "SKSChatMessageModel.h"
+#import "SKSChatUnReadTipContentView.h"
 
 @interface SKSUnReadContentConfig()
 
@@ -48,12 +49,12 @@
 
 
 - (NSString *)cellContentClass {
-    return @"SKSChatUnReadTipContentView";
+    return NSStringFromClass([SKSChatUnReadTipContentView class]);
 }
 
 
 - (NSString *)cellContentIdentifier {
-    return [NSString stringWithFormat:@"SKSChatUnReadTipContentView-%@", self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive"];
+    return [NSString stringWithFormat:@"%@-%@", [self cellContentClass], self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive"];
 }
 
 

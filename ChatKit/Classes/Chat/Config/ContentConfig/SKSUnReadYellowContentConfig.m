@@ -12,6 +12,7 @@
 #import "SKSChatMessage.h"
 #import "SKSChatSessionConfig.h"
 #import "SKSChatMessageModel.h"
+#import "SKSChatUnReadYellowTipContentView.h"
 
 @interface SKSUnReadYellowContentConfig()
 
@@ -40,12 +41,12 @@
 }
 
 - (NSString *)cellContentClass {
-    return @"SKSChatUnReadYellowTipContentView";
+    return NSStringFromClass([SKSChatUnReadYellowTipContentView class]);
 }
 
 
 - (NSString *)cellContentIdentifier {
-    return [NSString stringWithFormat:@"SKSChatUnReadYellowTipContentView-%@", self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive"];
+    return [NSString stringWithFormat:@"%@-%@", [self cellContentClass], self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive"];
 }
 
 

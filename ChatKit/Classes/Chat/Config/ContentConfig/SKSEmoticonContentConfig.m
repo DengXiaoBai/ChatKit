@@ -9,6 +9,7 @@
 #import "SKSEmoticonContentConfig.h"
 #import "SKSChatMessage.h"
 #import "SKSChatMessageModel.h"
+#import "SKSChatEmoticonContentView.h"
 
 @implementation SKSEmoticonContentConfig
 
@@ -19,11 +20,11 @@
 }
 
 - (NSString *)cellContentClass {
-    return @"SKSChatEmoticonContentView";
+    return NSStringFromClass([SKSChatEmoticonContentView class]);
 }
 
 - (NSString *)cellContentIdentifier {
-    return [NSString stringWithFormat:@"SKSChatEmoticonContentView-%@", self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive"];
+    return [NSString stringWithFormat:@"%@-%@", [self cellContentClass], self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive"];
 }
 
 - (UIEdgeInsets)contentViewInsets {

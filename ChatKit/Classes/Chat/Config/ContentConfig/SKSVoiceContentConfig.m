@@ -11,6 +11,7 @@
 #import "SKSChatMessage.h"
 #import "SKSVoiceMessageView.h"
 #import "SKSVoiceMessageObject.h"
+#import "SKSChatVoiceContentView.h"
 
 @implementation SKSVoiceContentConfig
 
@@ -21,7 +22,7 @@
 
 
 - (NSString *)cellContentClass {
-    return @"SKSChatVoiceContentView";
+    return NSStringFromClass([SKSChatVoiceContentView class]);
 }
 
 
@@ -30,7 +31,7 @@
     SKSVoiceMessageObject *voiceMessageObject = self.messageModel.message.messageAdditionalObject;
     int32_t duration = voiceMessageObject.duration;
 
-    NSString *identifier = [NSString stringWithFormat:@"SKSChatVoiceContentView-%@", self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive"];
+    NSString *identifier = [NSString stringWithFormat:@"%@-%@", [self cellContentClass], self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive"];
     identifier = [identifier stringByAppendingFormat:@"-%ld", (long)duration];
     return identifier;
 }

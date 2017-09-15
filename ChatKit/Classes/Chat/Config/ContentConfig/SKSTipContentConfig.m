@@ -11,6 +11,7 @@
 #import "SKSChatSessionConfig.h"
 #import "SKSChatCellConfig.h"
 #import "SKSChatMessageModel.h"
+#import "SKSChatTipContentView.h"
 
 @interface SKSTipContentConfig()
 
@@ -38,12 +39,12 @@
 
 
 - (NSString *)cellContentClass {
-    return @"SKSChatTipContentView";
+    return NSStringFromClass([SKSChatTipContentView class]);
 }
 
 
 - (NSString *)cellContentIdentifier {
-    return [NSString stringWithFormat:@"SKSChatTipContentView-%@", self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive"];
+    return [NSString stringWithFormat:@"%@-%@", [self cellContentClass], self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive"];
 }
 
 

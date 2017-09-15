@@ -12,6 +12,7 @@
 #import "ChatDateJoinedPreviewContentConfig.h"
 #import "ChatDateJoinedPreviewView.h"
 #import "ChatDateJoinedPreviewMessageObject.h"
+#import "ChatDateJoinedPreviewContentView.h"
 
 @implementation ChatDateJoinedPreviewContentConfig
 
@@ -22,7 +23,7 @@
 }
 
 - (NSString *)cellContentClass {
-    return @"ChatDateJoinedPreviewContentView";
+    return NSStringFromClass([ChatDateJoinedPreviewContentView class]);
 }
 
 - (NSString *)cellContentIdentifier {
@@ -33,7 +34,7 @@
     //判断是否有倒计时
     BOOL isHaveCountDown = messageObject.state == SKSActivityState_PUBLISHED ? YES: NO;//Cell 重用相关
 
-    return [NSString stringWithFormat:@"ChatDateJoinedPreviewContentView-%@-%d-%d", self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive", isHaveGift, isHaveCountDown];
+    return [NSString stringWithFormat:@"%@-%@-%d-%d", [self cellContentClass], self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive", isHaveGift, isHaveCountDown];
 }
 
 - (UIEdgeInsets)contentViewInsets {

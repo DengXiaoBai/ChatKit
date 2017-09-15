@@ -13,6 +13,7 @@
 #import "SKSChatMessageModel.h"
 #import "SKSChatMessage.h"
 #import "SKSChatSessionConfig.h"
+#import "SKSChatTextContentView.h"
 
 
 @interface SKSTextContentConfig()
@@ -71,12 +72,12 @@
 
 
 - (NSString *)cellContentClass {
-    return @"SKSChatTextContentView";
+    return NSStringFromClass([SKSChatTextContentView class]);
 }
 
 
 - (NSString *)cellContentIdentifier {
-    return [NSString stringWithFormat:@"SKSChatTextContentView-%@", self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive"];
+    return [NSString stringWithFormat:@"%@-%@", [self cellContentClass], self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive"];
 }
 
 
@@ -101,7 +102,6 @@
     return UIEdgeInsetsMake(5, 0, 5, 0);
 }
 
-//TODO: timestamp not included in contentView, should be removed
 - (UIEdgeInsets)timestampViewInsets {
     return UIEdgeInsetsMake(4, 0, 4, 0);
 }

@@ -12,10 +12,11 @@
 #import "SKSChatCellConfig.h"
 #import "SKSChatSessionConfig.h"
 #import "SKSChatMessageModel.h"
+#import "SKSChatTextContentView.h"
 
-@interface SKSNotSupportContentConfig()
+@interface SKSNotSupportContentConfig ()
 
-@property (nonatomic, strong) UILabel *commonLabel;
+@property(nonatomic, strong) UILabel *commonLabel;
 
 @end
 
@@ -31,7 +32,7 @@
 
 - (void)prepareInitData {
     _textFont = [UIFont systemFontOfSize:14];
-    
+
     switch (self.messageModel.message.messageSourceType) {
         case SKSMessageSourceTypeSend: {
             _textColor = [UIColor whiteColor];
@@ -49,49 +50,49 @@
 }
 
 - (CGSize)contentSizeWithCellWidth:(CGFloat)cellWidth {
-    
+
     if (self.messageModel.message.text.length == 0) {
         self.messageModel.message.text = @"";
     }
-    
+
     self.commonLabel.text = self.messageModel.message.text;
-    
+
     CGFloat factor = 0.6;
     CGFloat maxWidth = cellWidth * factor;
-    
+
     CGSize contentSize;
-    
+
     @try {
         contentSize = [self.commonLabel sizeThatFits:CGSizeMake(maxWidth, FLT_MAX)];
-        
+
     } @catch (NSException *exception) {
         //try again
         contentSize = [self.commonLabel sizeThatFits:CGSizeMake(maxWidth, FLT_MAX)];
     }
-    
+
     CGSize contentMinSize = [[[SKSDefaultValueMaker shareInstance] getDefaultChatCellConfig] chatNormalTextContentViewMinSize];
-    
-    if (contentSize.height   < contentMinSize.height) {
+
+    if (contentSize.height < contentMinSize.height) {
         contentSize.height = contentMinSize.height;
     }
-    
+
     self.messageModel.contentViewSize = contentSize;
     return contentSize;
 }
 
 
 - (NSString *)cellContentClass {
-    return @"SKSChatTextContentView";
+    return NSStringFromClass([SKSChatTextContentView class]);
 }
 
 
 - (NSString *)cellContentIdentifier {
-    return [NSString stringWithFormat:@"SKSChatTextContentView-%@", self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive"];
+    return [NSString stringWithFormat:@"%@-%@", [self cellContentClass], self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive"];
 }
 
 
 - (UIEdgeInsets)contentViewInsets {
-    id<SKSChatCellConfig> cellConfig = [self.messageModel.sessionConfig chatCellConfigWithMessage:self.messageModel.message];
+    id <SKSChatCellConfig> cellConfig = [self.messageModel.sessionConfig chatCellConfigWithMessage:self.messageModel.message];
 
     switch (self.messageModel.message.messageSourceType) {
         case SKSMessageSourceTypeReceive: {
@@ -122,13 +123,14 @@
 }
 
 #pragma mark - getter/setter
+
 - (UILabel *)commonLabel {
     if (!_commonLabel) {
         _commonLabel = [[UILabel alloc] initWithFrame:CGRectZero];
         _commonLabel.font = [UIFont systemFontOfSize:16];
         _commonLabel.numberOfLines = 0;
     }
-    
+
     return _commonLabel;
 }
 

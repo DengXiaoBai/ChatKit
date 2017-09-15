@@ -11,6 +11,7 @@
 #import "SKSRealTimeVideoOrVoiceView.h"
 #import "SKSChatMessageModel.h"
 #import "SKSBaseContentConfig.h"
+#import "SKSChatRealTimeVideoOrVoiceContentView.h"
 
 @implementation SKSRealTimeVideoOrVoiceContentConfig
 
@@ -21,12 +22,12 @@
 
 
 - (NSString *)cellContentClass {
-    return @"SKSChatRealTimeVideoOrVoiceContentView";
+    return NSStringFromClass([SKSChatRealTimeVideoOrVoiceContentView class]);
 }
 
 
 - (NSString *)cellContentIdentifier {
-    return [NSString stringWithFormat:@"SKSChatRealTimeVideoOrVoiceContentView-%@", self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive"];
+    return [NSString stringWithFormat:@"%@-%@", [self cellContentClass], self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive"];
 }
 
 

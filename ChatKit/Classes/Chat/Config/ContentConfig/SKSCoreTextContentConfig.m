@@ -14,6 +14,7 @@
 #import "DTCoreText.h"
 #import "SKSChatSessionConfig.h"
 #import "SKSChatCellConfig.h"
+#import "SKSChatCoreTextContentView.h"
 
 @implementation SKSCoreTextContentConfig
 
@@ -44,11 +45,11 @@
 }
 
 - (NSString *)cellContentClass {
-    return @"SKSChatCoreTextContentView";
+    return NSStringFromClass([SKSChatCoreTextContentView class]);
 }
 
 - (NSString *)cellContentIdentifier {
-    return [NSString stringWithFormat:@"SKSChatCoreTextContentView-%@", self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive"];
+    return [NSString stringWithFormat:@"%@-%@", [self cellContentClass], self.messageModel.message.messageSourceType == SKSMessageSourceTypeSend ? @"send" : @"receive"];
 }
 
 - (UIEdgeInsets)contentViewInsets {
