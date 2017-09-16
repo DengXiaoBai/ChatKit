@@ -12,7 +12,6 @@
 #import "SKSChatMessageModel.h"
 #import "SKSChatMessage.h"
 #import "SKSChatLocationView.h"
-#import "SKSDrawBubbleView.h"
 #import "SKSImageView.h"
 #import "SKSNewDrawBubbleView.h"
 

@@ -76,7 +76,15 @@ static NSInteger kTextRowMaxLimit = 4;
 }
 
 - (void)dealloc {
+
     [_inputTextView removeObserver:self forKeyPath: kINPUT_TEXT_VIEW_TEXT_KVO];
+
+    @try {
+        [_inputTextView removeObserver:self forKeyPath: kINPUT_TEXT_VIEW_CONTENT_SIZE_KVO];//make sure removed
+
+    } @catch (NSException *exception) {
+        // Do nothing
+    }
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
