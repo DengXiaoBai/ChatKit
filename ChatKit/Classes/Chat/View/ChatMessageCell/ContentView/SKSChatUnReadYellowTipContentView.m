@@ -72,6 +72,11 @@
         return;
     }
 
+    if (self.messageModel.message.messageMediaType != SKSMessageMediaTypeUnReadTip) {//检测类型
+        DLog(@"[Error] in SKSChatUnReadYellowTipContentView but messageMediaType != SKSMessageMediaTypeUnReadTip");
+        return;
+    }
+
     self.messageModel = messageModel;
 
     self.contentConfig = [self.messageModel.sessionConfig chatContentConfigWithMessageModel:messageModel];

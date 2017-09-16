@@ -55,6 +55,11 @@
         return;
     }
 
+    if (messageModel.message.messageMediaType != SKSMessageMediaTypeCoreText) {//检测类型
+        DLog(@"[Error] in SKSChatCoreTextContentView but messageMediaType != SKSMessageMediaTypeCoreText");
+        return;
+    }
+
     self.messageModel = messageModel;
     _messageObject = self.messageModel.message.messageAdditionalObject;
 

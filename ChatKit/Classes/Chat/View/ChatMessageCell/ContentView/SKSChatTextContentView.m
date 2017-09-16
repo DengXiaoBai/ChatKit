@@ -69,6 +69,12 @@
         return;
     }
 
+    if (messageModel.message.messageMediaType != SKSMessageMediaTypeText
+            && messageModel.message.messageMediaType != SKSMessageMediaTypeUnsupport) {//检测类型
+        DLog(@"[Error] in SKSChatTextContentView but messageMediaType != SKSMessageMediaTypeText && messageMediaType != SKSMessageMediaTypeUnsupport");
+        return;
+    }
+
     self.messageModel = messageModel;
     _contentConfig = [self.messageModel.sessionConfig chatContentConfigWithMessageModel:self.messageModel];
 

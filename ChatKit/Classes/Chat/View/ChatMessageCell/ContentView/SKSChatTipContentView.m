@@ -59,6 +59,11 @@
         return;
     }
 
+    if (messageModel.message.messageMediaType != SKSMessageMediaTypeTipLabel) {
+        DLog(@"[Error] in SKSChatTipContentView but messageMediaType != SKSMessageMediaTypeTipLabel");
+        return;
+    }
+
     self.messageModel = messageModel;
     _contentConfig = [self.messageModel.sessionConfig chatContentConfigWithMessageModel:self.messageModel];
 

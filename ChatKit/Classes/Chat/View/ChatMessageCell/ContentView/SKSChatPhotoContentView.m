@@ -71,6 +71,11 @@
         return;
     }
 
+    if (messageModel.message.messageMediaType != SKSMessageMediaTypePhoto) {
+        DLog(@"[Error] in SKSChatPhotoContentView but messageMediaType != SKSMessageMediaTypePhoto");
+        return;
+    }
+
     self.messageModel = messageModel;
     self.photoMessageObject = self.messageModel.message.messageAdditionalObject;
 

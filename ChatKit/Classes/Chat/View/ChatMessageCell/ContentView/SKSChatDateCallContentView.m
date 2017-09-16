@@ -52,6 +52,11 @@
         return;
     }
 
+    if (messageModel.message.messageMediaType != SKSMessageMediaTypeDataCall) {
+        DLog(@"[Error] in SKSChatDateCallContentView but messageMediaType != SKSMessageMediaTypeDataCall");
+        return;
+    }
+
     self.messageModel = messageModel;
     _contentConfig = [self.messageModel.sessionConfig chatContentConfigWithMessageModel:self.messageModel];
 

@@ -61,6 +61,11 @@
         return;
     }
 
+    if (messageModel.message.messageMediaType != SKSMessageMediaTypeLocation) {
+        DLog(@"[Error] in SKSChatLocationContentView but messageMediaType != SKSMessageMediaTypeLocation");
+        return;
+    }
+
     self.messageModel = messageModel;
 
     CGRect bubbleFrame = self.bubbleImageView.frame;

@@ -61,6 +61,11 @@
         return;
     }
 
+    if (messageModel.message.messageMediaType != SKSMessageMediaTypeVoice) {//检测类型
+        DLog(@"[Error] in SKSChatVoiceContentView but messageMediaType != SKSMessageMediaTypeVoice");
+        return;
+    }
+
     self.messageModel = messageModel;
     self.messageObject = self.messageModel.message.messageAdditionalObject;
 

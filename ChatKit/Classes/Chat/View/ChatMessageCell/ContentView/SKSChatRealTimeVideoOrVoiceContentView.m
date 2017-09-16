@@ -48,6 +48,13 @@
         return;
     }
 
+    //检测类型
+    if (messageModel.message.messageMediaType != SKSMessageMediaTypeRealTimeVideo
+            && messageModel.message.messageMediaType != SKSMessageMediaTypeRealTimeVoice) {
+        DLog(@"[Error] in SKSChatRealTimeVideoOrVoiceContentView but messageMediaType != SKSMessageMediaTypeRealTimeVideo && messageMediaType != SKSMessageMediaTypeRealTimeVoice");
+        return;
+    }
+
     self.messageModel = messageModel;
 
     UIEdgeInsets contentViewInsets = self.messageModel.contentViewInsets;

@@ -51,6 +51,11 @@
         return;
     }
 
+    if (messageModel.message.messageMediaType != SKSMessageMediaTypeEmoticon) {
+        DLog(@"[Error] in SKSChatEmoticonContentView but messageMediaType != SKSMessageMediaTypeEmoticon");
+        return;
+    }
+
     self.messageModel = messageModel;
 
     self.bubbleImageView.hidden = YES;
