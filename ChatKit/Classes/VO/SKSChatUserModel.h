@@ -24,7 +24,7 @@
 @property (nonatomic, assign) int32_t birthday;
 
 /**
- * 用于的唯一标识
+ * 用户唯一标识
  * */
 @property (nonatomic, strong) NSString *userId;
 
@@ -41,7 +41,7 @@
 
 
 /**
- *用户A于用户B的关系
+ *用户之间的关系
  * */
 @property (nonatomic, assign) SKSChatRelationshipType relationshipType;
 

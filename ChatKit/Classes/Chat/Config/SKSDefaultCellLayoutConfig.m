@@ -149,10 +149,6 @@
 }
 
 
-- (BOOL)shouldShowTimestamp:(SKSChatMessageModel *)messageModel {
-    return messageModel.shouldShowTimestamp;
-}
-
 - (UIEdgeInsets)timestampViewInsets:(SKSChatMessageModel *)messageModel {
     return UIEdgeInsetsMake(5, 0, 0, 0);//默认是居中，所有左右两边的边距忽略, 下面的边距由时间标签下面的控件来控制
 }

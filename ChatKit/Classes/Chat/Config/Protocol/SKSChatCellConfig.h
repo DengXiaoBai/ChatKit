@@ -7,7 +7,7 @@
 @class SKSChatMessageModel;
 
 /**
- 聊天以及用户列表的 UI 配置
+ * ChatCell 中 气泡视图,已读/未读视图，整个 Cell 的背景色，时间标签视图，发送失败视图的配置
  */
 @protocol SKSChatCellConfig <NSObject>
 
@@ -15,71 +15,86 @@
 #pragma mark - 聊天中普通文字控件的配置
 
 /**
- 聊天界面正常的纯文本的最小大小, 只是文字控件的消息，不包括气泡的大小
-
- @return 聊天界面正常的纯文本的最小大小
+ * 聊天界面中纯文本视图最小的 Size，例如 TextCell 中 UILabel 的最小 Size
+ * @return 聊天界面正常的纯文本的最小 Size
  */
 - (CGSize)chatNormalTextContentViewMinSize;
 
 #pragma mark - 聊天中气泡控件的配置
 
 /**
- 聊天气泡的尖角的宽度，一个大概值, 作为微调
-
- @return 气泡尖角的宽度
+ * 聊天气泡的尖角的宽度
+ * @return 聊天气泡的尖角的宽度
  */
 - (CGFloat)getBubbleViewArrowWidth;
 
 
-/**
- 聊天 Cell 中已读标签的字体
+#pragma mark - 已读/未读控件的配置
 
- @return 已读标签的字体
+/**
+ * 已读/未读视图的字体
+ * @return 已读/未读视图的字体
  */
 - (UIFont *)chatReadLabelTextFont;
 
-
 /**
- 聊天 Cell 中已读标签的字体颜色
-
- @return 已读标签的字体颜色
+ * 已读/未读视图的字体颜色
+ * @return 已读/未读视图的字体颜色
  */
 - (UIColor *)chatReadLabelTextColor;
 
 /**
- *获取聊天中的已读标签的 image, 需要根据消息是否已读来进行判断
- * */
+ * 已读/未读视图的 image, 需要根据消息是否已读来进行判断，如果 `- (BOOL)chatReadControlUseImageControlView` 方法返回为 true 的话，该参数才生效
+ * 默认是放在 Assets 资源文件夹内
+ * @param messageModel 消息 Model
+ * @return image的名称
+ */
 - (NSString *)chatReadImageWithMessageModel:(SKSChatMessageModel *)messageModel;
 
 /**
-    消息聊天中的已读控件是否是使用 image 的形式，否则则使用文字的形式
- * */
+ * 已读/未读视图是否是使用 UIImage 的形式，否则则使用 UILabel 的形式
+ * @return 是否使用UIImage形式的已读/未读视图
+ */
 - (BOOL)chatReadControlUseImageControlView;
 
 
-/**
- * 聊天 Cell 中的背景颜色
- * */
-- (UIColor *)chatMessageCellBackgroundColor;
+#pragma mark - 整个Cell的配置
 
 /**
- * 聊天中时间标签的字体
- * */
+ * 聊天 Cell 中的背景颜色
+ * @return Cell的 backgroundColor 值
+ */
+- (UIColor *)chatMessageCellBackgroundColor;
+
+
+#pragma mark - 时间标签视图的配置
+
+/**
+ * 时间标签视图的字体
+ * @return 时间标签视图的字体
+ */
 - (UIFont *)chatTimestampLabelFont;
 
 /**
- * 聊天中时间标签的字体颜色
- * */
+ * 时间标签视图的字体颜色
+ * @return 时间标签视图的字体颜色
+ */
 - (UIColor *)chatTimestampLabelTextColor;
 
-/**
- * 聊天中时间标签的背景色
- * */
-- (UIColor *)chatTimestampLabelBackgroundColor;
 
 /**
- * 消息发送失败的 icon 名称
- * */
+ * 聊天中时间标签视图的背景色
+ * @return 聊天中时间标签视图的背景色
+ */
+- (UIColor *)chatTimestampLabelBackgroundColor;
+
+
+#pragma mark - 发送失败视图的配置
+
+/**
+ * 消息发送失败的 icon 名称，默认是放在 Assets 资源文件夹内
+ * @return 消息发送失败的 icon 名称
+ */
 - (NSString *)chatSendFailImageName;
 
 @end

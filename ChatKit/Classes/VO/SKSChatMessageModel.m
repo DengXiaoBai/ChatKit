@@ -10,7 +10,6 @@
 #import "SKSChatCellLayoutConfig.h"
 #import "SKSDefaultValueMaker.h"
 #import "SKSChatSessionConfig.h"
-#import "SKSDefaultChatSessionConfig.h"
 
 @implementation SKSChatMessageModel
 

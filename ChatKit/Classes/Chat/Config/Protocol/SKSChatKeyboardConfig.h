@@ -15,30 +15,31 @@
  */
 - (NSInteger)maxInputLength;
 
-
+/**
+ * 输入控件的 Layer.borderColor 色值
+ * @return
+ */
 - (UIColor *)keyboardBorderColor;
 
 /**
- 输入控件的 placeholder
- @return 输入控件的 placeholder
+ 输入控件的 placeholder 字符串值
+ @return 输入控件的 placeholder 字符串值
  */
 - (NSString *)inputViewPlaceholder;
 
-
 /**
- * 输入键盘的背景颜色
+ * 输入控件的（整个键盘的，不只是输入框的 TextView 背景） background 颜色
  *
  * */
 - (UIColor *)inputViewBackgroundColor;
 
-
-/*
+/**
  * 键盘被选中的背景色
  * */
 - (UIColor *)inputViewSelectedBackgroundColor;
 
 /**
- * 输入键盘的文字颜色
+ * 输入键盘 TextView 中的文字颜色
  *
  * */
 - (UIColor *)inputViewTextColor;
@@ -127,6 +128,7 @@
  * 键盘中的表情商城的图片名称
  * */
 - (NSString *)chatKeyboardEmoticonShopImageName;
+
 - (UIColor *)chatKeyboardEmoticonShopBackgroundColor;
 
 /**
@@ -169,7 +171,9 @@
  * 聊天键盘中的Emoji发送按钮的字体
  * */
 - (UIFont *)chatKeyboardEmoticonSendButtonTextFont;
+
 - (UIColor *)chatKeyboardEmoticonSendButtonTextColor;
+
 - (UIColor *)chatKeyboardEmoticonSendButtonEnableTextColor;//不可点击状态文字
 
 /**
@@ -186,16 +190,19 @@
  * 表情工具栏中的按钮被选中之后的背景颜色
  * */
 - (UIColor *)chatKeyboardEmoticonToolBtnSelectedBackgroundColor;
+
 - (UIColor *)chatKeyboardEmoticonToolBtnNormalBackgroundColor;//正常状态下的按钮背景颜色
 
 /**
  * 表情容器视图中的点的色值
  * */
 - (UIColor *)chatKeyboardEmoticonPageIndicatorTintColor;
+
 - (UIColor *)chatKeyboardEmoticonCurrentPageIndicatorTintColor;
 
 
 #pragma mark - KeyboardView More Item Config
+
 /**
  * 键盘更多选项中的视图容器的背景颜色
  * */
@@ -205,6 +212,7 @@
  * 键盘中更多选中的中的按钮字体颜色
  * */
 - (UIColor *)chatKeyboardMoreViewDescTextColor;
+
 - (UIFont *)chatKeyboardMoreViewDescTextFont;
 
 #pragma mark - Record voice message
@@ -251,6 +259,7 @@
  * 录音倒计时相关的临界数值
  * */
 - (NSInteger)chatKeyboardRecordMaxLimitCount;
+
 - (NSInteger)chatKeyboardRecordCountDownCriticalPoint;
 
 

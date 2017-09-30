@@ -10,7 +10,6 @@
 #import "SKSDefaultCellConfig.h"
 #import "SKSDefaultChatSessionConfig.h"
 #import "SKSDefaultCellLayoutConfig.h"
-#import "SKSDefaultChatContentConfig.h"
 #import "SKSDefaultKeyboardConfig.h"
 #import "SKSChatKeyboardConfig.h"
 

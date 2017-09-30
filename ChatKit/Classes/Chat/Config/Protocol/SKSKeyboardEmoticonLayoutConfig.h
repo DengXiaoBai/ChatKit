@@ -4,6 +4,9 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ * 键盘中表情控件的配置协议
+ */
 @protocol SKSKeyboardEmoticonLayoutConfig <NSObject>
 
 @property (nonatomic, assign) UIEdgeInsets emoticonInsets;

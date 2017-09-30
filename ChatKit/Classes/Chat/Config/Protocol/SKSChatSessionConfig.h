@@ -58,24 +58,24 @@
  */
 - (CGFloat)getBubbleViewArrowWidth;
 
-#pragma mark - 聊天中消息的排版配置
+#pragma mark - 聊天中消息配置实例
 
 
 /**
- 消息的排版配置
+ 消息的排版配置实例
  @discussion 可以实现 SKSChatCellLayoutConfig 协议来实现自定义配置类, 每次新的消息（未计算Cell高度或强制刷新的都算新消息）的都会调用一次该接口
- 获取到相对应的排版配置信息，nil 则使用 SKSDefaultChatCellLayoutConfig 配置类
- @param message 需排版的消息实例
- @return 对应的排版配置
+ 获取到相对应的排版配置信息，如果检测到没有自定义协议则使用 SKSDefaultChatCellLayoutConfig 配置类
+ @param message 消息实例
+ @return 消息的排版配置实例
  */
 - (id<SKSChatCellLayoutConfig>)layoutConfigWithMessage:(SKSChatMessage *)message;
 
 
 /**
- 消息的UI配置
+ 消息的 UI（字体，大小，背景色等）配置
 
- @param message 需要获取UI配置的实例
- @return 消息的UI配置实例
+ @param message 消息实例
+ @return 消息的 UI 配置实例
  */
 - (id<SKSChatCellConfig>)chatCellConfigWithMessage:(SKSChatMessage *)message;
 
