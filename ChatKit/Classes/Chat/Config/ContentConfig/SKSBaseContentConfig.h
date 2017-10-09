@@ -11,6 +11,9 @@
 
 @class SKSChatMessageModel;
 
+/**
+ * 聊天 Cell 中的 ContentConfig 基类
+ */
 @interface SKSBaseContentConfig : NSObject <SKSChatContentConfig>
 
 @property (nonatomic, strong) SKSChatMessageModel *messageModel;

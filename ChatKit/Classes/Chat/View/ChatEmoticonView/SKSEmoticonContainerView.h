@@ -19,7 +19,7 @@
  表情按钮单击回调
  @param emotionMeta 表情的元数据
  */
-- (void)emotionButtonActionWithEmotionMeta:(SKSEmoticonMeta *)emotionMeta;//单击
+- (void)emotionButtonActionWithEmotionMeta:(SKSEmoticonMeta *)emotionMeta;
 
 
 /**
@@ -27,7 +27,7 @@
  @param emoticonMeta 表情的元数据
  @param isBegin 长安手势的状态是否开始, 否则则为长按手势结束
  */
-- (void)emotionButtonLongPressActionWithEmotionMeta:(SKSEmoticonMeta *)emoticonMeta isBegin:(BOOL)isBegin;//长按
+- (void)emotionButtonLongPressActionWithEmotionMeta:(SKSEmoticonMeta *)emoticonMeta isBegin:(BOOL)isBegin;
 
 
 /**
@@ -36,7 +36,7 @@
 - (void)emotionButtonTapEmoticonShopButtonAction;
 
 /**
- * 普通 Emoji 表情中的删除按钮
+ * 普通 Emoji 表情中的删除按钮回调
  * */
 - (void)emoticonDeleteButtonAction;
 
@@ -55,6 +55,10 @@
 - (instancetype)initWithUserModel:(SKSChatUserModel *)userModel
                     sessionConfig:(id<SKSChatSessionConfig>)sessionConfig;
 
-- (void)keyboardViewTextDidChange:(NSString *)text;//键盘文字更新
+/**
+ * 键盘文件监听回调
+ * @param text
+ */
+- (void)keyboardViewTextDidChange:(NSString *)text;
 
 @end

@@ -7,12 +7,11 @@
 //
 
 #import "SKSDefaultChatSessionConfig.h"
-#import "SKSKeyboardMoreViewItemProtocol.h"
-#import "SKSKeyboardMoreItemVO.h"
 #import "SKSDefaultValueMaker.h"
 #import "SKSChatMessageModel.h"
 #import "SKSChatMessage.h"
 #import "SKSSessionContentConfigFactory.h"
+#import "SKSMessageAvatarButton.h"
 
 @implementation SKSDefaultChatSessionConfig
 
@@ -60,7 +59,7 @@
 }
 
 - (NSString *)getAvatarButtonClassNameWithMessageModel:(SKSChatMessageModel *)messageModel {
-    return @"SKSMessageAvatarButton";
+    return NSStringFromClass([SKSMessageAvatarButton class]);
 }
 
 

@@ -16,7 +16,6 @@
 #import "SKSKeyboardEmoticonLayoutConfig.h"
 #import "SKSEmoticonButton.h"
 #import "SKSDefaultKeyboardEmoticonLayoutConfig.h"
-#import "UIColor+SKS.h"
 
 static CGFloat kLineGapPadding                 = 5.0f;
 
@@ -56,7 +55,6 @@ static CGFloat kLineGapPadding                 = 5.0f;
 }
 
 - (void)prepareEmoticonCatalogList {
-    //TODO: 准备表情数据
     NSString *emojiFileName = @"EmojisList";
     NSString *emojiFileType = @"plist";
     NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:emojiFileName ofType:emojiFileType]];

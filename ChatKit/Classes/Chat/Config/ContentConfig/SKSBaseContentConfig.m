@@ -11,16 +11,19 @@
 @implementation SKSBaseContentConfig
 
 - (CGSize)contentSizeWithCellWidth:(CGFloat)cellWidth {
+    NSAssert(NO, @"Please override this method in subClass");
     return CGSizeZero;
 }
 
 
 - (NSString *)cellContentClass {
+    NSAssert(NO, @"Please override this method in subClass");
     return @"";
 }
 
 
 - (NSString *)cellContentIdentifier {
+    NSAssert(NO, @"Please override this method in subClass");
     return @"";
 }
 

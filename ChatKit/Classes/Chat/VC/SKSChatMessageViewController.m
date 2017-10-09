@@ -120,11 +120,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Private method
-- (void)updateTableViewInsets {
-    
-}
-
 #pragma mark - Notification
 - (void)menuDidHide:(NSNotification *)notification {
     if (_keyboardView.inputTextView.overrideNextResponder != nil) {

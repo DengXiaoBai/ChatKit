@@ -17,18 +17,39 @@
 
 @property (nonatomic, strong) id<SKSKeyboardEmoticonLayoutConfig> emoticonLayoutConfig;
 
-@property (nonatomic, strong) NSString *catalogId;//对应于原来的 packageId
+/**
+ * 某套表情包目录的 id, 对应于原来的 packageId
+ */
+@property (nonatomic, strong) NSString *catalogId;
 
+/**
+ * 该套表情包目录的英文描述
+ */
 @property (nonatomic, strong) NSString *desc;
 
+/**
+ * 该套表情包目录的中文描述
+ */
 @property (nonatomic, strong) NSString *desc_zh;
 
+/**
+ * 该套表情包目录的英文名称
+ */
 @property (nonatomic, strong) NSString *name;
 
+/**
+ * 该套表情包目录的中文名称
+ */
 @property (nonatomic, strong) NSString *name_zh;
 
-@property (nonatomic, strong) NSString *previewImage;//该套表情的预览图
+/**
+ * 该套表情包目录的预览图片，每一套表情包目录都有一个预览图片
+ */
+@property (nonatomic, strong) NSString *previewImage;
 
+/**
+ * 该套表情包目录下的所有表情
+ */
 @property (nonatomic, strong) NSArray<SKSEmoticonMeta *>* emoticonList;
 
 - (CGSize)size;

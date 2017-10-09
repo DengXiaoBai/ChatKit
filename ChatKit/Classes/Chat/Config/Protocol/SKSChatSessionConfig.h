@@ -20,7 +20,7 @@
  */
 @protocol SKSChatSessionConfig <NSObject>
 
-#pragma mark - 聊天中的默认头像配置
+#pragma mark - Avatar UI
 
 /**
  聊天中的默认头像
@@ -29,7 +29,7 @@
  */
 - (UIImage *)defaultAvatar;
 
-#pragma mark - 时间标签中的配置
+#pragma mark - Timestamp UI
 
 
 /**
@@ -40,7 +40,7 @@
 - (NSTimeInterval)showTimestampInterval;
 
 
-#pragma mark - 聊天中的录音的配置
+#pragma mark - Record Voice UI
 
 /**
  最大的录音时长
@@ -49,7 +49,7 @@
  */
 - (NSTimeInterval)maxRecordDuration;
 
-#pragma mark - 聊天中气泡的配置
+#pragma mark - Chat bubble UI
 
 /**
  气泡尖角偏移量
@@ -58,7 +58,7 @@
  */
 - (CGFloat)getBubbleViewArrowWidth;
 
-#pragma mark - 聊天中消息配置实例
+#pragma mark - Config instance
 
 
 /**
@@ -93,7 +93,7 @@
 - (id<SKSChatKeyboardConfig>)chatKeyboardConfig;
 
 
-#pragma mark - 聊天中气泡的名称
+#pragma mark - Other
 - (NSString *)bubbleImageNameWithSKSMessageModel:(SKSChatMessageModel *)messageModel;
 
 

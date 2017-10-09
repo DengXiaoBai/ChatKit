@@ -79,7 +79,7 @@
 
 
 /**
- 子类自定义 UITableViewCell 的回调方法
+ 子类自定义 UITableViewCell 的回调方法， 类似与 UITableViewDataSource 中的 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 方法
 
  @param tableView Cell 所在的 tableView
  @param indexPath Cell 所在的 indexPath
@@ -103,12 +103,12 @@
 @property (nonatomic, strong) id<SKSChatSessionConfig> sessionConfig;
 
 /**
- * 聊天 TableView
+ * 聊天 UITableView
  * */
 @property (nonatomic, strong, readonly) UITableView *tableView;
 
 /**
- * 聊天键盘
+ * 整个聊天键盘视图
  * */
 @property (nonatomic, strong, readonly) SKSKeyboardView *keyboardView;
 
@@ -123,7 +123,7 @@
 
 
 /**
- 初始化 MessageModel 里面的参数, 并且Cell的计算高度
+ 初始化 MessageModel 里面的参数, 并且计算 Cell 的高度
 
  @param messageModel 消息Model
  */
