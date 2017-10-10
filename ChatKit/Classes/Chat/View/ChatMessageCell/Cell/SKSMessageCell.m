@@ -219,10 +219,16 @@
 
         Class clazz = NSClassFromString(avatarBtnViewClassName);
         if (clazz != nil) {
-            _avatarBtn = [[clazz alloc] initWithFrame:avatarButtonFrame messageModel:_messageModel];
+            if ([clazz conformsToProtocol:@protocol(SKSMessageAvatarProtocol)]) {
+                _avatarBtn = [[clazz alloc] initWithFrame:avatarButtonFrame messageModel:_messageModel];
+            } else {
+                _avatarBtn = [[SKSMessageAvatarButton alloc] initWithFrame:avatarButtonFrame messageModel:_messageModel];
+                DLog(@"[Error]: %@ class not implement SKSMessageAvatarProtocol, use SKSMessageAvatarButton instead", avatarBtnViewClassName);
+            }
+
         } else {
             _avatarBtn = [[SKSMessageAvatarButton alloc] initWithFrame:avatarButtonFrame messageModel:_messageModel];
-            DLog(@"not find the %@ class, use SKSMessageAvatarButton instead", avatarBtnViewClassName);
+            DLog(@"Not find the %@ class, use SKSMessageAvatarButton instead", avatarBtnViewClassName);
         }
 
         [_avatarBtn addTarget:self action:@selector(avatarButtonAction:) forControlEvents:UIControlEventTouchUpInside];

@@ -13,7 +13,7 @@
  Cell 布局的配置协议
  1. Cell 类名，Cell Identifier，ContentView Size
  2. BubbleView(气泡视图)与 Cell 之间的边距
- 3. ContentView 与 BubbleView(气泡视图)之间的视图
+ 3. ContentView 与 BubbleView(气泡视图)之间的边距
  4. 头像视图与 Cell 之间的边距，头像视图大小
  5: 时间标签视图大小，时间标签视图与 Cell 之间的边距
  6: 已读/未读视图与 Cell 之间的边距

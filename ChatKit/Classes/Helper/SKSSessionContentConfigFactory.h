@@ -10,6 +10,9 @@
 #import "SKSChatContentConfig.h"
 #import "SKSChatMessageModel.h"
 
+/**
+ * 获取 ChatKit 中 ContentConfig 实例
+ */
 @interface SKSSessionContentConfigFactory : NSObject
 
 + (instancetype)shareInstance;

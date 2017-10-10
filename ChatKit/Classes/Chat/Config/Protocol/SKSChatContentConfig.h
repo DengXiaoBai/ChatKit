@@ -8,7 +8,8 @@
 
 
 /**
- 聊天Cell 中的 ContentView (气泡视图中的具体控件,例如 TextCell 中的 UILabel, 以及 PhotoCell 中 UIImageView 等控件) 的界面配置类, 例如大小等
+ 1. 聊天 Cell 中的 ContentView (气泡视图中的具体控件,例如 TextCell 中的 UILabel, 以及 PhotoCell 中 UIImageView 等控件) 的界面配置类, 例如大小，与气泡视图(BubbleView)的边距
+ 2. 聊天 Cell 中的 BubbleView 与 Cell 之间的边距，BubbleView 的大小由 (ContentView.size 与 ContentView 与 BubbleView 的边距两个参数来确定)
  */
 @protocol SKSChatContentConfig <NSObject>
 
@@ -41,6 +42,7 @@
 
 /**
  * 聊天中气泡视图与 Cell 之间的边距（不考虑时间标签的情况）
+ * 默认是居中，所有左右边距忽略, 下边距由时间标签下面的控件来控制，只有上边距设置才起效果
  * @return 气泡视图与 Cell 之间的边距
  */
 - (UIEdgeInsets)bubbleViewInsetsRegardlessOfTheTimestampSituation;

@@ -13,7 +13,9 @@
 @protocol SKSChatContentConfig;
 @protocol SKSChatKeyboardConfig;
 
-
+/**
+ * 生成默认的 ChatCellConfig / ChatCellLayoutConfig / SessionConfig / KeyboardConfig 等配置类实例
+ */
 @interface SKSDefaultValueMaker : NSObject
 
 
