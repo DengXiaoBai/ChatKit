@@ -9,7 +9,7 @@
 
 ---
 ### 比较重要的几个协议
-![IMAGE](resources/11912FC1126BF6079ABF5EE85EB9F34D.jpg =321x118)，大部分的内容都是围绕这个几个协议来展开的。
+![IMAGE](resources/11912FC1126BF6079ABF5EE85EB9F34D.jpg)，大部分的内容都是围绕这个几个协议来展开的。
 
 
 
@@ -31,7 +31,7 @@
 #### 1. `SKSChatContentConfig` 目录结构：
 
 如下图所示是部分 `ChatKit` 已经实现好的 `ContentConfig` 实例，都是需要实现 `SKSChatContentConfig` 协议
-  ![IMAGE](resources/D4AD5FA6DFCB2EAD687098CA30219E99.jpg =451x555)
+  ![IMAGE](resources/D4AD5FA6DFCB2EAD687098CA30219E99.jpg)
   
 #### 2. `SKSChatContentConfig` 功能：
 该协议定义了聊天 `Cell` 中的 `ContentView` （`ContentView`: 拿文字视图来说，具体指聊天界面中气泡视图上面的那个存放文字的控件 UILabel/UITextView 视图），以及支持添加 `ContentView` 中子 View 中字体大小颜色，控件边距等自定义参数。
@@ -55,7 +55,7 @@
 
 #### 1. `SKSChatMessageContentProtocol` 目录结构
 如下图所示就是 `ChatKit` 已经实现好了的一些 `ContentView`, 需要遵循的规则就是要实现 `SKSChatMessageContentProtocol` 协议
-![IMAGE](resources/DC333D7452F0ABC68E244675EB360883.jpg =379x225)
+![IMAGE](resources/DC333D7452F0ABC68E244675EB360883.jpg)
 
 
 ---
