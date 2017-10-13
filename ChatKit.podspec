@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ChatKit'
-  s.version          = '0.2.13'
+  s.version          = '0.2.14'
   s.summary          = 'Chatting framework for iOS.'
 
 # This description is used to generate tags and improve search results.
@@ -40,7 +40,7 @@ Pod::Spec.new do |s|
   s.dependency  'pop', '~> 1.0'
   s.dependency  'DTCoreText', '~> 1.6'
   s.dependency  'GRMustache', '~> 7.3'
-  s.dependency  'Masonry', '~> 0.6'
+  s.dependency  'Masonry'
   s.dependency  'YYImage'
   s.dependency  'TTTAttributedLabel'
   s.dependency  'UITextView+Placeholder'
