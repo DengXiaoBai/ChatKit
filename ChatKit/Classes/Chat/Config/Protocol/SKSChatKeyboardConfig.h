@@ -17,7 +17,7 @@
 
 /**
  * 输入控件的 Layer.borderColor 色值
- * @return
+ * @return 输入控件的 Layer.borderColor 色值
  */
 - (UIColor *)keyboardBorderColor;
 

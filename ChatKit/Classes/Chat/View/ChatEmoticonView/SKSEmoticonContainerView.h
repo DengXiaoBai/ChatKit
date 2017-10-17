@@ -57,7 +57,7 @@
 
 /**
  * 键盘文件监听回调
- * @param text
+ * @param text 变化的值
  */
 - (void)keyboardViewTextDidChange:(NSString *)text;
 
