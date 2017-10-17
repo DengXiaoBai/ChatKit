@@ -655,7 +655,7 @@
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
 						DevelopmentTeam = FM629VZ3X3;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Manual;
 					};
 					6003F5AD195388D20070C39A = {
@@ -983,7 +983,8 @@
 				PROVISIONING_PROFILE = "d98792d9-6aeb-4711-89e3-28079552295b";
 				PROVISIONING_PROFILE_SPECIFIER = "iOS Development Wildcard";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_NAME)/General/BridgeHeader/ChatKit-Example-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1005,7 +1006,8 @@
 				PROVISIONING_PROFILE = "d98792d9-6aeb-4711-89e3-28079552295b";
 				PROVISIONING_PROFILE_SPECIFIER = "iOS Development Wildcard";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_NAME)/General/BridgeHeader/ChatKit-Example-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
