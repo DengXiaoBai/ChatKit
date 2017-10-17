@@ -21,43 +21,30 @@ extension UIFont {
     **/
 
     // APP默认字体
-    class func defaultFont(ofSize fontSize: CGFloat) -> UIFont {
-//        if UIDevice.is_iOS_9_or_later() {
-            let font = UIFont(name: "PingFangSC-Regular", size: fontSize)
-            guard let _ = font else {
-                return UIFont.systemFont(ofSize: fontSize)
-            }
+    @objc class func defaultFont(ofSize fontSize: CGFloat) -> UIFont {
+        let font = UIFont(name: "PingFangSC-Regular", size: fontSize)
+        guard let _ = font else {
+            return UIFont.systemFont(ofSize: fontSize)
+        }
 
-            return font!
-//        } else {
-//            return UIFont.systemFont(ofSize: fontSize)
-//        }
+        return font!
     }
 
-    class func mediumDefaultFont(ofSize fontSize: CGFloat) -> UIFont {
-//        if UIDevice.is_iOS_9_or_later() {
-            let font = UIFont(name: "PingFangSC-Medium", size: fontSize)
-            guard let _ = font else {
-                return UIFont.systemFont(ofSize: fontSize)
-            }
+    @objc class func mediumDefaultFont(ofSize fontSize: CGFloat) -> UIFont {
+        let font = UIFont(name: "PingFangSC-Medium", size: fontSize)
+        guard let _ = font else {
+            return UIFont.systemFont(ofSize: fontSize)
+        }
 
-            return font!
-//        } else {
-//            return UIFont.systemFont(ofSize: fontSize)
-//        }
-
+        return font!
     }
 
-    class func boldDefaultFont(ofSize fontSize: CGFloat) -> UIFont {
-//        if UIDevice.is_iOS_9_or_later() {
-            let font = UIFont(name: "PingFangSC-Semibold", size: fontSize)
-            guard let _ = font else {
-                return UIFont.boldSystemFont(ofSize: fontSize)
-            }
+    @objc class func boldDefaultFont(ofSize fontSize: CGFloat) -> UIFont {
+        let font = UIFont(name: "PingFangSC-Semibold", size: fontSize)
+        guard let _ = font else {
+            return UIFont.boldSystemFont(ofSize: fontSize)
+        }
 
-            return font!
-//        } else {
-//            return UIFont.boldSystemFont(ofSize: fontSize)
-//        }
+        return font!
     }
 }
