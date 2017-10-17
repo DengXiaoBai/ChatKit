@@ -18,8 +18,11 @@
 #import <ChatKit/SKSChatMessage.h>
 #import <ChatKit/SKSVoiceMessageObject.h>
 #import <Masonry/Masonry.h>
+#import <ChatKit/SKSChatKeyboardConfig.h>
 #import "ChatTestViewModel.h"
 #import "ChatSessionHelper.h"
+#import "MarcosDefinition.h"
+#import "ChatKit_Example-Swift.h"
 
 @interface ChatSessionViewController () <SKSChatMessageViewControllerDelegate,
         SKSChatMessageViewControllerDataSource,
@@ -29,6 +32,7 @@
 @property (nonatomic, strong) ChatTestViewModel *viewModel;
 
 @property (nonatomic, strong) SKSChatRecordView *chatRecordView;
+@property (nonatomic, assign) BOOL isKeyboardShowing;
 
 @end
 
@@ -40,6 +44,7 @@
         _viewModel = [[ChatTestViewModel alloc] init];
         _viewModel.sessionConfig = [[SKSDefaultValueMaker shareInstance] getDefaultSessionConfig];
         self.sessionConfig = [[SKSDefaultValueMaker shareInstance] getDefaultSessionConfig];
+        [self registerNotification];
     }
     return self;
 }
@@ -53,20 +58,65 @@
     self.sksDataSource = self;
 
     self.view.backgroundColor = RGB(249, 249, 249);
-    [self.tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view.mas_top).offset(64);
-        make.left.right.equalTo(self.view);
-        make.bottom.equalTo(self.keyboardView.mas_top);
-    }];
+    [self updateTableView];
+    [self updateKeyboardView];
+    [self registerNotification];
     self.tableView.backgroundColor = self.view.backgroundColor;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView reloadData];
-
-//    [self.keyboardView disableKeyboardView:YES];//Disable the keyboard view
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)registerNotification {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShowNotification:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHideNotification:) name:UIKeyboardWillHideNotification object:nil];
+}
+
+
+- (void)updateTableView {
+
+    /// 防止iOS11自动启用Self-Sizing
+    self.tableView.estimatedRowHeight = 0;
+    self.tableView.estimatedSectionFooterHeight = 0;
+    self.tableView.estimatedSectionHeaderHeight = 0;
+
+    /// 防止iOS11自动调整contentInset
+    if (@available(iOS 11.0, *)) {
+        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }
+
+    [self.tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.mas_top).offset([ConstantUtils getStatusBarAndNavBarHeightTotalHeight]);
+        make.left.right.equalTo(self.view);
+        make.bottom.equalTo(self.keyboardView.mas_top);
+    }];
+}
+
+- (void)updateKeyboardView {
+    if (@available(iOS 11.0, *)) {
+        if (IS_IPHONE_X) {
+            [self.keyboardView mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.bottom.equalTo(self.view.mas_safeAreaLayoutGuideBottom);
+                make.left.right.equalTo(self.view);
+                make.height.mas_equalTo([[self.sessionConfig chatKeyboardConfig] chatKeyboardViewDefaultHeight]);
+            }];
+        }
+    }
+}
+
+
+#pragma mark - Notification
+- (void)keyboardWillShowNotification:(NSNotification *)notification {
+    DLog(@"keyboardWillShowNotification");
+    self.isKeyboardShowing = YES;
+}
+
+- (void)keyboardWillHideNotification:(NSNotification *)notification {
+    DLog(@"keyboardWillHideNotification");
+    self.isKeyboardShowing = NO;
 }
 
 
@@ -297,16 +347,31 @@
 
 #pragma mark - SKSKeyboardViewDelegate
 - (void)inputTextViewHeightDidChange:(NSString *)text {
-    [self.keyboardView mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.left.right.bottom.equalTo(self.view);
+
+    DLog(@"inputTextViewHeightDidChange...isKeyboardShowing: %d", self.isKeyboardShowing);
+    [self.keyboardView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(self.view);
         make.height.equalTo(@(self.keyboardView.customInputViewHeight));
-        make.bottom.equalTo(self.view.mas_bottom).offset(-self.keyboardView.systemKeyboardViewHeight);
+        if (@available(iOS 11.0, *)) {
+            if (IS_IPHONE_X) {
+                if (!self.isKeyboardShowing) {
+                    make.bottom.equalTo(self.view.mas_safeAreaLayoutGuideBottom).offset(-self.keyboardView.systemKeyboardViewHeight);
+                } else {
+                    make.bottom.equalTo(self.view.mas_bottom).offset(-self.keyboardView.systemKeyboardViewHeight);
+                }
+
+            } else {
+                make.bottom.equalTo(self.view.mas_bottom).offset(-self.keyboardView.systemKeyboardViewHeight);
+            }
+        } else {
+            make.bottom.equalTo(self.view.mas_bottom).offset(-self.keyboardView.systemKeyboardViewHeight);
+        }
     }];
 
     //update tableView insets
     [self.tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.view);
-        make.top.equalTo(self.view.mas_top).offset(64);
+        make.top.equalTo(self.view.mas_top).offset([ConstantUtils getStatusBarAndNavBarHeightTotalHeight]);
         make.bottom.equalTo(self.keyboardView.mas_top);
     }];
 

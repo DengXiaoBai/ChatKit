@@ -238,11 +238,13 @@ static CGFloat kLineGapPadding                 = 5.0f;
         _emotionPageControl.currentPage = page - beforeSumOfPage;
     }
     CGSize size = [_emotionPageControl sizeForNumberOfPages:_emotionPageControl.numberOfPages];
+
+    CGFloat bottomPadding = self.keyboardConfig.chatKeyboardCustomInputViewHeight - self.keyboardConfig.chatKeyboardMoreViewHeight;
     [_emotionPageControl mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.mas_centerX);
         make.height.equalTo(@(size.height));
         make.width.equalTo(@(size.width));
-        make.bottom.equalTo(self.mas_bottom).offset(-(self.keyboardConfig.chatKeyboardEmoticonToolViewHeight - 5));
+        make.bottom.equalTo(self.mas_bottom).offset(-(self.keyboardConfig.chatKeyboardEmoticonToolViewHeight + bottomPadding - 5));
     }];
 }
 
@@ -278,15 +280,47 @@ static CGFloat kLineGapPadding                 = 5.0f;
         }];
 
         [_emotionToolScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.right.bottom.equalTo(self);
+            if (@available(iOS 11.0, *)) {
+                if (SKS_IS_IPHONE_X) {
+                    make.right.equalTo(self.mas_right);
+                    make.bottom.equalTo(self.mas_safeAreaLayoutGuideBottom);
+                } else {
+                    make.right.bottom.equalTo(self);
+                }
+            } else {
+                make.right.bottom.equalTo(self);
+            }
+
             make.left.equalTo(lineView.mas_right);
             make.height.equalTo(@(self.keyboardConfig.chatKeyboardEmoticonToolViewHeight));
         }];
     } else {
         [_emotionToolScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.right.left.bottom.equalTo(self);
+            if (@available(iOS 11.0, *)) {
+                if (SKS_IS_IPHONE_X) {
+                    make.left.right.equalTo(self);
+                    make.bottom.equalTo(self.mas_safeAreaLayoutGuideBottom);
+                } else {
+                    make.left.right.bottom.equalTo(self);
+                }
+            } else {
+                make.left.right.bottom.equalTo(self);
+            }
             make.height.equalTo(@(self.keyboardConfig.chatKeyboardEmoticonToolViewHeight));
         }];
+    }
+
+    if (SKS_IS_IPHONE_X) {//适配 iPhoneX
+        UIView *bgForXView = [[UIView alloc] init];
+        bgForXView.backgroundColor = UIColor.whiteColor;
+        bgForXView.translatesAutoresizingMaskIntoConstraints = NO;
+        [self addSubview:bgForXView];
+        [bgForXView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.bottom.equalTo(self);
+            make.top.equalTo(_emotionToolScrollView.mas_bottom);
+        }];
+
+        [self bringSubviewToFront:_emotionToolScrollView];
     }
 
     if (_emoticonCatalogList.count > 0) {

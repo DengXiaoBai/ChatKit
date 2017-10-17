@@ -81,7 +81,16 @@
 }
 
 - (CGFloat)chatKeyboardMoreViewHeight {
-    return 250.0f;
+    return 250.0;
+}
+
+- (CGFloat)chatKeyboardCustomInputViewHeight {
+    CGFloat keyboardMoreViewHeight = [self chatKeyboardMoreViewHeight];
+
+    if (SKS_IS_IPHONE_X) {
+        keyboardMoreViewHeight += 34.0;//34.0 is iPhoneX bottom safeArea value (pt)
+    }
+    return keyboardMoreViewHeight;
 }
 
 - (CGFloat)chatKeyboardEmoticonToolViewHeight {

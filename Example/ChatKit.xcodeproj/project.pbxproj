@@ -46,16 +46,17 @@
 		B7124736E1B6CB001D020B91 /* ChatPrivacyDateOfferContentConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124739D4C38807F6F702F6 /* ChatPrivacyDateOfferContentConfig.m */; };
 		B7124739C88EC99ECA917041 /* ChatPrivacyDateOfferCancelBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = B71242F7D10A7EE205A53B4E /* ChatPrivacyDateOfferCancelBtnView.m */; };
 		B71247CB621DB2A0C1B2A473 /* ChatYOContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124682D07BFF829D4E8B87 /* ChatYOContentView.m */; };
-		B71247FC19117FE3EBD10193 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7124F128C874CCB98D25BBB /* Default-568h@2x.png */; };
 		B7124853E7C5EAF32205C656 /* ChatTestViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B71240C920A1A7100096BB1C /* ChatTestViewModel.m */; };
 		B71248F0EAF8A1739082FB5B /* ChatImpressBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124D5B0744241677E99A9E /* ChatImpressBottomView.m */; };
 		B71248FB78A8598B20EAC677 /* ChatPrivacyActivityOfferCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124711E72AD71E52A82E84 /* ChatPrivacyActivityOfferCoverView.m */; };
 		B712495BB39274E11209C13B /* EmojisList.plist in Resources */ = {isa = PBXBuildFile; fileRef = B71241845849F6AFCB9AEEC9 /* EmojisList.plist */; };
 		B71249D67FBCD0426316FF1F /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71242EBBCBFED9F9244BBEF /* UIFont.swift */; };
 		B7124A2B9B8DE99999EE7D4C /* ChatDateJoinedPreviewContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = B71247ED0C25BFF2A1DC8509 /* ChatDateJoinedPreviewContentView.m */; };
+		B7124AFAD8BAF326BA0451AC /* Marcos.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7124599EB6B9666D22967E3 /* Marcos.swift */; };
 		B7124B3164EA9BBAD164A0A0 /* ChatSessionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B712476B948D493CFFF4943C /* ChatSessionConfig.m */; };
 		B7124BFDCDD5C8096CA8043E /* ChatPrivacyGiftOfferBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = B712453E8A5D29E9AA8BB3F6 /* ChatPrivacyGiftOfferBtnView.m */; };
 		B7124C59AD2C991E4726D243 /* ChatPrivacyGiftOfferMessageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B712415A6A207490A1319F72 /* ChatPrivacyGiftOfferMessageObject.m */; };
+		B7124CFD291A919DDD8924B7 /* ConstantUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7124501C40A5DA6FA8D8000 /* ConstantUtils.swift */; };
 		B7124D06B3A71A2C67663ED8 /* ChatDateOfferBtnBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = B71241BA4AC4769573A5E115 /* ChatDateOfferBtnBottomView.m */; };
 		B7124D9A2A03A83B24DACDD6 /* ChatImpressTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7124893AE7A5165CC6044FD /* ChatImpressTopView.m */; };
 		B7124DB10254810F303C366F /* ChatImpressView.m in Sources */ = {isa = PBXBuildFile; fileRef = B712476A84FB8939CC9EB783 /* ChatImpressView.m */; };
@@ -131,10 +132,12 @@
 		B7124441A7D2C7B76823DE83 /* ChatPrivacyDateOfferBtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyDateOfferBtnView.h; sourceTree = "<group>"; };
 		B712449547F60FAC29F42A02 /* ChatImpressTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatImpressTopView.h; sourceTree = "<group>"; };
 		B71244EE5D41162332C8C039 /* ChatImpressContentConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatImpressContentConfig.m; sourceTree = "<group>"; };
+		B7124501C40A5DA6FA8D8000 /* ConstantUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantUtils.swift; sourceTree = "<group>"; };
 		B712452534AF695B9946D96D /* MarcosDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarcosDefinition.h; sourceTree = "<group>"; };
 		B712453DF5EBC938613FAEDE /* ChatDateOfferView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatDateOfferView.m; sourceTree = "<group>"; };
 		B712453E8A5D29E9AA8BB3F6 /* ChatPrivacyGiftOfferBtnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyGiftOfferBtnView.m; sourceTree = "<group>"; };
 		B712459431A1E6F1D2E37DE2 /* ChatSessionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatSessionHelper.h; sourceTree = "<group>"; };
+		B7124599EB6B9666D22967E3 /* Marcos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Marcos.swift; sourceTree = "<group>"; };
 		B712459EB603E8115806A34D /* ChatPrivacyDateOfferContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatPrivacyDateOfferContentView.m; sourceTree = "<group>"; };
 		B71245A79E6CDD8BA19C38B2 /* ChatSessionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatSessionViewController.h; sourceTree = "<group>"; };
 		B7124612608978D382635100 /* ChatYOContentConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatYOContentConfig.m; sourceTree = "<group>"; };
@@ -195,7 +198,6 @@
 		B7124EE8215808B496ED1E58 /* common-coin-icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "common-coin-icon.jpg"; sourceTree = "<group>"; };
 		B7124EF30104F477E98E4BDE /* ChatPrivacyGiftOfferDescView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyGiftOfferDescView.h; sourceTree = "<group>"; };
 		B7124F07B16D89F8E84D0444 /* ChatDateOfferDescBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatDateOfferDescBottomView.m; sourceTree = "<group>"; };
-		B7124F128C874CCB98D25BBB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
 		B7124F6BF8B08AFF7872A25C /* ChatImpressContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatImpressContentView.m; sourceTree = "<group>"; };
 		B7124F7920383BB62932E93F /* ChatImpressBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatImpressBottomView.h; sourceTree = "<group>"; };
 		B7124FC2841A8B4CF2ED0337 /* ChatPrivacyDateOfferMessageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatPrivacyDateOfferMessageObject.h; sourceTree = "<group>"; };
@@ -275,7 +277,6 @@
 				B71245242B783615FC83E089 /* ViewModel */,
 				B71246346C53EB61C63FC33E /* Resource */,
 				B7124F2970BC2D73392717C6 /* Helper */,
-				B7124F128C874CCB98D25BBB /* Default-568h@2x.png */,
 				B7124E92BA1511B856DB072B /* ChatKitConfig */,
 				B7124D82517E250653329E6B /* General */,
 			);
@@ -523,6 +524,7 @@
 			isa = PBXGroup;
 			children = (
 				B712452534AF695B9946D96D /* MarcosDefinition.h */,
+				B7124599EB6B9666D22967E3 /* Marcos.swift */,
 			);
 			path = Marco;
 			sourceTree = "<group>";
@@ -551,6 +553,7 @@
 			children = (
 				B712459431A1E6F1D2E37DE2 /* ChatSessionHelper.h */,
 				B7124B59D0165110B91F6F4F /* ChatSessionHelper.m */,
+				B7124501C40A5DA6FA8D8000 /* ConstantUtils.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -691,7 +694,6 @@
 				B712401CD55EA913A82328DA /* common-coin-icon.jpg in Resources */,
 				B7124DBD9CE7F2FEFE0A28CD /* common-roses-icon.png in Resources */,
 				B71245B60D3F4A62AE5F042A /* in2.txt in Resources */,
-				B71247FC19117FE3EBD10193 /* Default-568h@2x.png in Resources */,
 				B712422993C7667596C8DFE9 /* chat_admin_send.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -848,6 +850,8 @@
 				B71248F0EAF8A1739082FB5B /* ChatImpressBottomView.m in Sources */,
 				B71247CB621DB2A0C1B2A473 /* ChatYOContentView.m in Sources */,
 				B7124739C88EC99ECA917041 /* ChatPrivacyDateOfferCancelBtnView.m in Sources */,
+				B7124CFD291A919DDD8924B7 /* ConstantUtils.swift in Sources */,
+				B7124AFAD8BAF326BA0451AC /* Marcos.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

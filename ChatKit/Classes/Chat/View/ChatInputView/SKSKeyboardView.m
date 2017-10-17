@@ -783,7 +783,7 @@ static NSInteger kTextRowMaxLimit = 4;
             _moreView = [[SKSKeyboardBaseMoreView alloc] initWithItemList:[_keyboardConfig getKeyboardMoreViewItemList] keyboarConfig:_keyboardConfig];
         }
 
-        _moreView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [_keyboardConfig chatKeyboardMoreViewHeight]);
+        _moreView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, _keyboardConfig.chatKeyboardCustomInputViewHeight);
         _moreView.clipsToBounds = YES;
         _moreView.actionDelegate = self;
         [_moreBtn setButtonInputView:_moreView];
@@ -800,7 +800,7 @@ static NSInteger kTextRowMaxLimit = 4;
         } else {
             _emoticonContainerView = [[SKSEmoticonContainerView alloc] initWithUserModel:nil sessionConfig:self.sessionConfig];
         }
-        _emoticonContainerView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, _keyboardConfig.chatKeyboardMoreViewHeight);
+        _emoticonContainerView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, _keyboardConfig.chatKeyboardCustomInputViewHeight);
         _emoticonContainerView.clipsToBounds = YES;
         _emoticonContainerView.delegate = self;
         [_emoticonBtn setButtonInputView:_emoticonContainerView];

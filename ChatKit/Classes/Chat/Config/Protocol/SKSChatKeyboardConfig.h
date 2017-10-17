@@ -109,6 +109,11 @@
  */
 - (CGFloat)chatKeyboardMoreViewHeight;
 
+/**
+ * 键盘中自定义 InputView 的视图高度, 为适配 iPhoneX添加的接口
+ * @return 键盘中自定义 InputView 的视图高度
+ */
+- (CGFloat)chatKeyboardCustomInputViewHeight;
 
 /**
  键盘中表情栏中的底部工具栏的高度
