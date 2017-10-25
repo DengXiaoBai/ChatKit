@@ -66,11 +66,7 @@
     }
     
     [_typingImageView startAnimating];
-}
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
-    
     [self updateUIWithMessageModel:self.messageModel force:YES];
 }
 

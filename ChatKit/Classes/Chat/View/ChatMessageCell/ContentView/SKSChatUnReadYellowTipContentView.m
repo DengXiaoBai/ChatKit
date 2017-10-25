@@ -57,10 +57,6 @@
     self.layer.shadowOpacity = 0.5;
     self.layer.shadowRadius = 4;
     self.layer.shadowColor = [RGB(222, 222, 222) CGColor];
-}
-
-- (void)layoutSubviews {
-    [super layoutSubviews];
 
     [self updateUIWithMessageModel:self.messageModel force:YES];
 }

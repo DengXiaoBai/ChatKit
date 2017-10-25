@@ -55,7 +55,7 @@
     NSString *content = @"dfah";
     SKSChatMessageModel *textMessageModel = [self wrapperTextMessageWithContent:content mesageSourceType:SKSMessageSourceTypeReceive timestampDesc:@"昨天 11:01"];
 
-    content = @"15914304883";
+    content = @"15918888888";
     SKSChatMessageModel *textMessageModel1 = [self wrapperTextMessageWithContent:content mesageSourceType:SKSMessageSourceTypeReceive timestampDesc:@"昨天 10:45"];
 
     content = @"我是接受的消息222";
@@ -461,7 +461,7 @@
     [_messageList addObject:privacyActivityMessageModel6];
     [_messageList addObject:privacyActivityMessageModel7];
     [_messageList addObject:privacyActivityMessageModel8];
-    
+
     [_messageList addObject:impressMessageModel];
     [_messageList addObject:impressMessageModel1];
     [_messageList addObject:impressMessageModel2];
@@ -706,6 +706,7 @@
     chatMessage.text = content;
     chatMessage.timestampDesc = timestampDesc;
     chatMessage.menuItemList = [self getMenuItemListWithMessage:chatMessage];
+    chatMessage.messageId = time(NULL) + random() % 10000;
 
     SKSChatMessageModel *messageModel = [[SKSChatMessageModel alloc] initWithMessage:chatMessage];
     messageModel.layoutConfig = [self.sessionConfig layoutConfigWithMessage:chatMessage];

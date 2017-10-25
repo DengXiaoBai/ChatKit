@@ -62,11 +62,6 @@
         [self addSubview:_tipLabel];
     }
 
-}
-
-- (void)layoutSubviews {
-    [super layoutSubviews];
-
     [self updateUIWithMessageModel:self.messageModel force:YES];
 }
 

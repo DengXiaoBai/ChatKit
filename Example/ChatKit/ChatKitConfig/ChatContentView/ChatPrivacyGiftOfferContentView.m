@@ -43,10 +43,7 @@
     self.contentView = [[ChatPrivacyGiftOfferView alloc] initWithMessageModel:self.messageModel];
     self.contentView.delegate = self;
     [self addSubview:self.contentView];
-}
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
     [self updateUIWithMessageModel:self.messageModel force:YES];
 }
 

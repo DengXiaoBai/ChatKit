@@ -50,13 +50,9 @@
         _bubbleImageView.clipsToBounds = YES;
         [self addSubview:_bubbleImageView];
     }
-}
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
     [self updateUIWithMessageModel:self.messageModel force:YES];
 }
-
 
 - (void)updateUIWithMessageModel:(SKSChatMessageModel *)messageModel force:(BOOL)force {
     if (self.messageModel.message.messageId == messageModel.message.messageId && self.messageModel.message.messageId != 0 && !force) {

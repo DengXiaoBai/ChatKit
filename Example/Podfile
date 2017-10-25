@@ -10,6 +10,7 @@ target 'ChatKit_Example' do
   pod 'Masonry', '~> 1.1'
   pod 'TTTAttributedLabel'
   pod 'Reveal-iOS-SDK'
+  pod 'JPFPSStatus', '~> 0.1'
 
   target 'ChatKit_Tests' do
     inherit! :search_paths

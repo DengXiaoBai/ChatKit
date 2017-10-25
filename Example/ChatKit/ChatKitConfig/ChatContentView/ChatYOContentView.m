@@ -44,11 +44,6 @@
     _yoLabel.text = @"YO";
     
     [self addSubview:self.yoLabel];
-    
-}
-
-- (void)layoutSubviews {
-    [super layoutSubviews];
 
     [self updateUIWithMessageModel:self.messageModel force:YES];
 }

@@ -36,10 +36,6 @@
         _emoticonLabel.numberOfLines = 0;
         [self addSubview:_emoticonLabel];
     }
-}
-
-- (void)layoutSubviews {
-    [super layoutSubviews];
 
     [self updateUIWithMessageModel:self.messageModel force:YES];
 }

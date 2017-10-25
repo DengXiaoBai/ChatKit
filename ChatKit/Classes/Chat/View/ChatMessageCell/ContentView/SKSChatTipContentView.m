@@ -33,9 +33,9 @@
 }
 
 - (void)setupUI {
-    
+
     _contentConfig = [self.messageModel.sessionConfig chatContentConfigWithMessageModel:self.messageModel];
-    
+
     if (!_tipLabel) {
         _tipLabel = [[UILabel alloc] initWithFrame:CGRectZero];
         _tipLabel.textColor = _contentConfig.tipColor;
@@ -44,11 +44,7 @@
         _tipLabel.numberOfLines = 0;
         [self addSubview:_tipLabel];
     }
-}
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
-    
     [self updateUIWithMessageModel:self.messageModel force:YES];
 }
 

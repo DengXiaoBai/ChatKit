@@ -34,10 +34,6 @@
         _impressView.delegate = self;
         [self addSubview:_impressView];
     }
-}
-
-- (void)layoutSubviews {
-    [super layoutSubviews];
 
     [self updateUIWithMessageModel:self.messageModel force:YES];
 }

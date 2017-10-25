@@ -34,10 +34,7 @@
         _realTimeVideoOrVoiceView = [[SKSRealTimeVideoOrVoiceView alloc] initWithMessageModel:self.messageModel];
         [self addSubview:_realTimeVideoOrVoiceView];
     }
-}
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
     [self updateUIWithMessageModel:self.messageModel force:YES];
 }
 

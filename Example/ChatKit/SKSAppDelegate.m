@@ -8,6 +8,7 @@
 
 #import "SKSAppDelegate.h"
 #import "ChatSessionViewController.h"
+#import <JPFPSStatus/JPFPSStatus.h>
 
 @implementation SKSAppDelegate
 
@@ -19,6 +20,9 @@
     ChatSessionViewController *chatTestViewController = [[ChatSessionViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:chatTestViewController];
     self.window.rootViewController = nav;
+
+    [[JPFPSStatus sharedInstance] open];
+
     [self.window makeKeyAndVisible];
     return YES;
 }

@@ -38,10 +38,7 @@
         _dateCallView = [[SKSDateCallView alloc] initWithMessageModel:self.messageModel];
         [self addSubview:_dateCallView];
     }
-}
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
     [self updateUIWithMessageModel:self.messageModel force:YES];
 }
 

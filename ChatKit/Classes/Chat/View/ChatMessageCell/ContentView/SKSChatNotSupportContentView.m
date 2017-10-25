@@ -56,10 +56,6 @@
         
         [self bringSubviewToFront:_displayTextLabel];
     }
-}
-
-- (void)layoutSubviews {
-    [super layoutSubviews];
 
     [self updateUIWithMessageModel:self.messageModel force:YES];
 }

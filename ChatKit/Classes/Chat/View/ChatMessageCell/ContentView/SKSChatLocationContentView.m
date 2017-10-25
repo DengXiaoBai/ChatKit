@@ -46,10 +46,7 @@
         _locationView = [[SKSChatLocationView alloc] initWithMessageModel:self.messageModel];
         [self addSubview:_locationView];
     }
-}
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
     [self updateUIWithMessageModel:self.messageModel force:YES];
 }
 

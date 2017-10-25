@@ -40,10 +40,6 @@
         _displayCoreTextView.textDelegate = self;
         [self addSubview:_displayCoreTextView];
     }
-}
-
-- (void)layoutSubviews {
-    [super layoutSubviews];
 
     [self updateUIWithMessageModel:self.messageModel force:YES];
 }

@@ -57,10 +57,7 @@
     }
 
     _displayPhotoImageView.image = self.photoMessageObject.thumbnailPhoto;
-}
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
     [self updateUIWithMessageModel:self.messageModel force:YES];
 }
 

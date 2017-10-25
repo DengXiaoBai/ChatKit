@@ -34,10 +34,6 @@
         _dateOfferContentView.delegate = self;
         [self addSubview:_dateOfferContentView];
     }
-}
-
-- (void)layoutSubviews {
-    [super layoutSubviews];
 
     [self updateUIWithMessageModel:self.messageModel force:YES];
 }

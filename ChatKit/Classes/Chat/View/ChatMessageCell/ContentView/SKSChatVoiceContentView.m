@@ -45,11 +45,6 @@
         _voiceMessageView.delegate = self;
         [self addSubview:_voiceMessageView];
     }
-}
-
-
-- (void)layoutSubviews {
-    [super layoutSubviews];
 
     [self updateUIWithMessageModel:self.messageModel force:YES];
 }
