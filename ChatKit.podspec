@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ChatKit'
-  s.version          = '0.2.15'
+  s.version          = '0.2.16'
   s.summary          = 'Chatting framework for iOS.'
 
 # This description is used to generate tags and improve search results.
