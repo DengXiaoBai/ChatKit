@@ -1,5 +1,5 @@
 PODS:
-  - ChatKit (0.2.16):
+  - ChatKit (0.2.17):
     - DTCoreText (~> 1.6)
     - GRMustache (~> 7.3)
     - Masonry
@@ -67,7 +67,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  ChatKit: 83c41abb9ccc43a0aaf72dde2095d222719dd0c7
+  ChatKit: eaf5c118962b459b25cc20dda7f9d6cf3ca42e01
   DTCoreText: 184cc2f460c2177108e8700dfb0eb1b1cb72c99d
   DTFoundation: 0ef29c70a9814e15518694862bd739347abe2a50
   Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
