@@ -31,6 +31,7 @@
 #import "ChatDateJoinedPreviewMessageObject.h"
 #import "ChatYOMessageObject.h"
 #import "ChatImpressMessageObject.h"
+#import "ChatAdminNormalCoreTextMessageObject.h"
 #import "ChatConstant.h"
 
 
@@ -251,7 +252,16 @@
             @"key_css_name" : @"chat"
     } fromString:templateHtml error:&error];
     SKSChatMessageModel *coreTextMessageModel4 = [self wrapperCoreTextMessageWithMsgId:111115 htmlText:renderChatHtml];
-
+    
+    
+    //////////新增类型 SKSMessageMediaTypePrivacyGiftOffer/////////////
+    int baseInt = 1010;
+    SKSChatMessageModel *adminNormalCoreTextMessage1 = [self wrapperAdminNormalCoreTextMessageWithMsgId:baseInt + 1 htmlText:renderChatHtml title:@"ManCity VS Arsenal"];
+    SKSChatMessageModel *adminNormalCoreTextMessage2 = [self wrapperAdminNormalCoreTextMessageWithMsgId:baseInt + 2 htmlText:renderChatHtml title:@"曼城 VS 阿森纳"];
+    SKSChatMessageModel *adminNormalCoreTextMessage3 = [self wrapperAdminNormalCoreTextMessageWithMsgId:baseInt + 3 htmlText:renderChatHtml title:@"曼联 VS 切尔西"];
+    
+    
+    /////////END//////////
     NSString *registerSuccessContent = @"<p><span class='activity_nickname'><font face=\"PingFangSC-Medium\">小李子</font></span>,你好，我是一见客服，很开心又多了一个小伙伴😊。快去首页发布你的专属邀约吧，带上承载满满诚意的 <img style=\"width:16px; height:16px;\" src=\"common-roses-icon.png\">, 在报名的用户中选择一位心仪的ta, 共赴心动之约~</p>";
     renderChatHtml = [GRMustacheTemplate renderObject: @{
             @"key_content" : registerSuccessContent,
@@ -465,6 +475,10 @@
     [_messageList addObject:impressMessageModel];
     [_messageList addObject:impressMessageModel1];
     [_messageList addObject:impressMessageModel2];
+    
+    [_messageList addObject:adminNormalCoreTextMessage1];
+    [_messageList addObject:adminNormalCoreTextMessage2];
+    [_messageList addObject:adminNormalCoreTextMessage3];
 
 }
 
@@ -654,6 +668,28 @@
     messageModel.sessionConfig = self.sessionConfig;
     messageModel.layoutConfig = [self.sessionConfig layoutConfigWithMessage:chatMessage];
 
+    return messageModel;
+}
+
+- (SKSChatMessageModel *)wrapperAdminNormalCoreTextMessageWithMsgId:(int64_t)msgID htmlText:(NSString *)htmlText title:(NSString*)title {
+    
+    SKSChatMessage *chatMessage = [[SKSChatMessage alloc] init];
+    chatMessage.messageSourceType = SKSMessageSourceTypeReceive;
+    chatMessage.messageMediaType = SKSMessageMediaTypeAdminNormalCoreText;
+    chatMessage.messageDeliveryState = SKSMessageDeliveryStateSent;
+    chatMessage.menuItemList = [self getMenuItemListWithMessage:chatMessage];
+    chatMessage.messageId = msgID;
+    chatMessage.timestampDesc = @"今天 08:50";
+    
+    ChatAdminNormalCoreTextMessageObject *messageObject = [[ChatAdminNormalCoreTextMessageObject alloc] initWithHtmlText:htmlText title:title];
+    messageObject.message = chatMessage;
+    chatMessage.messageAdditionalObject = messageObject;
+    
+    SKSChatMessageModel *messageModel = [[SKSChatMessageModel alloc] initWithMessage:chatMessage];
+    messageModel.shouldShowAvatar = YES;
+    messageModel.sessionConfig = self.sessionConfig;
+    messageModel.layoutConfig = [self.sessionConfig layoutConfigWithMessage:chatMessage];
+    
     return messageModel;
 }
 

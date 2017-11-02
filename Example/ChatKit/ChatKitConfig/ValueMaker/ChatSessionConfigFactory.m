@@ -27,6 +27,7 @@
 #import "ChatDateJoinedPreviewContentConfig.h"
 #import "ChatYOContentConfig.h"
 #import "ChatImpressContentConfig.h"
+#import "ChatAdminNormalCoreTextConfig.h"
 
 @interface ChatSessionConfigFactory()
 
@@ -68,6 +69,7 @@
                 @(SKSMessageMediaTypeUnReadTip) : [SKSUnReadYellowContentConfig new],
                 @(SKSMessageMediaTypePrivacyActivity): [ChatPrivacyDateOfferContentConfig new],
                 @(SKSMessageMediaTypePrivacyGiftOffer): [ChatPrivacyGiftOfferContentConfig new],
+                @(SKSMessageMediaTypeAdminNormalCoreText): [ChatAdminNormalCoreTextConfig new],
         };
     }
     return self;

@@ -50,6 +50,7 @@ typedef NS_ENUM(NSInteger, SKSMessageMediaType) {
     SKSMessageMediaTypeUnReadTip                    = 18,//聊天消息中的未读消息Tip
     SKSMessageMediaTypePrivacyActivity              = 19,//私人邀约
     SKSMessageMediaTypePrivacyGiftOffer             = 20,//私人送玫瑰的请求
+    SKSMessageMediaTypeAdminNormalCoreText          = 21,//管理员聊天富文本, 上半部分显示title,下半部分显示富文本
 };
 
 

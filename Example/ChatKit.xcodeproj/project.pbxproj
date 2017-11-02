@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0369C0651FAAC17600BB517D /* ChatAdminNormalCoreTextContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0369C0641FAAC17500BB517D /* ChatAdminNormalCoreTextContentView.m */; };
+		0369C06C1FAAC25500BB517D /* ChatAdminNormalCoreTextMessageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0369C06B1FAAC25500BB517D /* ChatAdminNormalCoreTextMessageObject.m */; };
+		0369C06F1FAAC2CD00BB517D /* ChatAdminNormalCoreTextConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 0369C06E1FAAC2CD00BB517D /* ChatAdminNormalCoreTextConfig.m */; };
+		0369C0721FAAC9E800BB517D /* ChatAdminNormalCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0369C0711FAAC9E800BB517D /* ChatAdminNormalCoreTextView.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -84,6 +88,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0369C0571FAABA6700BB517D /* ChatAdminNormalCoreTextContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatAdminNormalCoreTextContentView.h; sourceTree = "<group>"; };
+		0369C0641FAAC17500BB517D /* ChatAdminNormalCoreTextContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChatAdminNormalCoreTextContentView.m; path = ChatKit/ChatKitConfig/ChatContentView/ChatAdminNormalCoreTextContentView.m; sourceTree = SOURCE_ROOT; };
+		0369C06A1FAAC25500BB517D /* ChatAdminNormalCoreTextMessageObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatAdminNormalCoreTextMessageObject.h; sourceTree = "<group>"; };
+		0369C06B1FAAC25500BB517D /* ChatAdminNormalCoreTextMessageObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatAdminNormalCoreTextMessageObject.m; sourceTree = "<group>"; };
+		0369C06D1FAAC2CD00BB517D /* ChatAdminNormalCoreTextConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatAdminNormalCoreTextConfig.h; sourceTree = "<group>"; };
+		0369C06E1FAAC2CD00BB517D /* ChatAdminNormalCoreTextConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatAdminNormalCoreTextConfig.m; sourceTree = "<group>"; };
+		0369C0701FAAC9E800BB517D /* ChatAdminNormalCoreTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatAdminNormalCoreTextView.h; sourceTree = "<group>"; };
+		0369C0711FAAC9E800BB517D /* ChatAdminNormalCoreTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatAdminNormalCoreTextView.m; sourceTree = "<group>"; };
 		16F0CF79849D7D0645AD49FE /* Pods-ChatKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatKit_Example/Pods-ChatKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		235195F2020DB035610B0014 /* Pods_ChatKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52831D7CDF35426F1E82A5BE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -232,6 +244,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0369C0731FAB0F8400BB517D /* ChatAdminNormalCoreTextView */ = {
+			isa = PBXGroup;
+			children = (
+				0369C0701FAAC9E800BB517D /* ChatAdminNormalCoreTextView.h */,
+				0369C0711FAAC9E800BB517D /* ChatAdminNormalCoreTextView.m */,
+			);
+			path = ChatAdminNormalCoreTextView;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -327,6 +348,7 @@
 		B71242EE246A777156F38824 /* ChatView */ = {
 			isa = PBXGroup;
 			children = (
+				0369C0731FAB0F8400BB517D /* ChatAdminNormalCoreTextView */,
 				B71244191E3EC0C0DA2C59C2 /* ChatPrivacyAcitivityView */,
 				B7124797624F0FDD8DEA89E8 /* ChatPrivacyGiftOfferView */,
 				B71247C3480018EF001B8DF3 /* ChatDateJoinedPreviewView */,
@@ -463,6 +485,8 @@
 				B7124060B512B6070980D0AF /* ChatImpressMessageObject.m */,
 				B7124337FE3667A4D1B944BF /* ChatYOMessageObject.h */,
 				B71248DF9C5605BF4AC53D77 /* ChatYOMessageObject.m */,
+				0369C06A1FAAC25500BB517D /* ChatAdminNormalCoreTextMessageObject.h */,
+				0369C06B1FAAC25500BB517D /* ChatAdminNormalCoreTextMessageObject.m */,
 			);
 			path = ChatMessageAdditionObject;
 			sourceTree = "<group>";
@@ -483,6 +507,8 @@
 				B7124F6BF8B08AFF7872A25C /* ChatImpressContentView.m */,
 				B712489FD7BCFF8877773DE1 /* ChatYOContentView.h */,
 				B7124682D07BFF829D4E8B87 /* ChatYOContentView.m */,
+				0369C0571FAABA6700BB517D /* ChatAdminNormalCoreTextContentView.h */,
+				0369C0641FAAC17500BB517D /* ChatAdminNormalCoreTextContentView.m */,
 			);
 			path = ChatContentView;
 			sourceTree = "<group>";
@@ -544,6 +570,8 @@
 				B71244EE5D41162332C8C039 /* ChatImpressContentConfig.m */,
 				B71249CB11FC1BE39A547147 /* ChatYOContentConfig.h */,
 				B7124612608978D382635100 /* ChatYOContentConfig.m */,
+				0369C06D1FAAC2CD00BB517D /* ChatAdminNormalCoreTextConfig.h */,
+				0369C06E1FAAC2CD00BB517D /* ChatAdminNormalCoreTextConfig.m */,
 			);
 			path = ChatContentConfig;
 			sourceTree = "<group>";
@@ -847,6 +875,7 @@
 				6003F59E195388D20070C39A /* SKSAppDelegate.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				B71241214DAEBEE008600E99 /* ChatSessionViewController.m in Sources */,
+				0369C0721FAAC9E800BB517D /* ChatAdminNormalCoreTextView.m in Sources */,
 				B7124853E7C5EAF32205C656 /* ChatTestViewModel.m in Sources */,
 				B7124DC6AB60FF9C4936524C /* ChatSessionHelper.m in Sources */,
 				B7124EA52DC27EBCE71CFAB8 /* ChatDefaultValueMaker.m in Sources */,
@@ -855,6 +884,7 @@
 				B7124E36DD14803F31D6067C /* ChatPrivacyGiftOfferContentConfig.m in Sources */,
 				B712414C90FCA14ACC543B30 /* ChatPrivacyGiftOfferContentView.m in Sources */,
 				B7124F76CCEED8FDF60798AC /* ChatPrivacyDateOfferContentView.m in Sources */,
+				0369C06F1FAAC2CD00BB517D /* ChatAdminNormalCoreTextConfig.m in Sources */,
 				B712419E15CF2884490FCA03 /* ChatPrivacyDateOfferMessageObject.m in Sources */,
 				B7124C59AD2C991E4726D243 /* ChatPrivacyGiftOfferMessageObject.m in Sources */,
 				B7124B3164EA9BBAD164A0A0 /* ChatSessionConfig.m in Sources */,
@@ -865,6 +895,7 @@
 				B71240242719ECA8D7D8D92E /* ChatPrivacyGiftOfferView.m in Sources */,
 				B7124BFDCDD5C8096CA8043E /* ChatPrivacyGiftOfferBtnView.m in Sources */,
 				B71240E84A02425AF4C1305C /* ChatPrivacyGiftOfferDescView.m in Sources */,
+				0369C06C1FAAC25500BB517D /* ChatAdminNormalCoreTextMessageObject.m in Sources */,
 				B712465E4721BC2ACB709E71 /* ChatDateJoinedPreviewView.m in Sources */,
 				B71243C73B99467A783A197E /* ChatDateActivityMessageObject.m in Sources */,
 				B71246289F3BFB39F8D471DF /* ChatDateJoinedPreviewMessageObject.m in Sources */,
@@ -876,6 +907,7 @@
 				B7124F85DCD40C36E930B2F7 /* ChatDateOfferDescBottomView.m in Sources */,
 				B712455A80FB8708FCD81A2D /* ChatDateOfferMessageObject.m in Sources */,
 				B7124A2B9B8DE99999EE7D4C /* ChatDateJoinedPreviewContentView.m in Sources */,
+				0369C0651FAAC17600BB517D /* ChatAdminNormalCoreTextContentView.m in Sources */,
 				B712400860EAF421D7726114 /* ChatDateOfferContentView.m in Sources */,
 				B712416BFB0E4C530BF43457 /* ChatConfirmMeetMessageObject.m in Sources */,
 				B71242658F186373FF24890F /* ChatImpressContentView.m in Sources */,
