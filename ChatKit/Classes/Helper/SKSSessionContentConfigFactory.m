@@ -19,7 +19,6 @@
 #import "SKSRealTimeVideoOrVoiceContentConfig.h"
 #import "SKSCoreTextContentConfig.h"
 #import "SKSDateCallContentConfig.h"
-#import "SKSUnReadContentConfig.h"
 #import "SKSUnReadYellowContentConfig.h"
 
 @interface SKSSessionContentConfigFactory()
@@ -42,7 +41,6 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        //TODO: 设置配置实例
         _dict = @{
                 @(SKSMessageMediaTypeUnsupport) : [SKSNotSupportContentConfig new],
                 @(SKSMessageMediaTypeText) : [SKSTextContentConfig new],

@@ -31,6 +31,11 @@ class ConstantUtils: NSObject {
     }
 
     @objc class func getTabBarHeight() -> CGFloat {
-        return IS_IPHONE_X ? 69.0 : 49.0
+        return 49.0 + ConstantUtils.getTabBarBottomSafeAreaHeight()
+    }
+
+    //底部的安全高度
+    @objc class func getTabBarBottomSafeAreaHeight() -> CGFloat {
+        return IS_IPHONE_X ? 34.0 : 0.0
     }
 }

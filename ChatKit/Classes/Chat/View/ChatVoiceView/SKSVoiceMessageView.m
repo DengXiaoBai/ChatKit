@@ -299,10 +299,6 @@ static const BOOL kIsOpenUIDebugMode = NO;//是否开启UI测试模式, 开启�
     [aPath addLineToPoint:CGPointMake(10, startY)];
     [aPath addLineToPoint:CGPointMake(0, startY)];
 
-    //TODO:还没理解这里,不可以主动调用一下两个方法,会报 invalid context 0x0 error
-//    [aPath stroke];
-//    [aPath fill];
-
     return aPath;
 }
 

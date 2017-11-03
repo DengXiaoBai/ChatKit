@@ -10,7 +10,6 @@
 #import "SKSChatKeyboardConfig.h"
 #import "View+MASAdditions.h"
 #import "SKSVolumeDecibelView.h"
-#import "UIColor+SKS.h"
 
 @interface SKSChatRecordingInsideView()
 
@@ -51,7 +50,7 @@
         [_volumeDecibelView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.bottom.equalTo(_recordingImageView.mas_bottom);
             make.left.equalTo(self.mas_centerX).offset(15);
-            make.size.mas_equalTo(volumeDecibelSize);//TODO: 需要进行计算的, 弄成可配置的方式, 可以放 3 个 Cell
+            make.size.mas_equalTo(volumeDecibelSize);
         }];
     }
 }

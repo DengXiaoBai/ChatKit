@@ -112,7 +112,6 @@
     return UIEdgeInsetsMake(5, 0, 5, 0);
 }
 
-//TODO: timestamp not included in contentView, should be removed
 - (UIEdgeInsets)timestampViewInsets {
     return UIEdgeInsetsMake(4, 0, 4, 0);
 }

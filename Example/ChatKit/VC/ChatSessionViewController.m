@@ -11,7 +11,6 @@
 #import <ChatKit/SKSMessageCell.h>
 #import <ChatKit/SKSChatMessageModel.h>
 #import <ChatKit/SKSDefaultCellMaker.h>
-#import <ChatKit/UIResponder+SKS.h>
 #import <ChatKit/SKSChatRecordView.h>
 #import <ChatKit/SKSChatSessionConfig.h>
 #import <ChatKit/SKSKeyboardView.h>
@@ -20,7 +19,6 @@
 #import <Masonry/Masonry.h>
 #import <ChatKit/SKSChatKeyboardConfig.h>
 #import "ChatTestViewModel.h"
-#import "ChatSessionHelper.h"
 #import "MarcosDefinition.h"
 #import "ChatKit_Example-Swift.h"
 
@@ -136,12 +134,10 @@
             break;
         }
         case SKSKeyboardMoreTypeRealTimeVoice: {
-            //TODO: 实时语音呼叫
             
             break;
         }
         case SKSKeyboardMoreTypeRealTimeVideo: {
-            //TODO: 实时视频呼叫
             
             break;
         }

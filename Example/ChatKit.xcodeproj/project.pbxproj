@@ -679,7 +679,7 @@
 			attributes = {
 				CLASSPREFIX = SKS;
 				LastUpgradeCheck = 0720;
-				ORGANIZATIONNAME = iCrany;
+				ORGANIZATIONNAME = Stringstech;
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
 						DevelopmentTeam = FM629VZ3X3;

@@ -776,7 +776,7 @@
     chatMessage.menuItemList = [self getMenuItemListWithMessage:chatMessage];
 
     SKSRealTimeVideoOrVoiceMessageObject *messageObject = [[SKSRealTimeVideoOrVoiceMessageObject alloc] initWithSessionId:sessionId callState:callState duration:duration];
-    messageObject.message = chatMessage;//TODO: 编码的时候可能会忘记
+    messageObject.message = chatMessage;
     chatMessage.messageAdditionalObject = messageObject;
 
     SKSChatMessageModel *messageModel = [[SKSChatMessageModel alloc] initWithMessage:chatMessage];
