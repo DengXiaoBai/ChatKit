@@ -19,4 +19,8 @@
     return self;
 }
 
+- (NSString *)iconImageName {
+    return @"chat-session-select-date";
+}
+
 @end

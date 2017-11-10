@@ -11,7 +11,7 @@
 @interface ChatAdminNormalCoreTextMessageObject : SKSCoreTextMessageObject
 
 @property (nonatomic, strong) NSString *title;
-
+- (NSString *)iconImageName;
 - (instancetype)initWithHtmlText:(NSString *)htmlText title:(NSString*)title;
 
 

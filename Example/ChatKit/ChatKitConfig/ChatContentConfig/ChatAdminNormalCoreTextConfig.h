@@ -23,4 +23,6 @@
 
 @property (nonatomic, strong,readonly) UIColor *backgroundColor;
 
+@property (nonatomic, assign,readonly) UIEdgeInsets iconImageInsets;
+
 @end

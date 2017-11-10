@@ -256,7 +256,7 @@
     
     //////////新增类型 SKSMessageMediaTypePrivacyGiftOffer/////////////
     int baseInt = 1010;
-    SKSChatMessageModel *adminNormalCoreTextMessage1 = [self wrapperAdminNormalCoreTextMessageWithMsgId:baseInt + 1 htmlText:renderChatHtml title:@"ManCity VS Arsenal"];
+    SKSChatMessageModel *adminNormalCoreTextMessage1 = [self wrapperAdminNormalCoreTextMessageWithMsgId:baseInt + 1 htmlText:renderChatHtml title:@"WWWWWWWWWWWWWWWWWWW"];
     SKSChatMessageModel *adminNormalCoreTextMessage2 = [self wrapperAdminNormalCoreTextMessageWithMsgId:baseInt + 2 htmlText:renderChatHtml title:@"曼城 VS 阿森纳"];
     SKSChatMessageModel *adminNormalCoreTextMessage3 = [self wrapperAdminNormalCoreTextMessageWithMsgId:baseInt + 3 htmlText:renderChatHtml title:@"曼联 VS 切尔西"];
     
@@ -526,7 +526,7 @@
     chatMessage.messageId = time(NULL);
 
     ChatDateOfferMessageObject *messageObject = [[ChatDateOfferMessageObject alloc] init];
-    messageObject.title = @"我们一起去吃饭";
+    messageObject.title = @"WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW";
     messageObject.dateOfferState = dateOfferState;
     messageObject.message = chatMessage;
     chatMessage.messageAdditionalObject = messageObject;
@@ -614,7 +614,7 @@
     chatMessage.messageId = time(NULL);
 
     ChatConfirmMeetMessageObject *messageObject = [[ChatConfirmMeetMessageObject alloc] init];
-    messageObject.title = @"我们一起去吃饭";
+    messageObject.title = @"WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW";
     messageObject.dateOfferState = dateOfferState;
     messageObject.nickname = @"我是帐号哟";
     messageObject.message = chatMessage;

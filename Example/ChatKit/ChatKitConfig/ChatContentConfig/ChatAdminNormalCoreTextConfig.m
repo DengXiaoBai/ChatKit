@@ -32,6 +32,8 @@
 @property (nonatomic, assign) UIEdgeInsets coreTextViewInsets;
 
 @property (nonatomic, strong) UIColor *backgroundColor;
+
+@property (nonatomic, assign) UIEdgeInsets iconImageInsets;
 @end
 
 
@@ -58,6 +60,8 @@
     self.lineInsets = UIEdgeInsetsMake(6, 0, 0, 0);
     
     self.coreTextViewInsets =  UIEdgeInsetsMake(5, 15, 0, 15);
+    
+    self.iconImageInsets = UIEdgeInsetsMake(0, 0, 0, 0);
     
 }
 

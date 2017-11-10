@@ -21,6 +21,7 @@
 // controls
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UIView *seperator;
+@property (nonatomic, strong) UIImageView *iconImageView;
 @property (nonatomic, strong) DTAttributedTextView *displayCoreTextView;
 
 // models
@@ -53,6 +54,11 @@
         _titleLabel = [[UILabel alloc] init];
         _titleLabel.numberOfLines = 0;
         [self addSubview:_titleLabel];
+    }
+    
+    if (!_iconImageView) {
+        _iconImageView = [[UIImageView alloc] init];
+        [self addSubview:_iconImageView];
     }
     
     if (!_seperator) {
@@ -101,6 +107,16 @@
     yValue = titleEdgeInsets.top ;
     self.titleLabel.frame = CGRectMake(titleEdgeInsets.left, yValue, titleSize.width, titleSize.height);
     
+    // icon
+    self.iconImageView.image = [UIImage imageNamed:self.messageObject.iconImageName];
+    UIEdgeInsets iconImageInsets = self.contentConfig.iconImageInsets;
+    CGSize iconImageSize = self.iconImageView.image.size;
+    
+    CGFloat iconX = self.titleLabel.frame.origin.x + titleSize.width + titleEdgeInsets.right + iconImageInsets.left;
+    CGFloat iconY = (titleEdgeInsets.top + titleSize.height - iconImageSize.height) / 2;
+    self.iconImageView.frame = CGRectMake(iconX, iconY, iconImageSize.width, iconImageSize.height);
+    self.iconImageView.center = CGPointMake(self.iconImageView.center.x, self.titleLabel.center.y);
+
     // line
     yValue = yValue + titleSize.height + titleEdgeInsets.bottom+ self.contentConfig.lineInsets.top ;
     self.seperator.backgroundColor = self.contentConfig.lineColor;
@@ -119,6 +135,14 @@
     yValue = yValue + 1 + self.contentConfig.lineInsets.bottom + coreTextInsets.top;
     self.displayCoreTextView.frame = CGRectMake(coreTextInsets.left, yValue, attributedTextSize.width, attributedTextSize.height);
     
+    // 移动icon到最右边
+    if (CGRectGetMaxX(self.iconImageView.frame) < CGRectGetMaxX(self.displayCoreTextView.frame)){
+        CGFloat diff = CGRectGetMaxX(self.displayCoreTextView.frame) - CGRectGetMaxX(self.iconImageView.frame);
+        CGRect frame = self.iconImageView.frame;
+        frame.origin.x = frame.origin.x + diff;
+        self.iconImageView.frame = frame;
+    }
+    
 }
 
 #pragma mark - Public method
@@ -128,7 +152,8 @@
     ChatAdminNormalCoreTextMessageObject *messageObject = messageModel.message.messageAdditionalObject;
     
     // title
-    CGFloat width = 0;
+    CGFloat width1 = 0;
+    CGFloat width2 = 0;
     CGFloat height = 0;
     
     static UILabel * titleLabel;
@@ -143,6 +168,12 @@
     CGFloat max_width = contentConfig.cellWidth - titleEdgeInsets.left - titleEdgeInsets.right;
     CGSize titleSize = [titleLabel sizeThatFits:CGSizeMake(max_width, FLT_MAX)];
     
+    // icon
+    UIImage *iconImage = [UIImage imageNamed:messageObject.iconImageName];
+    UIEdgeInsets iconImageInsets = contentConfig.iconImageInsets;
+    CGSize iconImageSize = iconImage.size;
+    
+    width2 = titleEdgeInsets.left + titleSize.width + titleEdgeInsets.right + iconImageInsets.left + iconImageSize.width + iconImageInsets.right;
     
     // core text
     UIEdgeInsets coreTextInsets = contentConfig.coreTextViewInsets;
@@ -162,10 +193,11 @@
     [attributedTextContentView relayoutText];
     CGSize coreTextSize = [attributedTextContentView suggestedFrameSizeToFitEntireStringConstraintedToWidth:contentConfig.cellWidth];
     
-    width = coreTextInsets.left + coreTextSize.width + coreTextInsets.right ;
+    width1 = coreTextInsets.left + coreTextSize.width + coreTextInsets.right ;
+    
     height = titleEdgeInsets.top + titleSize.height + titleEdgeInsets.bottom +  contentConfig.lineInsets.top + 1 + contentConfig.lineInsets.bottom + contentConfig.coreTextViewInsets.top + coreTextSize.height + contentConfig.coreTextViewInsets.bottom;
     
-    return CGSizeMake(width, height);
+    return CGSizeMake(MAX(width1, width2), height);
 }
 
 @end
