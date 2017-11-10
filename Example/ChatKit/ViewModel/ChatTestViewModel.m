@@ -681,7 +681,7 @@
     chatMessage.messageId = msgID;
     chatMessage.timestampDesc = @"今天 08:50";
     
-    ChatAdminNormalCoreTextMessageObject *messageObject = [[ChatAdminNormalCoreTextMessageObject alloc] initWithHtmlText:htmlText title:title];
+    ChatAdminNormalCoreTextMessageObject *messageObject = [[ChatAdminNormalCoreTextMessageObject alloc] initWithHtmlText:htmlText title:title activityId:@""];
     messageObject.message = chatMessage;
     chatMessage.messageAdditionalObject = messageObject;
     

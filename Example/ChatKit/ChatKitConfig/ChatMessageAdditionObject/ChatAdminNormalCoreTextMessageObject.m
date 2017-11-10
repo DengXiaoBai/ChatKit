@@ -10,10 +10,11 @@
 
 @implementation ChatAdminNormalCoreTextMessageObject
 
-- (instancetype)initWithHtmlText:(NSString *)htmlText title:(NSString*)title{
+- (instancetype)initWithHtmlText:(NSString *)htmlText title:(NSString*)title activityId:(NSString*)aid{
     self = [super initWithHtmlText:htmlText];
     if (self) {
         self.title = title;
+        self.activityId = aid;
     }
     
     return self;
