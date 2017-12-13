@@ -23,6 +23,7 @@
 
 static NSString *kINPUT_TEXT_VIEW_TEXT_KVO           = @"text";
 static NSString *kINPUT_TEXT_VIEW_CONTENT_SIZE_KVO   = @"contentSize";
+static NSUInteger MAX_USER_INPUT = 32 * 1024 / 4 ;
 
 static CGFloat kKeyboardBtnSize = 40.0f;
 
@@ -678,6 +679,7 @@ static NSInteger kTextRowMaxLimit = 4;
 }
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    // NSLog(@">>>>>>>>>>>>>>>>>>textView.text : %@, range: [%d,%d], text:%@",textView.text, range.location,range.length, text);
     if ([text isEqualToString:@"\n"]) {
         if ([self.actionDelegate respondsToSelector:@selector(onSendText:)]) {
             [self.actionDelegate onSendText:textView.text];
@@ -686,14 +688,21 @@ static NSInteger kTextRowMaxLimit = 4;
         textView.text = @"";
         //通知表情控件键盘的文字有更改变动
         [self.emoticonContainerView keyboardViewTextDidChange:self.inputTextView.text];
-
+        
         //通知 VC 字数变化
         if ([self.delegate respondsToSelector:@selector(inputTextViewDidChange:isSend:)]) {
             [self.delegate inputTextViewDidChange:self.inputTextView.text isSend:YES];
         }
         return NO;
+    }else{
+        NSUInteger totalLenght = textView.text.length + (text.length - range.length);
+        if (totalLenght <=  MAX_USER_INPUT){
+            return YES;
+        }else{
+            textView.text = [[textView.text stringByAppendingString:text] substringWithRange:NSMakeRange(0, MAX_USER_INPUT)];
+            return  NO;
+        }
     }
-    return YES;
 }
 
 - (void)textViewDidBeginEditing:(UITextView *)textView {
