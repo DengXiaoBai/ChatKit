@@ -24,6 +24,10 @@ pod "ChatKit"
 
 iCrany, crany1992@gmail.com
 
+## Maintainer
+
+dengxiaobaigo@outlook.com
+
 ## License
 
 ChatKit is available under the MIT license. See the LICENSE file for more info.
